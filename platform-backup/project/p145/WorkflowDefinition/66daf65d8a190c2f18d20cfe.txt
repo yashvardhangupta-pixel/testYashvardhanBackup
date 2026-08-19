@@ -1,0 +1,68 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725625949791,
+	"deleted":true,
+	"description":"test",
+	"edges":[
+		{
+			"fromNodeId":"S11lL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"oR3EI",
+			"type":"next"
+		}
+	],
+	"id":"66daf65d8a190c2f18d20cfe",
+	"lastModifiedBy":520,
+	"lcName":"test1 (copy)",
+	"modifiedTime":1725625961349,
+	"name":"test1 (copy)",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"S11lL-1",
+			"id":"S11lL",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"signals_by_unifyapps",
+				"resourceVersion":18,
+				"resourceName":"signals_by_unifyapps_wait_for_signal",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"S11lL-1",
+			"id":"oR3EI",
+			"index":0,
+			"inputs":{
+				"unit":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Signals by UnifyApps",
+			"title":"Wait for signal",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"projectId":145,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
