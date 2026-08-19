@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		"usebasin"
+	],
+	"createdTime":1741095704176,
+	"deleted":true,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1741110522193,
+		"deployedBy":44103,
+		"deployedDefinitionId":"67c73cfa27950f19375a9037",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"67c70318e287cf63bdddd5ee",
+	"lastModifiedBy":44103,
+	"lcName":"test",
+	"modifiedTime":1741114157060,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"usebasin",
+				"resourceVersion":4,
+				"connectionId":"67c09b98b6a4893fbd17f82a",
+				"resourceName":"usebasin_on_new_submission"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GX9VN-1",
+			"id":"Ybn7i",
+			"index":0,
+			"inputs":{
+				"formId":48942,
+				"name":"test11"
+			},
+			"skip":false,
+			"subTitle":"Basin",
+			"title":"New submission",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":44103,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
