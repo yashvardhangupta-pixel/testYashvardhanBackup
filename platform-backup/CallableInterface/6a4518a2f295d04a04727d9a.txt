@@ -1,0 +1,57 @@
+{
+	"createdTime":1783344486840,
+	"deleted":false,
+	"description":"Used to edit subject for case according to usecase",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6a4518a2f295d04a04727d9a",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"caseId":{
+					"title":"Case Id",
+					"type":"string"
+				},
+				"summary":{
+					"title":"Summary",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"custom subject generator",
+	"modifiedTime":1787051771815,
+	"name":"Custom Subject Generator",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"resultantSummary":{
+					"title":"Resultant Summary",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":true,
+	"version":89
+}
