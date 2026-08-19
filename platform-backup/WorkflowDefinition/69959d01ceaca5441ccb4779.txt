@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1771412737034,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_Df4uS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Qd2G7",
+			"type":"next"
+		}
+	],
+	"id":"69959d01ceaca5441ccb4779",
+	"lastModifiedBy":3546,
+	"lcName":"dvw",
+	"modifiedTime":1771414298029,
+	"name":"dvw",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Df4uS-1",
+			"id":"_Df4uS",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Df4uS-1",
+			"id":"_Qd2G7",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3546,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
