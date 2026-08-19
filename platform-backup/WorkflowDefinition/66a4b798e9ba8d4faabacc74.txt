@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1722070936374,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"dQtB4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"EzM3Z",
+			"type":"next"
+		}
+	],
+	"id":"66a4b798e9ba8d4faabacc74",
+	"lastModifiedBy":1866,
+	"lcName":"akma3",
+	"modifiedTime":1722592917664,
+	"name":"akma3",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dQtB4-1",
+			"id":"dQtB4",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dQtB4-1",
+			"id":"EzM3Z",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		"you",
+		"32kkww",
+		"sakksa",
+		"hdfc233"
+	],
+	"version":1
+}
