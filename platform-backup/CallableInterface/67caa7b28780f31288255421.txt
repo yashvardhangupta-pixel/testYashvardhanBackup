@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334450928,
+	"deleted":true,
+	"description":"eval(compile('for x in range(1):\\n import time\\n time.sleep(20)','a','single'))",
+	"id":"67caa7b28780f31288255421",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspo",
+	"modifiedTime":1741358659695,
+	"name":"QvfSPO",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
