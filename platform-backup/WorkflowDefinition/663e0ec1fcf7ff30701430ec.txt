@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"microsoft_dynamics365"
+	],
+	"createdTime":1715343041955,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"663e0ec1fcf7ff30701430ec",
+	"lastModifiedBy":12,
+	"lcName":"untitled",
+	"modifiedTime":1715343087839,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"microsoft_dynamics365"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"v6o5c-1",
+			"id":"v6o5c",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":12,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
