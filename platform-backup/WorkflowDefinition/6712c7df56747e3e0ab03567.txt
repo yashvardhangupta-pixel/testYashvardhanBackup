@@ -1,0 +1,83 @@
+{
+	"appsUsed":[
+		"monday"
+	],
+	"createdTime":1729284063043,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_9GJ1E",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Irg9h",
+			"type":"next"
+		}
+	],
+	"id":"6712c7df56747e3e0ab03567",
+	"lastModifiedBy":520,
+	"lcName":"testingtour8 dnd",
+	"modifiedTime":1729284695613,
+	"name":"testingtour8 DND",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":80,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_aRr6s-1",
+			"id":"_9GJ1E",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"monday",
+				"resourceVersion":2385,
+				"connectionId":"6712c7fb8c26971de764be9a",
+				"resourceName":"monday_get_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_aRr6s-1",
+			"id":"_Irg9h",
+			"index":0,
+			"inputs":{
+				"item_id":"{{ _9GJ1E.outputs }}",
+				"board_id":"v",
+				"object":"item"
+			},
+			"skip":false,
+			"subTitle":"Monday",
+			"title":"Get record",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
