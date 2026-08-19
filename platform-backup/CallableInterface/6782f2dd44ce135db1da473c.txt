@@ -1,0 +1,33 @@
+{
+	"createdTime":1736635101230,
+	"deleted":false,
+	"description":"otAyeP",
+	"id":"6782f2dd44ce135db1da473c",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"alux47oyh2\\\\lw1pxtyq3m",
+	"modifiedTime":1736635101230,
+	"name":"alux47oyh2\\\\lw1pxtyq3m",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":854,
+	"standard":false,
+	"version":0
+}
