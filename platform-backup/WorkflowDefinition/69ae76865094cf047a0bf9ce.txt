@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1773041286455,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_HQaId",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_kTt8s",
+			"type":"next"
+		}
+	],
+	"id":"69ae76865094cf047a0bf9ce",
+	"lastModifiedBy":3546,
+	"lcName":"vrev",
+	"modifiedTime":1773042093180,
+	"name":"vrev",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HQaId-1",
+			"id":"_HQaId",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_HQaId-1",
+			"id":"_kTt8s",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3546,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
