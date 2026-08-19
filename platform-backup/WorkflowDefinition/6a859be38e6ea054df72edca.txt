@@ -1,24 +1,25 @@
 {
 	"appsUsed":[
-		
+		"gdrive"
 	],
 	"createdTime":1787141091162,
 	"deleted":false,
 	"edges":[
 		{
 			"fromNodeId":"_RrLjE",
+			"id":"next@_RrLjE@n_qu9Dw",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_xQMpP",
+			"toNodeId":"n_qu9Dw",
 			"type":"next"
 		}
 	],
 	"id":"6a859be38e6ea054df72edca",
 	"lastModifiedBy":6701,
 	"lastPlatformUpdateBy":6701,
-	"lastPlatformUpdateOn":1787141091162,
+	"lastPlatformUpdateOn":1787141235649,
 	"lcName":"tets",
-	"modifiedTime":1787141091162,
+	"modifiedTime":1787141235649,
 	"name":"tets",
 	"nodes":[
 		{
@@ -27,7 +28,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_RrLjE-1",
 			"id":"_RrLjE",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -36,18 +37,37 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"gdrive",
+				"resourceVersion":11088,
+				"connectionId":"6a859c0645a2ff6cfe955ba3",
+				"resourceName":"gdrive_upload_files",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrLjE-1",
-			"id":"_xQMpP",
-			"index":0,
+			"id":"n_qu9Dw",
+			"index":2,
+			"inputs":{
+				"attachment":{
+					"attachment_option":"use_file_url",
+					"url":"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+					"file_name":"test",
+					"mimeType":"application/pdf"
+				}
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Drive",
+			"title":"Upload a file",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":6701,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -58,5 +78,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
