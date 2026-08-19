@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1787143763146,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_sacjn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_h3OPy",
+			"type":"next"
+		}
+	],
+	"id":"6a85a653ec9ccf3f750bb7f8",
+	"lastModifiedBy":2721,
+	"lastPlatformUpdateBy":2721,
+	"lastPlatformUpdateOn":1787143763146,
+	"lcName":"webhook_on-newuser",
+	"modifiedTime":1787143763146,
+	"name":"Webhook_on-newuser",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sacjn-1",
+			"id":"_sacjn",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_sacjn-1",
+			"id":"_h3OPy",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2721,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
