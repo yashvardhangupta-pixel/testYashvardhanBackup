@@ -6,48 +6,67 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_jFSEx",
+			"fromNodeId":"n_lr0su",
+			"id":"next@n_lr0su@n_PAexS",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_IKnHP",
+			"toNodeId":"n_PAexS",
 			"type":"next"
 		}
 	],
 	"id":"6a85b8c4af361241368ce8f5",
 	"lastModifiedBy":49915,
 	"lastPlatformUpdateBy":49915,
-	"lastPlatformUpdateOn":1787148484357,
+	"lastPlatformUpdateOn":1787148492457,
 	"lcName":"webhook ",
-	"modifiedTime":1787148484357,
+	"modifiedTime":1787148492457,
 	"name":"webhook ",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":953,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_jFSEx-1",
-			"id":"_jFSEx",
-			"index":0,
+			"id":"n_lr0su",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"stop"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_jFSEx-1",
-			"id":"_IKnHP",
-			"index":0,
+			"id":"n_PAexS",
+			"index":2,
 			"skip":false,
-			"title":"Select an app and action",
-			"type":"ACTION"
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":49915,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -58,5 +77,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
