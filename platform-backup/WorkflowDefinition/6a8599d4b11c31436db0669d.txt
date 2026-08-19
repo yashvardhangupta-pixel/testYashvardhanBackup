@@ -7,18 +7,19 @@
 	"edges":[
 		{
 			"fromNodeId":"_Wk49G",
+			"id":"next@_Wk49G@n_LevhW",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_PyQqI",
+			"toNodeId":"n_LevhW",
 			"type":"next"
 		}
 	],
 	"id":"6a8599d4b11c31436db0669d",
-	"lastModifiedBy":175510,
-	"lastPlatformUpdateBy":175510,
-	"lastPlatformUpdateOn":1787140564482,
+	"lastModifiedBy":195283,
+	"lastPlatformUpdateBy":195283,
+	"lastPlatformUpdateOn":1787149278934,
 	"lcName":"tets",
-	"modifiedTime":1787140564482,
+	"modifiedTime":1787149278934,
 	"name":"tets",
 	"nodes":[
 		{
@@ -27,7 +28,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_Wk49G-1",
 			"id":"_Wk49G",
-			"index":0,
+			"index":1,
 			"skip":false,
 			"title":"Select a trigger event",
 			"trigger":{
@@ -36,18 +37,32 @@
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":0,
+				"resourceName":"standard_entities_get_connections",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_Wk49G-1",
-			"id":"_PyQqI",
-			"index":0,
+			"id":"n_LevhW",
+			"index":2,
+			"inputs":{
+				"offset":0,
+				"size":20
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Get connections",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":175510,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -58,5 +73,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
