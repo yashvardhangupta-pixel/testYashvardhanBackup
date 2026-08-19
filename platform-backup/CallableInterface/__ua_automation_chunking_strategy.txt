@@ -1,0 +1,150 @@
+{
+	"createdTime":1757441803145,
+	"deleted":false,
+	"description":"Output the chunks using Automation",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"__ua_automation_chunking_strategy",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"additional":{
+					"additionalProperties":false,
+					"properties":{
+						"channelModifiedTime":{
+							"title":"Channel Modified Time",
+							"type":"integer"
+						},
+						"splitIndexId":{
+							"title":"Split Index Id",
+							"type":"string"
+						}
+					},
+					"required":[],
+					"title":"Additional",
+					"type":"object"
+				},
+				"authorEmail":{
+					"title":"Author Email",
+					"type":"string"
+				},
+				"chunkMetadata":{
+					"additionalProperties":false,
+					"properties":{},
+					"title":"Chunk Metadata",
+					"type":"object"
+				},
+				"fileDetails":{
+					"additionalProperties":false,
+					"properties":{},
+					"title":"File Details",
+					"type":"object"
+				},
+				"indexContent":{
+					"title":"Index Content",
+					"type":"boolean"
+				},
+				"knowledge":{
+					"additionalProperties":false,
+					"properties":{},
+					"title":"Knowledge",
+					"type":"object"
+				},
+				"knowledgeId":{
+					"title":"Knowledge Id",
+					"type":"string"
+				},
+				"knowledgeSetId":{
+					"title":"Knowledge Set Id",
+					"type":"string"
+				},
+				"knowledgeVersion":{
+					"title":"Knowledge Version",
+					"type":"number"
+				},
+				"mimeType":{
+					"title":"Mime Type",
+					"type":"string"
+				},
+				"sharedWithIds":{
+					"items":{
+						"type":"string"
+					},
+					"title":"Shared With Ids",
+					"type":"array"
+				},
+				"uniqueEntityId":{
+					"title":"Unique Entity Id",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"automation chunking strategy",
+	"modifiedTime":1787051771919,
+	"name":"Automation Chunking Strategy",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"chunks":{
+					"items":{
+						"additionalProperties":false,
+						"properties":{
+							"metadata":{
+								"additionalProperties":false,
+								"properties":{},
+								"title":"Metadata",
+								"type":"object"
+							},
+							"text":{
+								"title":"Text",
+								"type":"string"
+							}
+						},
+						"required":[],
+						"type":"object"
+					},
+					"title":"Chunks",
+					"type":"array"
+				},
+				"links":{
+					"items":{
+						"type":"string"
+					},
+					"title":"Links",
+					"type":"array"
+				},
+				"success":{
+					"title":"Success",
+					"type":"boolean"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":0,
+	"standard":true,
+	"version":196
+}
