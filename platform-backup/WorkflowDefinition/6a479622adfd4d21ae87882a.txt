@@ -4120,7 +4120,25 @@
 		},
 		{
 			"fromNodeId":"n_2Eh4o",
-			"id":"next@n_2Eh4o@n_xImo2",
+			"id":"next@n_2Eh4o@n_qq5Mm",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_qq5Mm",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_qq5Mm",
+			"id":"if@n_qq5Mm@n_1UFym",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_1UFym",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_qq5Mm",
+			"id":"next@n_qq5Mm@n_xImo2",
 			"name":"no",
 			"priority":0,
 			"skip":false,
@@ -4129,28 +4147,61 @@
 		},
 		{
 			"fromNodeId":"n_xImo2",
-			"id":"next@n_xImo2@n_I20Qn",
+			"id":"next@n_xImo2@n_afkSg",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_I20Qn",
+			"toNodeId":"n_afkSg",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_I20Qn",
-			"id":"if@n_I20Qn@n_KSwiy",
-			"name":"yes",
+			"fromNodeId":"n_afkSg",
+			"id":"branch@n_afkSg@n_afkSg@1",
+			"name":"1",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_KSwiy",
-			"type":"if"
+			"toNodeId":"n_afkSg@1",
+			"type":"branch"
 		},
 		{
-			"fromNodeId":"n_I20Qn",
-			"id":"next@n_I20Qn@n_Rgt61",
-			"name":"no",
+			"fromNodeId":"n_afkSg@1",
+			"id":"next@n_afkSg@1@n_IYFo4",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_Rgt61",
+			"toNodeId":"n_IYFo4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_afkSg",
+			"id":"branch@n_afkSg@n_afkSg@2",
+			"name":"2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_afkSg@2",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_afkSg@2",
+			"id":"next@n_afkSg@2@n_X7Xzq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_X7Xzq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_afkSg",
+			"id":"branch@n_afkSg@n_afkSg@3",
+			"name":"3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_afkSg@3",
+			"type":"branch"
+		},
+		{
+			"fromNodeId":"n_afkSg@3",
+			"id":"next@n_afkSg@3@n_Zc9Hf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_Zc9Hf",
 			"type":"next"
 		},
 		{
@@ -4170,16 +4221,41 @@
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_KSwiy",
-			"id":"next@n_KSwiy@n_hgwYV",
+			"fromNodeId":"n_1UFym",
+			"id":"next@n_1UFym@n_hgwYV",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_hgwYV",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_Rgt61",
-			"id":"next@n_Rgt61@n_hgwYV",
+			"fromNodeId":"n_IYFo4",
+			"id":"next@n_IYFo4@n_hgwYV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hgwYV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_X7Xzq",
+			"id":"next@n_X7Xzq@n_hgwYV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hgwYV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Zc9Hf",
+			"id":"next@n_Zc9Hf@n_hgwYV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hgwYV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_afkSg",
+			"id":"next@n_afkSg@n_hgwYV",
+			"name":"default",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_hgwYV",
@@ -4343,9 +4419,9 @@
 	"id":"6a479622adfd4d21ae87882a",
 	"lastModifiedBy":196121,
 	"lastPlatformUpdateBy":196121,
-	"lastPlatformUpdateOn":1787149733554,
+	"lastPlatformUpdateOn":1787150311805,
 	"lcName":"governance | for one control",
-	"modifiedTime":1787149733554,
+	"modifiedTime":1787150311805,
 	"name":"Governance | For one Control",
 	"nodes":[
 		{
@@ -7290,6 +7366,8 @@
 			"inputs":{
 				"output":{
 					"additionalProperties":false,
+					"required":[],
+					"type":"object",
 					"properties":{
 						"enabled":{
 							"title":"Enabled",
@@ -7318,12 +7396,12 @@
 							"title":"Patterns",
 							"type":"array"
 						}
-					},
-					"required":[],
-					"type":"object"
+					}
 				},
 				"input":{
 					"additionalProperties":false,
+					"required":[],
+					"type":"object",
 					"properties":{
 						"actionType":{
 							"title":"Action Type",
@@ -7335,11 +7413,9 @@
 							"title":"Additional",
 							"type":"object"
 						}
-					},
-					"required":[],
-					"type":"object"
+					}
 				},
-				"code":"def add = binding.hasVariable('additional') ? additional : [:]\ndef actionType = binding.hasVariable('actionType') ? actionType : null\n\nreturn [\n    enabled : add.enabled,\n    patterns: (add.regexes ?: []).collect {\n        [\n            name     : it.name,\n            regex    : it.pattern,\n            behaviour: actionType == \"flag\" ? \"mask\" : \"block\"\n        ]\n    }\n]",
+				"code":"def add = binding.hasVariable('additional') ? additional : [:]\ndef actionType = binding.hasVariable('actionType') ? actionType : null\n\nreturn [\n    enabled : add.enabled,\n    patterns: (add.regexes ?: []).collect {\n        [\n            name     : it.name,\n            regex    : it.pattern,\n            behaviour: actionType == \"block\" ? \"block\" : \"mask\"\n        ]\n    }\n]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -9344,27 +9420,27 @@
 			"inputs":{
 				"output":{
 					"additionalProperties":false,
+					"required":[],
+					"type":"object",
 					"properties":{
 						"behaviour":{
 							"title":"Behaviour",
 							"type":"string"
 						}
-					},
-					"required":[],
-					"type":"object"
+					}
 				},
 				"input":{
 					"additionalProperties":false,
+					"required":[],
+					"type":"object",
 					"properties":{
 						"actionType":{
 							"title":"Action Type",
 							"type":"string"
 						}
-					},
-					"required":[],
-					"type":"object"
+					}
 				},
-				"code":"\ndef actionType = binding.hasVariable('actionType') ? actionType : null\n\nreturn [\n  \n   behaviour: actionType == \"flag\" ? \"mask\" : \"block\"\n        \n    \n]",
+				"code":"\ndef actionType = binding.hasVariable('actionType') ? actionType : null\n\nreturn [\n  \n   behaviour = actionType == \"block\" ? \"block\" : \"mask\"\n        \n    \n]",
 				"compile_static":false,
 				"captureStdOutput":false,
 				"parameters":{
@@ -16492,14 +16568,18 @@
 			"inputs":{
 				"variableSchema":{
 					"additionalProperties":false,
+					"required":[],
+					"type":"object",
 					"properties":{
 						"externalAgent":{
 							"title":"External Agent",
 							"type":"boolean"
+						},
+						"connectionType":{
+							"type":"string",
+							"title":"Connection Type"
 						}
-					},
-					"required":[],
-					"type":"object"
+					}
 				}
 			},
 			"skip":false,
@@ -16596,6 +16676,66 @@
 			"type":"ACTION"
 		},
 		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":191,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n",
+			"id":"n_qq5Mm",
+			"index":359,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_eAcmk.outputs.connectionType }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"observe"
+						}
+					},
+					{
+						"property":"{{ n_zeIv6.outputs.traceId }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@y",
+			"id":"n_1UFym",
+			"index":360,
+			"inputs":{
+				"result":{
+					"block":false,
+					"blockMessage":"{{ n_zeIv6.outputs.userQuery }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
 			"additional":{
 				"visibleOptionalFields":[
 					"root.record.chatTypeIncident.userQuery",
@@ -16618,21 +16758,21 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n",
+			"groupId":"n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n",
 			"id":"n_xImo2",
-			"index":359,
+			"index":361,
 			"inputs":{
 				"useRawPayload":false,
 				"writeThroughSessionVariables":false,
-				"inlineRefresh":false,
 				"object_type":"incidents",
 				"skipIfBlank":false,
+				"inlineRefresh":false,
 				"record":{
 					"accessibleTo":[
 						"global",
 						"agent_profile/{{ n_zeIv6.outputs.aiAgentId }}"
 					],
-					"action":"=IF({{ n_qo9AO.outputs.result.actionType }}=\"flag\",\"FLAG\",\"BLOCK\")",
+					"action":"=IF({{ n_eAcmk.outputs.connectionType }}=\"observe\",\"FLAG\",IF({{ n_qo9AO.outputs.result.actionType }}=\"flag\",\"FLAG\",IF({{ n_qo9AO.outputs.result.actionType }}=\"mask\",\"MASK\",\"BLOCK\")))",
 					"assetType":"{{ n_zeIv6.outputs.assetType }}",
 					"chatTypeIncident":{
 						"conversationId":"{{ n_zeIv6.outputs.caseId }}",
@@ -16645,7 +16785,7 @@
 					"control":"{{ n_zeIv6.outputs.controlId }}",
 					"incidentType":"=IF({{ n_qo9AO.outputs.result.appliedTo }}=\"chat\",\"CHAT\",\"KNOWLEDGE\")",
 					"policy":"{{ n_zeIv6.outputs.policyID }}",
-					"severity":"{{ n_QuFwv.outputs.severityLevel }}",
+					"severity":"=UPPER({{ n_QuFwv.outputs.severityLevel }})",
 					"status":"OPEN",
 					"traceId":"{{ n_zeIv6.outputs.traceId }}"
 				},
@@ -16659,33 +16799,113 @@
 		},
 		{
 			"context":{
-				"appName":"if_else",
-				"resourceVersion":189,
-				"resourceName":"if_else_condition",
+				"appName":"branch",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n",
-			"id":"n_I20Qn",
-			"index":360,
+			"groupId":"n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n",
+			"id":"n_afkSg",
+			"index":362,
 			"inputs":{
-				"filters":[
+				"branches":[
 					{
-						"filter":{
-							"operator":"EQUAL",
-							"value":"flag"
-						},
-						"property":"{{ n_qo9AO.outputs.result.actionType }}"
+						"id":"1",
+						"inputs":{
+							"name":"Branch 1",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ n_qo9AO.outputs.result.actionType }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"block"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"2",
+						"inputs":{
+							"name":"Branch 2",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ n_qo9AO.outputs.result.actionType }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"flag"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"3",
+						"inputs":{
+							"name":"Branch 3",
+							"conditions":{
+								"filters":[
+									{
+										"property":"{{ n_qo9AO.outputs.result.actionType }}",
+										"filter":{
+											"operator":"EQUAL",
+											"value":"mask"
+										}
+									}
+								],
+								"operator":"AND"
+							}
+						}
+					},
+					{
+						"id":"default"
 					}
-				],
-				"operator":"AND"
+				]
 			},
 			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
+			"subTitle":"Branch",
+			"title":"",
+			"type":"BRANCH"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_afkSg@n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n@1",
+			"id":"n_afkSg@1",
+			"index":363,
+			"inputs":{
+				"name":"Branch 1",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ n_qo9AO.outputs.result.actionType }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"block"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"subTitle":"Branch Condition",
+			"title":"Branch 1",
+			"type":"BRANCH_CONDITION"
 		},
 		{
 			"context":{
@@ -16697,13 +16917,13 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_I20Qn@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@y",
-			"id":"n_KSwiy",
-			"index":361,
+			"groupId":"n_afkSg@n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n@1",
+			"id":"n_IYFo4",
+			"index":364,
 			"inputs":{
 				"result":{
-					"block":false,
-					"blockMessage":"{{ n_CS5Ru.outputs.maskedQuery }}"
+					"block":true,
+					"blockMessage":"{{ n_CS5Ru.outputs.blockedMessage }}"
 				}
 			},
 			"skip":false,
@@ -16713,6 +16933,39 @@
 		},
 		{
 			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_afkSg@n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n@2",
+			"id":"n_afkSg@2",
+			"index":365,
+			"inputs":{
+				"name":"Branch 2",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ n_qo9AO.outputs.result.actionType }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"flag"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"subTitle":"Branch Condition",
+			"title":"Branch 2",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":978,
 				"resourceName":"callables_return_to_automation",
@@ -16721,13 +16974,70 @@
 			"debug":false,
 			"dirty":false,
 			"fallbackMode":"STOP",
-			"groupId":"n_I20Qn@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n",
-			"id":"n_Rgt61",
-			"index":362,
+			"groupId":"n_afkSg@n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n@2",
+			"id":"n_X7Xzq",
+			"index":366,
 			"inputs":{
 				"result":{
-					"block":true,
-					"blockMessage":"{{ n_CS5Ru.outputs.blockedMessage }}"
+					"block":false,
+					"blockMessage":"{{ n_zeIv6.outputs.userQuery }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"branch_condition",
+				"resourceVersion":0,
+				"resourceName":"branch_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_afkSg@n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n@3",
+			"id":"n_afkSg@3",
+			"index":367,
+			"inputs":{
+				"name":"Branch 3",
+				"conditions":{
+					"filters":[
+						{
+							"property":"{{ n_qo9AO.outputs.result.actionType }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"mask"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"subTitle":"Branch Condition",
+			"title":"Branch 3",
+			"type":"BRANCH_CONDITION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":978,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_afkSg@n_qq5Mm@n_2Eh4o@n_0L511@_mm4vu@_incBG-1@y@n@n@n@3",
+			"id":"n_Zc9Hf",
+			"index":368,
+			"inputs":{
+				"result":{
+					"block":false,
+					"blockMessage":"{{ n_CS5Ru.outputs.maskedQuery }}"
 				}
 			},
 			"skip":false,
@@ -16747,7 +17057,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@y",
 			"id":"n_hgwYV",
-			"index":363,
+			"index":369,
 			"inputs":{
 				"filters":[
 					{
@@ -16777,7 +17087,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hgwYV@_mm4vu@_incBG-1@y@y",
 			"id":"n_qEyJj",
-			"index":364,
+			"index":370,
 			"inputs":{
 				"result":{
 					"block":false,
@@ -16801,7 +17111,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_hgwYV@_mm4vu@_incBG-1@y@n",
 			"id":"n_uh0BU",
-			"index":365,
+			"index":371,
 			"inputs":{
 				"automationId":"68036c6fecbd4a4d19aa7fc2",
 				"runtimeConnections":{},
@@ -16834,7 +17144,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@y",
 			"id":"n_nSChH",
-			"index":366,
+			"index":372,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -16906,7 +17216,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@y",
 			"id":"_GnGEm",
-			"index":367,
+			"index":373,
 			"inputs":{
 				"filters":[
 					{
@@ -16936,7 +17246,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_GnGEm@_mm4vu@_incBG-1@y@y",
 			"id":"n_FZSPp",
-			"index":368,
+			"index":374,
 			"inputs":{
 				"automationId":"68036c6fecbd4a4d19aa7fc2",
 				"runtimeConnections":{},
@@ -16964,7 +17274,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@y",
 			"id":"n_R7AKj",
-			"index":369,
+			"index":375,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -17144,7 +17454,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@y",
 			"id":"n_TqQUb",
-			"index":370,
+			"index":376,
 			"inputs":{
 				"numberOfRecordsToUpdate":"MULTIPLE",
 				"triggerInputCondition":{
@@ -17198,7 +17508,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@y",
 			"id":"_SlbKU",
-			"index":371,
+			"index":377,
 			"inputs":{
 				"recordId":"{{ n_zeIv6.outputs.caseId }}",
 				"writeThroughSessionVariables":false,
@@ -17242,7 +17552,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@y",
 			"id":"_VoX8c",
-			"index":372,
+			"index":378,
 			"inputs":{
 				"result":{
 					"block":true,
@@ -17266,7 +17576,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@n",
 			"id":"n_N2OqB",
-			"index":373,
+			"index":379,
 			"inputs":{
 				"filters":[
 					{
@@ -17296,7 +17606,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_N2OqB@_mm4vu@_incBG-1@n@y",
 			"id":"n_JOlsz",
-			"index":374,
+			"index":380,
 			"inputs":{
 				"result":{
 					"block":false
@@ -17325,7 +17635,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_mm4vu@_incBG-1@n",
 			"id":"_FDI9s",
-			"index":375,
+			"index":381,
 			"inputs":{
 				"recordId":"{{ n_zeIv6.outputs.caseId }}",
 				"writeThroughSessionVariables":false,
@@ -17368,7 +17678,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_incBG-1",
 			"id":"n_GakR3",
-			"index":376,
+			"index":382,
 			"inputs":{
 				"result":{
 					"block":false,
@@ -17395,5 +17705,5 @@
 		}
 	},
 	"standard":false,
-	"version":274
+	"version":275
 }
