@@ -1,0 +1,74 @@
+{
+	"appsUsed":[
+		"microsoft_outlook"
+	],
+	"createdTime":1723638411903,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"2ezpL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Rm5xC",
+			"type":"next"
+		}
+	],
+	"id":"66bca28b9c55272005368e4f",
+	"lastModifiedBy":2347,
+	"lcName":"new23",
+	"modifiedTime":1725009478463,
+	"name":"new23",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":56,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"F5oFP-1",
+			"id":"2ezpL",
+			"index":0,
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"microsoft_outlook",
+				"resourceVersion":3,
+				"connectionId":"66bcae050af1965d6ba7d8f2",
+				"resourceName":"microsoft_outlook_list_categories",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"F5oFP-1",
+			"id":"Rm5xC",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Microsoft Outlook",
+			"title":"List Categories",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":10
+}
