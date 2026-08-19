@@ -1,0 +1,50 @@
+{
+	"createdTime":1772775976571,
+	"deleted":false,
+	"description":"MFA Trigger",
+	"id":"69aa6a283de86a6308e8162b",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"mfa trigger",
+	"modifiedTime":1772775979204,
+	"name":"MFA Trigger",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"code":{
+					"type":"string",
+					"title":"Code"
+				},
+				"additionalAttributes":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Additional Attributes"
+				}
+			},
+			"required":[
+				"code"
+			]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":false,
+	"version":0
+}
