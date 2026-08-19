@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"ozonetel"
+	],
+	"createdTime":1720602022829,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"668e4da67208c33375678010",
+	"lastModifiedBy":174,
+	"lcName":"untitled",
+	"modifiedTime":1720602035136,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"ozonetel"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"7WfwL-1",
+			"id":"7WfwL",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
