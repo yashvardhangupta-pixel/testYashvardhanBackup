@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		"systeme"
+	],
+	"createdTime":1738071221888,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1738071288375,
+		"deployedBy":45775,
+		"deployedDefinitionId":"6798dcf71192c97dd18e15d8",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"6798dcb51192c97dd18e1568",
+	"lastModifiedBy":45775,
+	"lcName":"sad",
+	"modifiedTime":1738071392854,
+	"name":"sad",
+	"nodes":[
+		{
+			"context":{
+				"appName":"systeme",
+				"resourceVersion":17,
+				"connectionId":"67989e8d2a8f1c2766f77046",
+				"resourceName":"systeme_on_contact_tag_added"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"NR0G6-1",
+			"id":"uBOiv",
+			"index":0,
+			"inputs":{
+				"name":"asa",
+				"secret":"msfdsfsd"
+			},
+			"skip":false,
+			"subTitle":"Systeme",
+			"title":"New Tag Added to Contact",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":45775,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
