@@ -1,0 +1,33 @@
+{
+	"createdTime":1760637836391,
+	"deleted":false,
+	"description":"dfvg",
+	"id":"68f1338c03ed2152b715582c",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":43498,
+	"lcName":"dewefdvsg",
+	"modifiedTime":1760637836391,
+	"name":"dewefdvsg",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":43498,
+	"standard":false,
+	"version":0
+}
