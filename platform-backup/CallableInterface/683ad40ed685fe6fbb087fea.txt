@@ -1,0 +1,82 @@
+{
+	"createdTime":1753888954817,
+	"deleted":false,
+	"description":"User Input Custom PreProcessor",
+	"id":"683ad40ed685fe6fbb087fea",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"messageId":{
+					"type":"string",
+					"title":"Message Id"
+				},
+				"caseId":{
+					"type":"string",
+					"title":"Case Id"
+				},
+				"type":{
+					"type":"string",
+					"title":"Type"
+				},
+				"messageContent":{
+					"type":"string",
+					"title":"Message Content"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":89323,
+	"lcName":"user input custom preprocessor",
+	"modifiedTime":1753888954817,
+	"name":"User Input Custom PreProcessor",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"block":{
+					"type":"boolean",
+					"title":"Block"
+				},
+				"blockedMessage":{
+					"type":"string",
+					"title":"Blocked Message"
+				},
+				"buttons":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{
+							"id":{
+								"type":"string",
+								"title":"Id"
+							},
+							"title":{
+								"type":"string",
+								"title":"Title"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					},
+					"title":"Buttons"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":89323,
+	"standard":false,
+	"version":9
+}
