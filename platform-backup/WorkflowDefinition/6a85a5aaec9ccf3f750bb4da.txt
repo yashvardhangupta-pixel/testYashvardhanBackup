@@ -17,9 +17,9 @@
 	"id":"6a85a5aaec9ccf3f750bb4da",
 	"lastModifiedBy":2721,
 	"lastPlatformUpdateBy":2721,
-	"lastPlatformUpdateOn":1787143727957,
+	"lastPlatformUpdateOn":1787143958807,
 	"lcName":"test",
-	"modifiedTime":1787143727957,
+	"modifiedTime":1787143958807,
 	"name":"test",
 	"nodes":[
 		{
@@ -62,6 +62,7 @@
 			"id":"n_6lgpb",
 			"index":2,
 			"inputs":{
+				"address":"https://api.qa.unifyapps.com/api-endpoint/trigger-workflow/6a85a653ec9ccf3f750bb7f8",
 				"domain":"unifyapps.com",
 				"id":"newUserChannel",
 				"type":"web_hook",
@@ -88,5 +89,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
