@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1722364084874,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"bfG2D",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"RuTVB",
+			"type":"next"
+		}
+	],
+	"id":"66a930b4025aef5c68588b73",
+	"lastModifiedBy":302,
+	"lcName":"spotify_get_top_trakcs",
+	"modifiedTime":1722364102608,
+	"name":"spotify_get_top_trakcs",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":46,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"yoP7l-1",
+			"id":"bfG2D",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"yoP7l-1",
+			"id":"RuTVB",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":302,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
