@@ -1,0 +1,105 @@
+{
+	"createdTime":1760296147900,
+	"deleted":false,
+	"description":"Interface to select between several of websearch providers",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68e4065055eefd253485c41e",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"SearchParameters":{
+					"additionalProperties":false,
+					"properties":{
+						"DateOrMonthOrWeeksOrYears":{
+							"title":"DateMonthWeeksYears(D/M/W/Y)",
+							"type":"string"
+						},
+						"SearchResultsFromNumberOfPastDMWY":{
+							"title":"Search Results From Number Of Past DMWY",
+							"type":"string"
+						},
+						"countryNameOrCode":{
+							"title":"CountryForLocalisedSearch",
+							"type":"string"
+						},
+						"numberOfSources":{
+							"title":"Num Searches",
+							"type":"integer"
+						}
+					},
+					"required":[],
+					"title":"Search Parameters",
+					"type":"object"
+				},
+				"agentResponseMessageId":{
+					"title":"Agent Response Message Id",
+					"type":"string"
+				},
+				"aiAgentId":{
+					"title":"aiAgentId",
+					"type":"string"
+				},
+				"caseId":{
+					"title":"caseId",
+					"type":"string"
+				},
+				"query":{
+					"title":"query",
+					"type":"string"
+				},
+				"scrapModelId":{
+					"title":"Scrap Model Id",
+					"type":"string"
+				},
+				"searchModelId":{
+					"title":"Search Model Id",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"perform web search (agent)",
+	"modifiedTime":1787051771785,
+	"name":"Perform Web Search (Agent)",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"output":{
+					"title":"output",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":true,
+	"version":191
+}
