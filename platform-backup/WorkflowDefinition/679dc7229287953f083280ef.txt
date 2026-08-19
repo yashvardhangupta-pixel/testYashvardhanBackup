@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		"servicem8"
+	],
+	"createdTime":1738393378232,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1738393588098,
+		"deployedBy":46209,
+		"deployedDefinitionId":"679dc7f49287953f083281e8",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"679dc7229287953f083280ef",
+	"lastModifiedBy":46209,
+	"lcName":"test",
+	"modifiedTime":1738394678447,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"servicem8",
+				"resourceVersion":12,
+				"connectionId":"679dc75a20b0a03d6df66010",
+				"resourceName":"servicem8_on_create_client"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"8dKHC-1",
+			"id":"nH2cT",
+			"index":0,
+			"inputs":{
+				"interval":1
+			},
+			"skip":false,
+			"subTitle":"ServiceM8",
+			"title":"New client",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":46209,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
