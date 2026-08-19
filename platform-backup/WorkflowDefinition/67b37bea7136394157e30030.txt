@@ -1,0 +1,96 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1739815914689,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"OmpL2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"O7lli",
+			"type":"next"
+		}
+	],
+	"id":"67b37bea7136394157e30030",
+	"lastModifiedBy":557,
+	"lcName":"test",
+	"modifiedTime":1740147589044,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":261,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WUtjp-1",
+			"id":"OmpL2",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":300,
+				"resourceName":"analytics_by_unifyapps_query_reports",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WUtjp-1",
+			"id":"O7lli",
+			"index":0,
+			"inputs":{
+				"projections":[
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"test"
+					},
+					{
+						"aggregationFunction":"COUNT",
+						"includePercentageChange":false,
+						"name":"ENTITY_join_4=::=COUNT"
+					}
+				],
+				"entityType":"ENTITY_join_4",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Analytics Query",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":557,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
