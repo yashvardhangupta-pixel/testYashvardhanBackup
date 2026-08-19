@@ -1,0 +1,53 @@
+{
+	"appsUsed":[
+		"quaderno"
+	],
+	"createdTime":1740122268237,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"67b8289cd1df4128e9a6a819",
+	"lastModifiedBy":45775,
+	"lcName":"testing",
+	"modifiedTime":1740122563229,
+	"name":"testing",
+	"nodes":[
+		{
+			"context":{
+				"appName":"quaderno",
+				"resourceVersion":37,
+				"connectionId":"67a99a7658770b7ae79bca3b",
+				"resourceName":"quaderno_on_new_contact"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"AFbE4-1",
+			"id":"G770b",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Quaderno",
+			"title":"New contact",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":45775,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
