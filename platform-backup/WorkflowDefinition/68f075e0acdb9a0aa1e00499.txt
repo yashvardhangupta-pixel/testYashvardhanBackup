@@ -1,0 +1,260 @@
+{
+	"appsUsed":[
+		"microsoft_calendar"
+	],
+	"createdTime":1767695237379,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1767695237520,
+		"deployedBy":191574,
+		"deployedDefinitionId":"695ce3854f6c6d7f36b566dc",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":28
+	},
+	"description":"Gets free/busy events from Microsoft Calendar",
+	"edges":[
+		{
+			"fromNodeId":"n_I8SZZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_qPKtW",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_qPKtW",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_e4SEq",
+			"type":"next"
+		}
+	],
+	"id":"68f075e0acdb9a0aa1e00499",
+	"lastModifiedBy":191574,
+	"lcName":"yoda| get free/busy events via microsoft calendar 2/2-v2",
+	"modifiedTime":1770715604185,
+	"name":"YODA| Get Free/Busy Events via Microsoft Calendar 2/2-v2",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":130,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_kTi0U-1",
+			"id":"n_I8SZZ",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"result":{
+							"type":"object",
+							"properties":{
+								"AvailabilityView":{
+									"type":"string",
+									"title":"Availability View"
+								},
+								"scheduleItems":{
+									"type":"array",
+									"items":{
+										"type":"object",
+										"properties":{
+											"status":{
+												"type":"string",
+												"title":"Status"
+											},
+											"subject":{
+												"type":"string",
+												"title":"Subject"
+											},
+											"location":{
+												"type":"string",
+												"title":"Location"
+											},
+											"startDateTime":{
+												"type":"string",
+												"format":"date",
+												"title":"Start Date Time",
+												"disablePast":false
+											},
+											"startTimeZone":{
+												"type":"string",
+												"title":"Start Time Zone"
+											},
+											"endDateTime":{
+												"type":"string",
+												"format":"date",
+												"title":"End Date Time",
+												"disablePast":false
+											},
+											"endTimeZone":{
+												"type":"string",
+												"title":"End Time Zone"
+											},
+											"scheduleId":{
+												"type":"string",
+												"title":"Schedule Id"
+											}
+										},
+										"additionalProperties":false,
+										"required":[]
+									},
+									"title":"Schedule Items"
+								}
+							},
+							"additionalProperties":false,
+							"title":"Result",
+							"required":[]
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"startDate":{
+							"type":"string",
+							"title":"Start Date"
+						},
+						"endDate":{
+							"type":"string",
+							"title":"End Date"
+						},
+						"timeZone":{
+							"type":"string",
+							"title":"Time Zone"
+						},
+						"attendeesEmailList":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Attendees Email List"
+						},
+						"availabilityViewInterval":{
+							"type":"integer",
+							"title":"Availability View Interval"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"microsoft_calendar",
+				"resourceVersion":1021,
+				"connectionId":"690337479e1edd234707b052",
+				"resourceName":"microsoft_calendar_get_free_busy_events",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_kTi0U-1",
+			"id":"_qPKtW",
+			"index":2,
+			"inputs":{
+				"Schedules":{
+					"source":"{{ n_I8SZZ.outputs.attendeesEmailList }}",
+					"ua:type":"mappedArray",
+					"items":"{{ n_I8SZZ.outputs.attendeesEmailList[0] }}"
+				},
+				"EndTime":{
+					"dateTime":"{{ n_I8SZZ.outputs.endDate }}",
+					"timeZone":"{{ n_I8SZZ.outputs.timeZone }}"
+				},
+				"StartTime":{
+					"dateTime":"{{ n_I8SZZ.outputs.startDate }}",
+					"timeZone":"{{ n_I8SZZ.outputs.timeZone }}"
+				},
+				"prefer_timeZone":"{{ n_I8SZZ.outputs.timeZone }}",
+				"availabilityViewInterval":"{{ n_I8SZZ.outputs.availabilityViewInterval }}"
+			},
+			"skip":false,
+			"subTitle":"Microsoft Calendar",
+			"title":"Get Free/Busy Events",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":131,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_kTi0U-1",
+			"id":"n_e4SEq",
+			"index":3,
+			"inputs":{
+				"result":{
+					"result":{
+						"AvailabilityView":"{{ _qPKtW.outputs.value[0].availabilityView }}",
+						"scheduleItems":{
+							"source":"{{ _qPKtW.outputs.value[0].scheduleItems }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"status":"{{ _qPKtW.outputs.value[0].scheduleItems[0].status }}",
+								"subject":"{{ _qPKtW.outputs.value[0].scheduleItems[0].subject }}",
+								"location":"{{ _qPKtW.outputs.value[0].scheduleItems[0].location }}",
+								"startDateTime":"{{ _qPKtW.outputs.value[0].scheduleItems[0].start.dateTime }}",
+								"startTimeZone":"{{ _qPKtW.outputs.value[0].scheduleItems[0].start.timeZone }}",
+								"endDateTime":"{{ _qPKtW.outputs.value[0].scheduleItems[0].end.dateTime }}",
+								"endTimeZone":"{{ _qPKtW.outputs.value[0].scheduleItems[0].end.timeZone }}",
+								"scheduleId":"{{ _qPKtW.outputs.value[0].scheduleId }}"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":191574,
+	"runtimeConnectionAppNames":[
+		"microsoft_calendar"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"YODA"
+	],
+	"version":29
+}
