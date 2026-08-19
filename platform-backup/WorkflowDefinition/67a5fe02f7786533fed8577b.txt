@@ -1,0 +1,89 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1738931714655,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"4j5YQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"dhyii",
+			"type":"next"
+		}
+	],
+	"id":"67a5fe02f7786533fed8577b",
+	"lastModifiedBy":4446,
+	"lcName":"test",
+	"modifiedTime":1739440901391,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":278,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"mfDCm-1",
+			"id":"4j5YQ",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"queryParams":{
+						"type":"object",
+						"properties":{
+							"timestamp":{
+								"type":"string",
+								"title":"Timestamp"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"test_http",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"mfDCm-1",
+			"id":"dhyii",
+			"index":0,
+			"skip":false,
+			"subTitle":"Test HTTP API",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":4446,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":6
+}
