@@ -6,48 +6,84 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_K0sSU",
+			"fromNodeId":"n_YaOXN",
+			"id":"next@n_YaOXN@n_zGVxF",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_ARBnB",
+			"toNodeId":"n_zGVxF",
 			"type":"next"
 		}
 	],
 	"id":"6a8566a24bb8b10ec6cc076a",
 	"lastModifiedBy":46209,
 	"lastPlatformUpdateBy":46209,
-	"lastPlatformUpdateOn":1787127458861,
+	"lastPlatformUpdateOn":1787127491003,
 	"lcName":"test",
-	"modifiedTime":1787127458861,
+	"modifiedTime":1787127491003,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":953,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_K0sSU-1",
-			"id":"_K0sSU",
-			"index":0,
+			"id":"n_YaOXN",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":12097,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_K0sSU-1",
-			"id":"_ARBnB",
-			"index":0,
+			"id":"n_zGVxF",
+			"index":2,
+			"inputs":{
+				"shouldSearchInAnalyticsStore":false,
+				"object_type":"test_object0",
+				"includeRoleMappings":false,
+				"includeCurrentUserPermissions":false,
+				"translationsOption":"DEFAULT",
+				"page":{
+					"paginateBy":"OFFSET",
+					"limit":20
+				},
+				"numberOfRecordsToFetch":"SINGLE",
+				"readThroughSessionVariables":false,
+				"includeTotalCount":false
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":46209,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -58,5 +94,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
