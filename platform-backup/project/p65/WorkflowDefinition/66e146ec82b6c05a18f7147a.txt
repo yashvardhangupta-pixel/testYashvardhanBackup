@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726039788895,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"rgNxp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0wG0F",
+			"type":"next"
+		}
+	],
+	"id":"66e146ec82b6c05a18f7147a",
+	"lastModifiedBy":520,
+	"lcName":"test-tags",
+	"modifiedTime":1726039806007,
+	"name":"test-tags",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rgNxp-1",
+			"id":"rgNxp",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rgNxp-1",
+			"id":"0wG0F",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"projectId":65,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		"you",
+		"tag1",
+		"tag2",
+		"revops"
+	],
+	"version":1
+}
