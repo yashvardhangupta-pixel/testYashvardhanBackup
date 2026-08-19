@@ -1,0 +1,75 @@
+{
+	"appsUsed":[
+		"constant_contact"
+	],
+	"createdTime":1738057134884,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"IrQHM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"mrOhb",
+			"type":"next"
+		}
+	],
+	"id":"6798a5ae84d02a587d96d5bc",
+	"lastModifiedBy":520,
+	"lcName":"test",
+	"modifiedTime":1738059555067,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"constant_contact"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YwgLu-1",
+			"id":"IrQHM",
+			"index":0,
+			"skip":false,
+			"subTitle":"Constant Contact",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"constant_contact",
+				"resourceVersion":4,
+				"connectionId":"6798a2512a8f1c2766f77109",
+				"resourceName":"constant_contact_add_contact_to_lists",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"YwgLu-1",
+			"id":"mrOhb",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Constant Contact",
+			"title":"Add Contact to Lists",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
