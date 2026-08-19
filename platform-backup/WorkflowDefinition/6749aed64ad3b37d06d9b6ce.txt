@@ -1,0 +1,82 @@
+{
+	"appsUsed":[
+		"microsoft_entra_id"
+	],
+	"createdTime":1732882134973,
+	"deleted":true,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1732882188715,
+		"deployedBy":2347,
+		"deployedDefinitionId":"6749af0c4ad3b37d06d9b718",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":2
+	},
+	"edges":[
+		{
+			"fromNodeId":"_GTaDM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Kyl42",
+			"type":"next"
+		}
+	],
+	"id":"6749aed64ad3b37d06d9b6ce",
+	"lastModifiedBy":2347,
+	"lcName":"entra id trigger 5",
+	"modifiedTime":1732882217209,
+	"name":"entra id trigger 5",
+	"nodes":[
+		{
+			"context":{
+				"appName":"microsoft_entra_id",
+				"resourceVersion":9,
+				"connectionId":"6748349edab5a25eb2c98cde",
+				"resourceName":"microsoft_entra_id_on_new_user_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_pjz0f-1",
+			"id":"_GTaDM",
+			"index":0,
+			"inputs":{
+				"interval":5
+			},
+			"skip":false,
+			"subTitle":"Microsoft Entra ID",
+			"title":"New user created",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_pjz0f-1",
+			"id":"_Kyl42",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":2347,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":3
+}
