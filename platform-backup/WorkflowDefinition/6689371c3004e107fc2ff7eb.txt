@@ -1,0 +1,43 @@
+{
+	"appsUsed":[
+		"amazon_ses"
+	],
+	"createdTime":1720268572777,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		
+	],
+	"id":"6689371c3004e107fc2ff7eb",
+	"lastModifiedBy":520,
+	"lcName":"hjk",
+	"modifiedTime":1720280854000,
+	"name":"hjk",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon_ses"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"AiIKP-1",
+			"id":"AiIKP",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
