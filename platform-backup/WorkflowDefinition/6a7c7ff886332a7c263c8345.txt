@@ -4,19 +4,19 @@
 	],
 	"createdTime":1787123123186,
 	"deleted":false,
-	"deployedVersion":3,
+	"deployedVersion":4,
 	"deploymentState":{
-		"deployedAt":1787129575481,
+		"deployedAt":1787140474325,
 		"deployedBy":195810,
-		"deployedDefinitionId":"6a856ee7e8e5d4338fc0786c",
+		"deployedDefinitionId":"6a859979b11c31436daf5986",
 		"status":"DEPLOYED",
-		"version":3,
-		"workflowVersion":10
+		"version":4,
+		"workflowVersion":11
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_5b8dx",
-			"id":"next@n_5b8dx@n_rWaGj",
+			"fromNodeId":"n_sbOZn",
+			"id":"next@n_sbOZn@n_rWaGj",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_rWaGj",
@@ -147,33 +147,36 @@
 	"id":"6a7c7ff886332a7c263c8345",
 	"lastModifiedBy":195810,
 	"lastPlatformUpdateBy":195810,
-	"lastPlatformUpdateOn":1787140465573,
+	"lastPlatformUpdateOn":1787140600289,
 	"lcName":"user job | github | all connections",
-	"modifiedTime":1787140465573,
+	"modifiedTime":1787140600289,
 	"name":"User Job | Github | All Connections",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":11655,
-				"resourceName":"webhooks_default"
+				"appName":"schedule",
+				"resourceVersion":967,
+				"resourceName":"schedule_default"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7762G-1",
-			"id":"n_5b8dx",
+			"id":"n_sbOZn",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
-				}
+				"cron":"INTERVAL",
+				"sequential":true,
+				"maxWaitTime":8,
+				"interval":6,
+				"sequentialRunTimeUnit":"HOURS",
+				"frequency":"HOURS"
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
@@ -185,7 +188,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_7762G-1",
 			"id":"n_rWaGj",
@@ -212,7 +215,7 @@
 				"appName":"stop"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_rWaGj@_7762G-1@y",
 			"id":"n_kZJ3W",
@@ -816,5 +819,5 @@
 		}
 	},
 	"standard":false,
-	"version":11
+	"version":12
 }
