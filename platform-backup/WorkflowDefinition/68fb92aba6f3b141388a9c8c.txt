@@ -1,0 +1,568 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1767695239875,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1767695239970,
+		"deployedBy":191574,
+		"deployedDefinitionId":"695ce3874f6c6d7f36b566ef",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":14
+	},
+	"description":"Deletes a calendar event by calendar  and event ID in Microsoft Calendar",
+	"edges":[
+		{
+			"fromNodeId":"n_c0Gn2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7yj1V",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_7yj1V",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_JvhzI",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_JvhzI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_SldvY",
+			"type":"next"
+		}
+	],
+	"id":"68fb92aba6f3b141388a9c8c",
+	"lastModifiedBy":191574,
+	"lcName":"yoda| update a calendar event via microsoft calendar 1/2",
+	"modifiedTime":1770715540247,
+	"name":"YODA| Update a calendar event via Microsoft Calendar 1/2",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":186,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RsYZ4-1",
+			"id":"n_c0Gn2",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"id":{
+							"type":"string",
+							"title":"id"
+						},
+						"subject":{
+							"type":"string",
+							"title":"subject"
+						},
+						"start":{
+							"type":"object",
+							"properties":{
+								"dateTime":{
+									"type":"string",
+									"title":"dateTime"
+								},
+								"timeZone":{
+									"type":"string",
+									"title":"timeZone"
+								}
+							},
+							"title":"start",
+							"additionalProperties":false
+						},
+						"end":{
+							"type":"object",
+							"properties":{
+								"dateTime":{
+									"type":"string",
+									"title":"dateTime"
+								},
+								"timeZone":{
+									"type":"string",
+									"title":"timeZone"
+								}
+							},
+							"title":"end",
+							"additionalProperties":false
+						},
+						"lastModifiedDateTime":{
+							"type":"string",
+							"title":"lastModifiedDateTime"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"subject":{
+							"type":"string",
+							"title":"subject"
+						},
+						"body":{
+							"type":"object",
+							"properties":{
+								"contentType":{
+									"type":"string",
+									"title":"contentType"
+								},
+								"content":{
+									"type":"string",
+									"title":"content"
+								}
+							},
+							"title":"body",
+							"additionalProperties":false
+						},
+						"start":{
+							"type":"object",
+							"properties":{
+								"dateTime":{
+									"type":"string",
+									"title":"dateTime"
+								},
+								"timeZone":{
+									"type":"string",
+									"title":"timeZone"
+								}
+							},
+							"title":"start",
+							"additionalProperties":false
+						},
+						"end":{
+							"type":"object",
+							"properties":{
+								"dateTime":{
+									"type":"string",
+									"title":"dateTime"
+								},
+								"timeZone":{
+									"type":"string",
+									"title":"timeZone"
+								}
+							},
+							"title":"end",
+							"additionalProperties":false
+						},
+						"location":{
+							"type":"object",
+							"properties":{
+								"displayName":{
+									"type":"string",
+									"title":"displayName"
+								},
+								"locationType":{
+									"type":"string",
+									"title":"locationType"
+								},
+								"address":{
+									"type":"object",
+									"properties":{
+										"city":{
+											"type":"string",
+											"title":"city"
+										},
+										"countryOrRegion":{
+											"type":"string",
+											"title":"countryOrRegion"
+										},
+										"postalCode":{
+											"type":"string",
+											"title":"postalCode"
+										},
+										"state":{
+											"type":"string",
+											"title":"state"
+										},
+										"street":{
+											"type":"string",
+											"title":"street"
+										}
+									},
+									"title":"address",
+									"additionalProperties":false
+								}
+							},
+							"title":"location",
+							"additionalProperties":false
+						},
+						"attendees":{
+							"type":"string",
+							"title":"attendees"
+						},
+						"importance":{
+							"type":"string",
+							"title":"importance"
+						},
+						"isAllDay":{
+							"type":"string",
+							"title":"isAllDay"
+						},
+						"isReminderOn":{
+							"type":"string",
+							"title":"isReminderOn"
+						},
+						"isOnlineMeeting":{
+							"type":"string",
+							"title":"isOnlineMeeting"
+						},
+						"reminderMinutesBeforeStart":{
+							"type":"string",
+							"title":"reminderMinutesBeforeStart"
+						},
+						"showAs":{
+							"type":"string",
+							"title":"showAs"
+						},
+						"sensitivity":{
+							"type":"string",
+							"title":"sensitivity"
+						},
+						"responseRequested":{
+							"type":"string",
+							"title":"responseRequested"
+						},
+						"allowNewTimeProposals":{
+							"type":"string",
+							"title":"allowNewTimeProposals"
+						},
+						"onlineMeetingProvider":{
+							"type":"string",
+							"title":"onlineMeetingProvider"
+						},
+						"connectionId":{
+							"type":"string",
+							"title":"Connection Id"
+						},
+						"calendarId":{
+							"type":"string",
+							"title":"Calendar Id"
+						},
+						"eventId":{
+							"type":"string",
+							"title":"Event Id"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":187,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RsYZ4-1",
+			"id":"n_7yj1V",
+			"index":2,
+			"inputs":{
+				"automationId":"68fb677de7d799445dfb517d",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"connectionId":"{{ n_c0Gn2.outputs.connectionId }}"
+				}
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"maxLeaseTimeUnit":"SECONDS",
+					"maxWaitDurationUnit":"SECONDS"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"cacheKey":"{{ n_c0Gn2.outputs.connectionId }}",
+					"enabled":true,
+					"timeToLive":"3600",
+					"usagePolicy":"ALWAYS",
+					"useInMemoryCache":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"count":3,
+					"enabled":true
+				},
+				"stepError":"STOP",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.subject",
+					"root.parameters.body.contentType",
+					"root.parameters.body.content",
+					"root.parameters.start.dateTime",
+					"root.parameters.start.timeZone",
+					"root.parameters.end.dateTime",
+					"root.parameters.end.timeZone",
+					"root.parameters.location.displayName",
+					"root.parameters.location.locationType",
+					"root.parameters.location.address.city",
+					"root.parameters.location.address.countryOrRegion",
+					"root.parameters.location.address.postalCode",
+					"root.parameters.location.address.state",
+					"root.parameters.location.address.street",
+					"root.parameters.attendees",
+					"root.parameters.reminderMinutesBeforeStart",
+					"root.parameters.showAs",
+					"root.parameters.sensitivity",
+					"root.parameters.responseRequested",
+					"root.parameters.allowNewTimeProposals",
+					"root.parameters.onlineMeetingProvider",
+					"root.parameters.calendarId",
+					"root.parameters.eventId",
+					"root.parameters.importance"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":186,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RsYZ4-1",
+			"id":"n_JvhzI",
+			"index":3,
+			"inputs":{
+				"automationId":"68f07bf17692a0047198d6db",
+				"runtimeConnections":{
+					"microsoft_calendar":"{{ n_7yj1V.outputs.connectionId }}"
+				},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"subject":"{{ n_c0Gn2.outputs.subject }}",
+					"body":{
+						"contentType":"{{ n_c0Gn2.outputs.body.contentType }}",
+						"content":"{{ n_c0Gn2.outputs.body.content }}"
+					},
+					"start":{
+						"dateTime":"{{ n_c0Gn2.outputs.start.dateTime }}",
+						"timeZone":"{{ n_c0Gn2.outputs.start.timeZone }}"
+					},
+					"end":{
+						"dateTime":"{{ n_c0Gn2.outputs.end.dateTime }}",
+						"timeZone":"{{ n_c0Gn2.outputs.end.timeZone }}"
+					},
+					"location":{
+						"displayName":"{{ n_c0Gn2.outputs.location.displayName }}",
+						"locationType":"{{ n_c0Gn2.outputs.location.locationType }}",
+						"address":{
+							"city":"{{ n_c0Gn2.outputs.location.address.city }}",
+							"countryOrRegion":"{{ n_c0Gn2.outputs.location.address.countryOrRegion }}",
+							"postalCode":"{{ n_c0Gn2.outputs.location.address.postalCode }}",
+							"state":"{{ n_c0Gn2.outputs.location.address.state }}",
+							"street":"{{ n_c0Gn2.outputs.location.address.street }}"
+						}
+					},
+					"attendees":"{{ n_c0Gn2.outputs.attendees }}",
+					"reminderMinutesBeforeStart":"{{ n_c0Gn2.outputs.reminderMinutesBeforeStart }}",
+					"showAs":"{{ n_c0Gn2.outputs.showAs }}",
+					"sensitivity":"{{ n_c0Gn2.outputs.sensitivity }}",
+					"responseRequested":"{{ n_c0Gn2.outputs.responseRequested }}",
+					"allowNewTimeProposals":"{{ n_c0Gn2.outputs.allowNewTimeProposals }}",
+					"onlineMeetingProvider":"{{ n_c0Gn2.outputs.onlineMeetingProvider }}",
+					"calendarId":"{{ n_c0Gn2.outputs.calendarId }}",
+					"eventId":"{{ n_c0Gn2.outputs.eventId }}",
+					"isMeetingOnline":"{{ n_c0Gn2.outputs.isOnlineMeeting }}",
+					"isReminderOn":"{{ n_c0Gn2.outputs.isReminderOn }}",
+					"importance":"{{ n_c0Gn2.outputs.importance }}",
+					"isAllDay":"{{ n_c0Gn2.outputs.isAllDay }}",
+					"connectionId":"{{ n_c0Gn2.outputs.connectionId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.result.subject",
+					"root.result.bodyPreview",
+					"root.result.importance",
+					"root.result.sensitivity",
+					"root.result.showAs",
+					"root.result.isAllDay",
+					"root.result.isCancelled",
+					"root.result.isDraft",
+					"root.result.isOnlineMeeting",
+					"root.result.isOrganizer",
+					"root.result.isReminderOn",
+					"root.result.reminderMinutesBeforeStart",
+					"root.result.responseRequested",
+					"root.result.allowNewTimeProposals",
+					"root.result.start.dateTime",
+					"root.result.start.timeZone",
+					"root.result.end.dateTime",
+					"root.result.end.timeZone",
+					"root.result.location.displayName",
+					"root.result.location.locationType",
+					"root.result.location.uniqueId",
+					"root.result.location.uniqueIdType",
+					"root.result.location.address.street",
+					"root.result.location.address.city",
+					"root.result.location.address.state",
+					"root.result.location.address.postalCode",
+					"root.result.location.address.countryOrRegion",
+					"root.result.locations.source",
+					"root.result.locations.ua:type",
+					"root.result.locations.items.displayName",
+					"root.result.locations.items.locationType",
+					"root.result.locations.items.uniqueId",
+					"root.result.locations.items.uniqueIdType",
+					"root.result.locations.items.address.street",
+					"root.result.locations.items.address.city",
+					"root.result.locations.items.address.state",
+					"root.result.locations.items.address.postalCode",
+					"root.result.locations.items.address.countryOrRegion",
+					"root.result.organizer.emailAddress.address",
+					"root.result.organizer.emailAddress.name",
+					"root.result.attendees.source",
+					"root.result.attendees.ua:type",
+					"root.result.attendees.items.type",
+					"root.result.attendees.items.status.response",
+					"root.result.attendees.items.status.time",
+					"root.result.attendees.items.emailAddress.address",
+					"root.result.attendees.items.emailAddress.name",
+					"root.result.body.contentType",
+					"root.result.body.content",
+					"root.result.onlineMeetingProvider",
+					"root.result.webLink",
+					"root.result.hasAttachments",
+					"root.result.categories.source",
+					"root.result.categories.ua:type",
+					"root.result.categories.items",
+					"root.result.responseStatus.response",
+					"root.result.responseStatus.time",
+					"root.result.type"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":187,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RsYZ4-1",
+			"id":"n_SldvY",
+			"index":4,
+			"inputs":{
+				"result":{
+					"id":"{{ n_JvhzI.outputs.id }}",
+					"subject":"{{ n_JvhzI.outputs.subject }}",
+					"start":{
+						"dateTime":"{{ n_JvhzI.outputs.start.dateTime }}",
+						"timeZone":"{{ n_JvhzI.outputs.start.timeZone }}"
+					},
+					"end":{
+						"dateTime":"{{ n_JvhzI.outputs.end.dateTime }}",
+						"timeZone":"{{ n_JvhzI.outputs.end.timeZone }}"
+					},
+					"lastModifiedDateTime":"{{ n_JvhzI.outputs.lastModifiedDateTime }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":191574,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"YODA"
+	],
+	"version":15
+}
