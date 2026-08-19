@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1770460751065,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_0Huth",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_jiRGV",
+			"type":"next"
+		}
+	],
+	"id":"6987164febe252576dab6113",
+	"lastModifiedBy":196118,
+	"lcName":"api_task_update",
+	"modifiedTime":1770460922034,
+	"name":"API_Task_Update",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0Huth-1",
+			"id":"_0Huth",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0Huth-1",
+			"id":"_jiRGV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":196118,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
