@@ -1,0 +1,47 @@
+{
+	"createdTime":1751355254073,
+	"deleted":false,
+	"description":"tyv",
+	"id":"68638f76ccef3651bb7e9d80",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"key":{
+					"type":"string",
+					"title":"Key"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"standard dnd",
+	"modifiedTime":1751409551237,
+	"name":"standard dnd",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"response":{
+					"type":"string",
+					"title":"Response"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":44096,
+	"standard":false,
+	"version":5
+}
