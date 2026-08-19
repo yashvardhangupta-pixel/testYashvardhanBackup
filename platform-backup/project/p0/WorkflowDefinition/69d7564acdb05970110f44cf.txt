@@ -4,14 +4,14 @@
 	],
 	"createdTime":1775720010683,
 	"deleted":false,
-	"deployedVersion":15,
+	"deployedVersion":16,
 	"deploymentState":{
-		"deployedAt":1787139996129,
+		"deployedAt":1787143954284,
 		"deployedBy":195833,
-		"deployedDefinitionId":"6a85979cc5ee671661c0fa49",
+		"deployedDefinitionId":"6a85a712f5d73d7fa522c80e",
 		"status":"DEPLOYED",
-		"version":15,
-		"workflowVersion":19
+		"version":16,
+		"workflowVersion":20
 	},
 	"edges":[
 		{
@@ -24,7 +24,15 @@
 		},
 		{
 			"fromNodeId":"n_68BIW",
-			"id":"next@n_68BIW@n_Pj6kD",
+			"id":"next@n_68BIW@n_EM8j3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_EM8j3",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_EM8j3",
+			"id":"next@n_EM8j3@n_Pj6kD",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Pj6kD",
@@ -56,37 +64,11 @@
 		},
 		{
 			"fromNodeId":"n_F3TwN",
-			"id":"loop@n_F3TwN@n_3Xmgh",
+			"id":"loop@n_F3TwN@n_P78LP",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_3Xmgh",
+			"toNodeId":"n_P78LP",
 			"type":"loop"
-		},
-		{
-			"fromNodeId":"n_3Xmgh",
-			"id":"if@n_3Xmgh@n_FcMZh",
-			"name":"yes",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_FcMZh",
-			"type":"if"
-		},
-		{
-			"fromNodeId":"n_FcMZh",
-			"id":"next@n_FcMZh@n_P78LP",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_P78LP",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_3Xmgh",
-			"id":"next@n_3Xmgh@n_P78LP",
-			"name":"no",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_P78LP",
-			"type":"next"
 		},
 		{
 			"fromNodeId":"n_P78LP",
@@ -188,15 +170,7 @@
 		},
 		{
 			"fromNodeId":"n_F3TwN",
-			"id":"next@n_F3TwN@n_iG6GP",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_iG6GP",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_iG6GP",
-			"id":"next@n_iG6GP@n_JZqQH",
+			"id":"next@n_F3TwN@n_JZqQH",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_JZqQH",
@@ -206,9 +180,9 @@
 	"id":"69d7564acdb05970110f44cf",
 	"lastModifiedBy":195833,
 	"lastPlatformUpdateBy":195833,
-	"lastPlatformUpdateOn":1787143952220,
+	"lastPlatformUpdateOn":1787154556582,
 	"lcName":"token usage | using e_traces",
-	"modifiedTime":1787143952220,
+	"modifiedTime":1787154556582,
 	"name":"Token Usage | Using e_traces",
 	"nodes":[
 		{
@@ -218,7 +192,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_Dw7D8",
@@ -236,7 +210,22 @@
 							}
 						}
 					},
-					"contentType":"application/json"
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"query":{
+								"type":"string",
+								"title":"Query"
+							},
+							"queryWithCache":{
+								"type":"string",
+								"title":"Query With Cache"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
 				},
 				"endpointType":"REST",
 				"response":[
@@ -282,7 +271,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_68BIW",
@@ -430,6 +419,28 @@
 			"type":"ACTION"
 		},
 		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":855,
+				"resourceName":"analytics_by_unifyapps_execute_query",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_68fvK-1",
+			"id":"n_EM8j3",
+			"index":3,
+			"inputs":{
+				"query":"SELECT      t._pr_aiAgentId AS agentId,     COALESCE(ag._pr_name, t._pr_aiAgentId) AS agentName,     t._pr_modelId AS modelId,     COALESCE(m._pr_name, t._pr_modelId) AS modelName,     SUM(COALESCE(CAST(t._pr_inputToken AS BIGINT), 0) + COALESCE(CAST(t._pr_cacheReadInputTokens AS BIGINT), 0)) AS totalInputTokens,     SUM(COALESCE(CAST(t._pr_outputToken AS BIGINT), 0) + COALESCE(CAST(t._pr_cacheWriteInputTokens AS BIGINT), 0)) AS totalOutputTokens,     SUM(COALESCE(t._pr_cost, 0)) AS totalCost,     COUNT(*) AS executionCount FROM ENTITY_e_traces t LEFT JOIN ENTITY_ai_agent_llm_model m ON t._pr_modelId = m.id LEFT JOIN ENTITY_ai_agent ag ON t._pr_aiAgentId = ag.id WHERE      t.timestamp BETWEEN '2026-08-19 00:00:00' AND '2026-08-19 23:59:59'     AND t._pr_inputToken > 0 GROUP BY      t._pr_aiAgentId,     COALESCE(ag._pr_name, t._pr_aiAgentId),     t._pr_modelId,     COALESCE(m._pr_name, t._pr_modelId) ORDER BY totalCost DESC;",
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Execute Analytics SQL Query",
+			"type":"ACTION"
+		},
+		{
 			"additional":{
 				"visibleOptionalFields":[
 					"root.parameters.input1.items"
@@ -442,11 +453,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_Pj6kD",
-			"index":3,
+			"index":4,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -527,11 +538,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_Uep7l",
-			"index":4,
+			"index":5,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -553,8 +564,8 @@
 				}
 			},
 			"inputs":{
-				"queryWithCache":"SELECT      t._pr_aiAgentId AS agentId,     COALESCE(ag._pr_name, t._pr_aiAgentId) AS agentName,     t._pr_modelId AS modelId,     COALESCE(m._pr_name, t._pr_modelId) AS modelName,     SUM(COALESCE(CAST(t._pr_inputToken AS BIGINT), 0) + COALESCE(CAST(t._pr_cacheReadInputTokens AS BIGINT), 0)) AS totalInputTokens,     SUM(COALESCE(CAST(t._pr_outputToken AS BIGINT), 0) + COALESCE(CAST(t._pr_cacheWriteInputTokens AS BIGINT), 0)) AS totalOutputTokens,     SUM(COALESCE(t._pr_cost, 0)) AS totalCost,     COUNT(*) AS executionCount FROM ENTITY_e_traces t LEFT JOIN ENTITY_ai_agent_llm_model m ON t._pr_modelId = m.id LEFT JOIN ENTITY_ai_agent ag ON t._pr_aiAgentId = ag.id WHERE      t.timestamp BETWEEN '{{ n_Pj6kD.outputs.result.startDate }}' AND '{{ n_Pj6kD.outputs.result.endDate }}'     AND t._pr_inputToken > 0 GROUP BY      t._pr_aiAgentId,     COALESCE(ag._pr_name, t._pr_aiAgentId),     t._pr_modelId,     COALESCE(m._pr_name, t._pr_modelId) ORDER BY totalCost DESC;",
-				"query":"SELECT      t._pr_aiAgentId AS agentId,     COALESCE(ag._pr_name, t._pr_aiAgentId) AS agentName,     t._pr_modelId AS modelId,     COALESCE(m._pr_name, t._pr_modelId) AS modelName,     SUM(COALESCE(CAST(t._pr_inputToken AS BIGINT), 0)) AS totalInputTokens,     SUM(COALESCE(CAST(t._pr_outputToken AS BIGINT), 0)) AS totalOutputTokens,     SUM(COALESCE(t._pr_cost, 0)) AS totalCost,     COUNT(*) AS executionCount FROM ENTITY_e_traces t LEFT JOIN ENTITY_ai_agent_llm_model m ON t._pr_modelId = m.id LEFT JOIN ENTITY_ai_agent ag ON t._pr_aiAgentId = ag.id WHERE      t.timestamp BETWEEN '{{ n_Pj6kD.outputs.result.startDate }}' AND '{{ n_Pj6kD.outputs.result.endDate }}'     AND t._pr_inputToken > 0 GROUP BY      t._pr_aiAgentId,     COALESCE(ag._pr_name, t._pr_aiAgentId),     t._pr_modelId,     COALESCE(m._pr_name, t._pr_modelId) ORDER BY totalInputTokens DESC;"
+				"queryWithCache":"{{ n_Dw7D8.outputs.body.queryWithCache }}",
+				"query":"{{ n_Dw7D8.outputs.body.query }}"
 			},
 			"outputSchema":{
 				"dynamic":false,
@@ -587,11 +598,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_YiPJJ",
-			"index":5,
+			"index":6,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -792,61 +803,74 @@
 									"title":"List Item Source"
 								},
 								"items":{
-									"additionalProperties":false,
-									"type":[
-										"object",
-										"string",
-										"number",
-										"boolean",
-										"integer"
-									],
+									"type":"object",
 									"properties":{
 										"customerId":{
 											"type":"string",
-											"title":"Customer Id"
+											"title":"customerId"
 										},
 										"customerName":{
 											"type":"string",
-											"title":"Customer Name"
+											"title":"customerName"
 										},
 										"agentName":{
 											"type":"string",
-											"title":"Agent Name"
+											"title":"agentName"
 										},
 										"agentId":{
 											"type":"string",
-											"title":"Agent Id"
+											"title":"agentId"
 										},
 										"modelName":{
 											"type":"string",
-											"title":"Model Name"
+											"title":"modelName"
 										},
 										"modelId":{
 											"type":"string",
-											"title":"Model Id"
+											"title":"modelId"
+										},
+										"provider":{
+											"type":"string",
+											"title":"provider"
 										},
 										"executionCount":{
 											"type":"integer",
-											"title":"Execution Count"
+											"title":"executionCount"
+										},
+										"inputTokens":{
+											"type":"integer",
+											"title":"inputTokens"
+										},
+										"outputTokens":{
+											"type":"integer",
+											"title":"outputTokens"
+										},
+										"cacheReadInputTokens":{
+											"type":"integer",
+											"title":"cacheReadInputTokens"
+										},
+										"cacheWriteInputTokens":{
+											"type":"integer",
+											"title":"cacheWriteInputTokens"
 										},
 										"totalInputTokens":{
 											"type":"integer",
-											"title":"Total Input Tokens"
+											"title":"totalInputTokens"
 										},
 										"totalOutputTokens":{
 											"type":"integer",
-											"title":"Total Output Tokens"
+											"title":"totalOutputTokens"
 										},
 										"totalCost":{
 											"type":"number",
-											"title":"Total Cost"
+											"title":"totalCost"
 										},
 										"env":{
 											"type":"string",
-											"title":"Env"
+											"title":"env"
 										}
 									},
-									"required":[]
+									"additionalProperties":false
 								}
 							}
 						}
@@ -874,50 +898,69 @@
 								"properties":{
 									"customerId":{
 										"type":"string",
-										"title":"Customer Id"
+										"title":"customerId"
 									},
 									"customerName":{
 										"type":"string",
-										"title":"Customer Name"
+										"title":"customerName"
 									},
 									"agentName":{
 										"type":"string",
-										"title":"Agent Name"
+										"title":"agentName"
 									},
 									"agentId":{
 										"type":"string",
-										"title":"Agent Id"
+										"title":"agentId"
 									},
 									"modelName":{
 										"type":"string",
-										"title":"Model Name"
+										"title":"modelName"
 									},
 									"modelId":{
 										"type":"string",
-										"title":"Model Id"
+										"title":"modelId"
+									},
+									"provider":{
+										"type":"string",
+										"title":"provider"
 									},
 									"executionCount":{
 										"type":"integer",
-										"title":"Execution Count"
+										"title":"executionCount"
+									},
+									"inputTokens":{
+										"type":"integer",
+										"title":"inputTokens"
+									},
+									"outputTokens":{
+										"type":"integer",
+										"title":"outputTokens"
+									},
+									"cacheReadInputTokens":{
+										"type":"integer",
+										"title":"cacheReadInputTokens"
+									},
+									"cacheWriteInputTokens":{
+										"type":"integer",
+										"title":"cacheWriteInputTokens"
 									},
 									"totalInputTokens":{
 										"type":"integer",
-										"title":"Total Input Tokens"
+										"title":"totalInputTokens"
 									},
 									"totalOutputTokens":{
 										"type":"integer",
-										"title":"Total Output Tokens"
+										"title":"totalOutputTokens"
 									},
 									"totalCost":{
 										"type":"number",
-										"title":"Total Cost"
+										"title":"totalCost"
 									},
 									"env":{
 										"type":"string",
-										"title":"Env"
+										"title":"env"
 									}
-								},
-								"required":[]
+								}
 							}
 						}
 					}
@@ -936,11 +979,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_F3TwN",
-			"index":6,
+			"index":7,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_Pj6kD.outputs.result.result }}",
@@ -950,64 +993,6 @@
 			"subTitle":"Loop",
 			"title":"For each loop",
 			"type":"LOOP"
-		},
-		{
-			"context":{
-				"appName":"if_else",
-				"resourceVersion":914,
-				"resourceName":"if_else_condition",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_F3TwN@_68fvK-1@l",
-			"id":"n_3Xmgh",
-			"index":7,
-			"inputs":{
-				"filters":[
-					{
-						"property":"{{ n_F3TwN.outputs.item.key }}",
-						"filter":{
-							"operator":"NOT_EQUAL",
-							"value":"1"
-						}
-					},
-					{
-						"property":"{{ n_F3TwN.outputs.item.key }}",
-						"filter":{
-							"operator":"NOT_EQUAL",
-							"value":"147"
-						}
-					}
-				],
-				"operator":"AND"
-			},
-			"skip":false,
-			"subTitle":"Condition",
-			"title":"Condition",
-			"type":"IF_ELSE"
-		},
-		{
-			"context":{
-				"appName":"continue",
-				"resourceVersion":914,
-				"resourceName":"continue",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"n_3Xmgh@n_F3TwN@_68fvK-1@l@y",
-			"id":"n_FcMZh",
-			"index":8,
-			"inputs":{
-				"loop":"n_F3TwN"
-			},
-			"skip":false,
-			"subTitle":"Continue",
-			"title":"Continue",
-			"type":"CONTINUE"
 		},
 		{
 			"additional":{
@@ -1022,11 +1007,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_F3TwN@_68fvK-1@l",
 			"id":"n_P78LP",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -1385,11 +1370,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_P78LP@n_F3TwN@_68fvK-1@l@success",
 			"id":"n_VMmQP",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -1458,11 +1443,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_P78LP@n_F3TwN@_68fvK-1@l@success",
 			"id":"n_zLz6v",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"filters":[
 					{
@@ -1500,11 +1485,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_zLz6v@n_P78LP@n_F3TwN@_68fvK-1@l@success@y",
 			"id":"n_ghkb6",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -1558,13 +1543,13 @@
 									"columns":{
 										"type":"object",
 										"properties":{
-											"modelName":{
-												"type":"string",
-												"title":"modelName"
-											},
 											"agentId":{
 												"type":"string",
 												"title":"agentId"
+											},
+											"cacheReadInputTokens":{
+												"type":"integer",
+												"title":"cacheReadInputTokens"
 											},
 											"modelId":{
 												"type":"string",
@@ -1574,17 +1559,37 @@
 												"type":"string",
 												"title":"agentName"
 											},
-											"executionCount":{
+											"inputTokens":{
 												"type":"integer",
-												"title":"executionCount"
+												"title":"inputTokens"
 											},
 											"totalInputTokens":{
 												"type":"integer",
 												"title":"totalInputTokens"
 											},
+											"modelName":{
+												"type":"string",
+												"title":"modelName"
+											},
+											"provider":{
+												"type":"string",
+												"title":"provider"
+											},
+											"cacheWriteInputTokens":{
+												"type":"integer",
+												"title":"cacheWriteInputTokens"
+											},
+											"executionCount":{
+												"type":"integer",
+												"title":"executionCount"
+											},
 											"totalOutputTokens":{
 												"type":"integer",
 												"title":"totalOutputTokens"
+											},
+											"outputTokens":{
+												"type":"integer",
+												"title":"outputTokens"
 											},
 											"totalCost":{
 												"type":"number",
@@ -1720,7 +1725,12 @@
 					"root.itemsToAdd.items.totalInputTokens",
 					"root.itemsToAdd.items.totalOutputTokens",
 					"root.itemsToAdd.items.totalCost",
-					"root.itemsToAdd.items.env"
+					"root.itemsToAdd.items.env",
+					"root.itemsToAdd.items.provider",
+					"root.itemsToAdd.items.inputTokens",
+					"root.itemsToAdd.items.outputTokens",
+					"root.itemsToAdd.items.cacheReadInputTokens",
+					"root.itemsToAdd.items.cacheWriteInputTokens"
 				]
 			},
 			"context":{
@@ -1730,11 +1740,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_ghkb6@n_zLz6v@n_P78LP@n_F3TwN@_68fvK-1@l@success@y@success",
 			"id":"n_OEUKt",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"captureAddedItems":false,
 				"insertLocation":"END",
@@ -1748,7 +1758,12 @@
 						"agentId":"{{ n_ghkb6.outputs.result.objects[0].columns.agentId }}",
 						"modelName":"{{ n_ghkb6.outputs.result.objects[0].columns.modelName }}",
 						"modelId":"{{ n_ghkb6.outputs.result.objects[0].columns.modelId }}",
+						"provider":"{{ n_ghkb6.outputs.result.objects[0].columns.provider }}",
 						"executionCount":"{{ n_ghkb6.outputs.result.objects[0].columns.executionCount }}",
+						"inputTokens":"{{ n_ghkb6.outputs.result.objects[0].columns.inputTokens }}",
+						"outputTokens":"{{ n_ghkb6.outputs.result.objects[0].columns.outputTokens }}",
+						"cacheReadInputTokens":"{{ n_ghkb6.outputs.result.objects[0].columns.cacheReadInputTokens }}",
+						"cacheWriteInputTokens":"{{ n_ghkb6.outputs.result.objects[0].columns.cacheWriteInputTokens }}",
 						"totalInputTokens":"{{ n_ghkb6.outputs.result.objects[0].columns.totalInputTokens }}",
 						"totalOutputTokens":"{{ n_ghkb6.outputs.result.objects[0].columns.totalOutputTokens }}",
 						"totalCost":"{{ n_ghkb6.outputs.result.objects[0].columns.totalCost }}",
@@ -1775,11 +1790,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_zLz6v@n_P78LP@n_F3TwN@_68fvK-1@l@success@n",
 			"id":"n_maVGs",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -1833,13 +1848,13 @@
 									"columns":{
 										"type":"object",
 										"properties":{
-											"modelName":{
-												"type":"string",
-												"title":"modelName"
-											},
 											"agentId":{
 												"type":"string",
 												"title":"agentId"
+											},
+											"cacheReadInputTokens":{
+												"type":"integer",
+												"title":"cacheReadInputTokens"
 											},
 											"modelId":{
 												"type":"string",
@@ -1849,17 +1864,37 @@
 												"type":"string",
 												"title":"agentName"
 											},
-											"executionCount":{
+											"inputTokens":{
 												"type":"integer",
-												"title":"executionCount"
+												"title":"inputTokens"
 											},
 											"totalInputTokens":{
 												"type":"integer",
 												"title":"totalInputTokens"
 											},
+											"modelName":{
+												"type":"string",
+												"title":"modelName"
+											},
+											"provider":{
+												"type":"string",
+												"title":"provider"
+											},
+											"cacheWriteInputTokens":{
+												"type":"integer",
+												"title":"cacheWriteInputTokens"
+											},
+											"executionCount":{
+												"type":"integer",
+												"title":"executionCount"
+											},
 											"totalOutputTokens":{
 												"type":"integer",
 												"title":"totalOutputTokens"
+											},
+											"outputTokens":{
+												"type":"integer",
+												"title":"outputTokens"
 											},
 											"totalCost":{
 												"type":"number",
@@ -1915,6 +1950,7 @@
 						"value":"6a833b247b51777b5a6f5f80"
 					}
 				],
+				"errorResponseSchemas":[],
 				"authType":"CUSTOM",
 				"requestContentType":"application/json",
 				"ignoreTrailingSlashes":false,
@@ -2000,7 +2036,12 @@
 					"root.itemsToAdd.items.totalInputTokens",
 					"root.itemsToAdd.items.totalOutputTokens",
 					"root.itemsToAdd.items.totalCost",
-					"root.itemsToAdd.items.env"
+					"root.itemsToAdd.items.env",
+					"root.itemsToAdd.items.provider",
+					"root.itemsToAdd.items.inputTokens",
+					"root.itemsToAdd.items.outputTokens",
+					"root.itemsToAdd.items.cacheReadInputTokens",
+					"root.itemsToAdd.items.cacheWriteInputTokens"
 				]
 			},
 			"context":{
@@ -2010,11 +2051,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_maVGs@n_zLz6v@n_P78LP@n_F3TwN@_68fvK-1@l@success@n@success",
 			"id":"n_4btYZ",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"captureAddedItems":false,
 				"insertLocation":"END",
@@ -2028,7 +2069,12 @@
 						"agentId":"{{ n_maVGs.outputs.result.objects[0].columns.agentId }}",
 						"modelName":"{{ n_maVGs.outputs.result.objects[0].columns.modelName }}",
 						"modelId":"{{ n_maVGs.outputs.result.objects[0].columns.modelId }}",
+						"provider":"{{ n_maVGs.outputs.result.objects[0].columns.provider }}",
 						"executionCount":"{{ n_maVGs.outputs.result.objects[0].columns.executionCount }}",
+						"inputTokens":"{{ n_maVGs.outputs.result.objects[0].columns.inputTokens }}",
+						"outputTokens":"{{ n_maVGs.outputs.result.objects[0].columns.outputTokens }}",
+						"cacheReadInputTokens":"{{ n_maVGs.outputs.result.objects[0].columns.cacheReadInputTokens }}",
+						"cacheWriteInputTokens":"{{ n_maVGs.outputs.result.objects[0].columns.cacheWriteInputTokens }}",
 						"totalInputTokens":"{{ n_maVGs.outputs.result.objects[0].columns.totalInputTokens }}",
 						"totalOutputTokens":"{{ n_maVGs.outputs.result.objects[0].columns.totalOutputTokens }}",
 						"totalCost":"{{ n_maVGs.outputs.result.objects[0].columns.totalCost }}",
@@ -2043,64 +2089,6 @@
 			"type":"ACTION"
 		},
 		{
-			"additional":{
-				"visibleOptionalFields":[
-					"root.records.items.result.items.customerId",
-					"root.records.items.result.items.customerName",
-					"root.records.items.result.items.modelName",
-					"root.records.items.result.items.modelId",
-					"root.records.items.result.items.executionCount",
-					"root.records.items.result.items.totalInputTokens",
-					"root.records.items.result.items.totalOutputTokens",
-					"root.records.items.result.items.totalCost",
-					"root.records.items.result.items.env"
-				]
-			},
-			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":9974,
-				"resourceName":"storage_by_unifyapps_bulk_create_records",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_68fvK-1",
-			"id":"n_iG6GP",
-			"index":16,
-			"inputs":{
-				"useRawPayload":false,
-				"object_type":"token_usage",
-				"skipIfBlank":false,
-				"records":{
-					"source":"{{ n_YiPJJ.outputs.items }}",
-					"ua:type":"mappedArray",
-					"items":{
-						"result":{
-							"source":"{{ n_YiPJJ.outputs.items[0] }}",
-							"ua:type":"mappedArray",
-							"items":{
-								"customerId":"{{ n_YiPJJ.outputs.items[0].customerId }}",
-								"customerName":"{{ n_YiPJJ.outputs.items[0].customerName }}",
-								"modelName":"{{ n_YiPJJ.outputs.items[0].modelName }}",
-								"modelId":"{{ n_YiPJJ.outputs.items[0].modelId }}",
-								"executionCount":"{{ n_YiPJJ.outputs.items[0].executionCount }}",
-								"totalInputTokens":"{{ n_YiPJJ.outputs.items[0].totalInputTokens }}",
-								"totalOutputTokens":"{{ n_YiPJJ.outputs.items[0].totalOutputTokens }}",
-								"totalCost":"{{ n_YiPJJ.outputs.items[0].totalCost }}",
-								"env":"{{ n_YiPJJ.outputs.items[0].env }}"
-							}
-						}
-					}
-				},
-				"skipUpdate":false
-			},
-			"skip":false,
-			"subTitle":"Storage by UnifyApps",
-			"title":"Create or update records in bulk",
-			"type":"ACTION"
-		},
-		{
 			"context":{
 				"appName":"callables",
 				"resourceVersion":640,
@@ -2108,18 +2096,18 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_JZqQH",
-			"index":17,
+			"index":15,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_undefined",
 				"body":{
 					"result":{
-						"ua:type":"mappedArray",
 						"source":"{{ n_YiPJJ.outputs.items }}",
+						"ua:type":"mappedArray",
 						"items":"{{ n_YiPJJ.outputs.items[0] }}"
 					}
 				},
@@ -2146,5 +2134,5 @@
 		}
 	},
 	"standard":false,
-	"version":20
+	"version":21
 }
