@@ -1,0 +1,55 @@
+{
+	"createdTime":1710232487999,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65f013a7bf333e64fab91b37",
+	"lastModifiedBy":3,
+	"lcName":"test",
+	"modifiedTime":1710234086213,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":2,
+				"connectionId":"65f013f603f60d602ae1163c",
+				"resourceName":"salesforce_on_new_record"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"dJMGZ-1",
+			"id":"dJMGZ",
+			"index":0,
+			"inputs":{
+				"objectSourceResourceName":"salesforce_fetch_object"
+			},
+			"skip":false,
+			"title":"New record",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
