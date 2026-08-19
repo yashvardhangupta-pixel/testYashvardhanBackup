@@ -6,48 +6,75 @@
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_os8Ka",
+			"fromNodeId":"n_PkMN8",
+			"id":"next@n_PkMN8@n_2RMjy",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_9uHrz",
+			"toNodeId":"n_2RMjy",
 			"type":"next"
 		}
 	],
 	"id":"6a856d9ae8e5d4338fc0742f",
 	"lastModifiedBy":196039,
 	"lastPlatformUpdateBy":196039,
-	"lastPlatformUpdateOn":1787129242552,
+	"lastPlatformUpdateOn":1787129287053,
 	"lcName":"test",
-	"modifiedTime":1787129242552,
+	"modifiedTime":1787129287053,
 	"name":"TEST",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":953,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_os8Ka-1",
-			"id":"_os8Ka",
-			"index":0,
+			"id":"n_PkMN8",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"meeting_bot_by_unifyapps",
+				"resourceVersion":3141,
+				"resourceName":"meeting_bot_by_unifyapps_join_meeting",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_os8Ka-1",
-			"id":"_9uHrz",
-			"index":0,
+			"id":"n_2RMjy",
+			"index":2,
+			"inputs":{
+				"botName":"UnifyApps",
+				"autoLeaveMeeting":true,
+				"meetingUrl":"https://meet.google.com/jdb-zuio-atz"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Meeting bot by UnifyApps",
+			"title":"Join meeting",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":196039,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -58,5 +85,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
