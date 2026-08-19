@@ -1,0 +1,83 @@
+{
+	"appsUsed":[
+		"cal"
+	],
+	"createdTime":1738066472893,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"x1DIZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ZNrCe",
+			"type":"next"
+		}
+	],
+	"id":"6798ca281192c97dd18de998",
+	"lastModifiedBy":44096,
+	"lcName":"cal",
+	"modifiedTime":1738066677713,
+	"name":"cal",
+	"nodes":[
+		{
+			"context":{
+				"appName":"cal",
+				"resourceVersion":10,
+				"connectionId":"6798a3252a8f1c2766f77137",
+				"resourceName":"cal_on_create_booking"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"CTqae-1",
+			"id":"x1DIZ",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Cal",
+			"title":"Booking created",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"cal",
+				"resourceVersion":10,
+				"connectionId":"6798a3252a8f1c2766f77137",
+				"resourceName":"cal_create_eventtype",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"CTqae-1",
+			"id":"ZNrCe",
+			"index":0,
+			"inputs":{
+				"length":15,
+				"title":"cal booking trigger test",
+				"slug":"cal booking trigger testing "
+			},
+			"skip":false,
+			"subTitle":"Cal",
+			"title":"Create event type",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":44096,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
