@@ -1,0 +1,55 @@
+{
+	"createdTime":1776740343711,
+	"deleted":false,
+	"description":"Reset Password Interface",
+	"id":"69e6e7f7e5463a496b2d808b",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"sessionId":{
+					"type":"string",
+					"title":"Session Id"
+				},
+				"domain":{
+					"type":"string",
+					"title":"Domain"
+				},
+				"userId":{
+					"type":"string",
+					"title":"User Id"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"reset password",
+	"modifiedTime":1776740343790,
+	"name":"Reset Password",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"email":{
+					"type":"string",
+					"title":"Email"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":false,
+	"version":0
+}
