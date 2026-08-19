@@ -1,0 +1,43 @@
+{
+	"appsUsed":[
+		"eventbrite"
+	],
+	"createdTime":1720083060347,
+	"deleted":true,
+	"description":"1122",
+	"edges":[
+		
+	],
+	"id":"6686627427d8ba447bf8ac73",
+	"lastModifiedBy":520,
+	"lcName":"1122",
+	"modifiedTime":1720083375056,
+	"name":"1122",
+	"nodes":[
+		{
+			"context":{
+				"appName":"eventbrite"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wYf4k-1",
+			"id":"wYf4k",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
