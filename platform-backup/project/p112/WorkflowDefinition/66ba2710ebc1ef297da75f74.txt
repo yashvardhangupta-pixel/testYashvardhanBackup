@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1723475728394,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"K3PkK",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"pxldJ",
+			"type":"next"
+		}
+	],
+	"id":"66ba2710ebc1ef297da75f74",
+	"lastModifiedBy":465,
+	"lcName":"code chat orchestrator - each iteration",
+	"modifiedTime":1723475971197,
+	"name":"Code Chat Orchestrator - Each Iteration",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"K3PkK-1",
+			"id":"K3PkK",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"K3PkK-1",
+			"id":"pxldJ",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":465,
+	"projectId":112,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
