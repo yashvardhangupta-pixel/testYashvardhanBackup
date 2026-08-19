@@ -1,0 +1,859 @@
+{
+	"appsUsed":[
+		"openai",
+		"quickbase",
+		"salesforce",
+		"slack"
+	],
+	"createdTime":1721756475888,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"HsyYc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MSbM1",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"MSbM1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"lWeTl",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"lWeTl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"b4SH4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"b4SH4",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"aePW5",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"b4SH4",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"dxdQs",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"aePW5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"4fp9K",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"dxdQs",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"4fp9K",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"4fp9K",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"8M8uz",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"8M8uz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"LvJw6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"LvJw6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"xHR79",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"xHR79",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DgiBe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"DgiBe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GrLjv",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"GrLjv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"lNl1F",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"lNl1F",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"jYCNT",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"jYCNT",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"DgiBe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"DgiBe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"T9kui",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"T9kui",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"uelvB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"uelvB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ef6TE",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ef6TE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"biBgl",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"biBgl",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"vKRE4",
+			"type":"next"
+		}
+	],
+	"id":"669feb3b8e2b794fc718e82f",
+	"lastModifiedBy":665,
+	"lcName":"sync cpq (quickbase) data in crm (salesforce) (test)",
+	"modifiedTime":1722005830375,
+	"name":"Sync CPQ (Quickbase) data in CRM (Salesforce) (test)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":1039,
+				"connectionId":"66a3812a823c4a3c3d4a371b",
+				"resourceName":"salesforce_on_new_record"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DdX05-1",
+			"id":"HsyYc",
+			"index":0,
+			"inputs":{
+				"objectSourceResourceName":"salesforce_fetch_object",
+				"objectId":"Opportunity"
+			},
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"New record",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"quickbase",
+				"resourceVersion":287,
+				"connectionId":"669e41e130bdf11290fb5eef",
+				"resourceName":"quickbase_search_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DdX05-1",
+			"id":"MSbM1",
+			"index":0,
+			"inputs":{
+				"objectSourceResourceName":"quickbase_fetch_fields",
+				"appId":"budpc53fn",
+				"record":{
+					"8":"{{ HsyYc.outputs.Id }}"
+				},
+				"tableId":"budppbd6w"
+			},
+			"skip":false,
+			"subTitle":"Quickbase",
+			"title":"Search records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":969,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DdX05-1",
+			"id":"lWeTl",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"id",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ HsyYc.outputs.Id }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"salesforce_opp",
+				"page":{
+					"limit":20,
+					"offset":0
+				},
+				"numberOfRecordsToFetch":"MULTIPLE",
+				"includeTotalCount":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Fetch records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":44,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DdX05-1",
+			"id":"b4SH4",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ MSbM1.outputs.metadata.totalRecords }}",
+						"filter":{
+							"operator":"GTE",
+							"value":"1"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Check if opportunity exists",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"quickbase",
+				"resourceVersion":285,
+				"connectionId":"669e41e130bdf11290fb5eef",
+				"resourceName":"quickbase_update_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"b4SH4@DdX05-1@y",
+			"id":"aePW5",
+			"index":0,
+			"inputs":{
+				"recordId":1,
+				"appId":"budpc53fn",
+				"record":{
+					"6":"testing",
+					"7":"{{ HsyYc.outputs.Description }}",
+					"8":"{{ HsyYc.outputs.Id }}",
+					"9":"{{ HsyYc.outputs.StageName }}",
+					"10":"{{ HsyYc.outputs.Amount }}",
+					"12":"{{ HsyYc.outputs.FiscalYear }}",
+					"14":"{{ HsyYc.outputs.ForecastCategory }}",
+					"15":"{{ HsyYc.outputs.LastReferencedDate }}",
+					"17":"{{ HsyYc.outputs.Type }}",
+					"18":"{{ HsyYc.outputs.CloseDate }}",
+					"19":"{{ HsyYc.outputs.Name }}",
+					"20":"{{ HsyYc.outputs.HasOpenActivity }}",
+					"22":"{{ HsyYc.outputs.ExpectedRevenue }}",
+					"23":"{{ HsyYc.outputs.CreatedById }}",
+					"24":"{{ HsyYc.outputs.OwnerId }}",
+					"26":"{{ HsyYc.outputs.PushCount }}",
+					"27":"{{ HsyYc.outputs.FiscalQuarter }}",
+					"28":"{{ HsyYc.outputs.IsDeleted }}",
+					"29":"{{ HsyYc.outputs.StageName }}",
+					"31":"{{ HsyYc.outputs.LastViewedDate }}",
+					"32":"{{ HsyYc.outputs.Probability }}",
+					"33":"{{ HsyYc.outputs.SystemModstamp }}",
+					"34":"{{ HsyYc.outputs.Products__c }}",
+					"35":"{{ HsyYc.outputs.CreatedDate }}",
+					"36":"{{ HsyYc.outputs.HasOverdueTask }}",
+					"37":"{{ HsyYc.outputs.ForecastCategoryName }}",
+					"38":"{{ HsyYc.outputs.IsPrivate }}"
+				},
+				"tableId":"budppbd6w"
+			},
+			"skip":false,
+			"subTitle":"Quickbase",
+			"title":"Update record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"quickbase",
+				"resourceVersion":296,
+				"connectionId":"669e41e130bdf11290fb5eef",
+				"resourceName":"quickbase_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"b4SH4@DdX05-1@n",
+			"id":"dxdQs",
+			"index":0,
+			"inputs":{
+				"appId":"budpc53fn",
+				"record":{
+					"6":"Test"
+				},
+				"tableId":"budppbd6w"
+			},
+			"skip":false,
+			"subTitle":"Quickbase",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":44,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DdX05-1",
+			"id":"4fp9K",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ HsyYc.outputs.StageName }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"Proposal/Price Quote"
+						}
+					},
+					{
+						"property":"{{ lWeTl.outputs.objects[0].properties.SyncedinQuickbase }}",
+						"filter":{
+							"operator":"NOT_EQUAL",
+							"value":"true"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Check opportunity stage",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":980,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"8M8uz",
+			"index":0,
+			"inputs":{
+				"object_type":"salesforce_opp",
+				"record":{
+					"Opp_Id":"{{ HsyYc.outputs.Id }}",
+					"SyncedinQuickbase":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":114,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"LvJw6",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"ui:submitButtonOptions":{
+						"norender":true
+					}
+				},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"productNames":{
+							"type":"string",
+							"title":"Product Names"
+						},
+						"price":{
+							"type":"string",
+							"title":"Price"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"price":"0"
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"productNames":{
+							"type":"string",
+							"title":"Product Names"
+						},
+						"price":{
+							"type":"string",
+							"title":"Price"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":52,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"xHR79",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"output":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Output"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"product":{
+							"type":"string",
+							"title":"Product"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def input = product.split(\";\")\nreturn [\"output\" : input]",
+				"parameters":{
+					"product":"{{ HsyYc.outputs.Products__c }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Split product list",
+			"title":"Execute groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":87,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"DgiBe",
+			"index":0,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ xHR79.outputs.result.output }}"
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each item in the list",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"quickbase",
+				"resourceVersion":303,
+				"connectionId":"669e41e130bdf11290fb5eef",
+				"resourceName":"quickbase_search_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DgiBe@4fp9K@DdX05-1@y@l",
+			"id":"GrLjv",
+			"index":0,
+			"inputs":{
+				"objectSourceResourceName":"quickbase_fetch_fields",
+				"appId":"budpc53fn",
+				"record":{
+					"6":"{{ DgiBe.outputs.item }}"
+				},
+				"tableId":"budp4fbis"
+			},
+			"skip":false,
+			"subTitle":"Quickbase",
+			"title":"Search records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":52,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DgiBe@4fp9K@DdX05-1@y@l",
+			"id":"lNl1F",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"price":{
+							"type":"integer",
+							"title":"Price"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"field":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Field"
+						},
+						"data":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Data"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"def priceId = \"\"\nfor(item in field){\n    if (item.label == \"List Price\"){\n        priceId = item.id\n    }\n}\nreturn [\"price\" : data[0][priceId].value.toInteger()]",
+				"parameters":{
+					"field":{
+						"source":"{{ GrLjv.outputs.fields }}",
+						"ua:type":"mappedArray",
+						"items":"{{ GrLjv.outputs.fields }}"
+					},
+					"data":{
+						"source":"{{ GrLjv.outputs.data }}",
+						"ua:type":"mappedArray",
+						"items":"{{ GrLjv.outputs.data }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Code By UnifyApps",
+			"title":"Execute groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":56,
+				"resourceName":"variable_by_unifyapps_update_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DgiBe@4fp9K@DdX05-1@y@l",
+			"id":"jYCNT",
+			"index":0,
+			"inputs":{
+				"variables":[
+					{
+						"source":"{{ LvJw6.outputs.productNames }}",
+						"value":"=CONCATENATE({{ DgiBe.outputs.item }},CONCATENATE(\" \",{{ LvJw6.outputs.productNames }}))"
+					},
+					{
+						"source":"{{ LvJw6.outputs.price }}",
+						"value":"=sum({{ lNl1F.outputs.result.price }} , {{ LvJw6.outputs.price }})"
+					}
+				]
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Update variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"template_by_unifyapps",
+				"resourceVersion":77,
+				"resourceName":"template_by_unifyapps_compile_template",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"T9kui",
+			"index":0,
+			"inputs":{
+				"input_schema":{
+					"ProductDetails":"{{ LvJw6.outputs.productNames }}",
+					"name":"{{ HsyYc.outputs.Name }}"
+				},
+				"template_id":"e_669f713d1f47916aaa85a7b5"
+			},
+			"skip":false,
+			"subTitle":"Template by UnifyApps",
+			"title":"Compile template",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"openai",
+				"resourceVersion":1053,
+				"connectionId":"666da02691f7657f5f91f12a",
+				"resourceName":"openai_send_message",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"uelvB",
+			"index":0,
+			"inputs":{
+				"response_format":"json_object",
+				"model":"gpt-4o",
+				"message":"{{ T9kui.outputs.output }}"
+			},
+			"skip":false,
+			"subTitle":"OpenAI",
+			"title":"Send message to OpenAI models",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"utility_by_unifyapps",
+				"resourceVersion":12,
+				"resourceName":"utility_by_unifyapps_to_json_object",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"ef6TE",
+			"index":0,
+			"inputs":{
+				"jsonSchema":{
+					"type":"object",
+					"properties":{
+						"suggestedProduct":{
+							"type":"string",
+							"title":"Suggested Product"
+						},
+						"suggestion":{
+							"type":"string",
+							"title":"Suggestion"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"jsonString":"{{ uelvB.outputs.choices[0].message.content }}"
+			},
+			"skip":false,
+			"subTitle":"Utility by UnifyApps",
+			"title":"Deserialize string to json object",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"salesforce",
+				"resourceVersion":1178,
+				"connectionId":"66a3812a823c4a3c3d4a371b",
+				"resourceName":"salesforce_update_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"biBgl",
+			"index":0,
+			"inputs":{
+				"recordId":"{{ HsyYc.outputs.Id }}",
+				"record":{
+					"Amount":"{{ LvJw6.outputs.price }}",
+					"Probability":"{{ HsyYc.outputs.Probability }}",
+					"OrderNumber__c":"{{ HsyYc.outputs.OrderNumber__c }}",
+					"CloseDate":"{{ HsyYc.outputs.CloseDate }}",
+					"Name":"{{ HsyYc.outputs.Name }}",
+					"Products__c":{
+						"source":"{{ HsyYc.outputs.Products__c }}",
+						"ua:type":"mappedArray"
+					},
+					"TotalOpportunityQuantity":"{{ HsyYc.outputs.TotalOpportunityQuantity }}",
+					"Type":"{{ HsyYc.outputs.Type }}",
+					"CurrentGenerators__c":"{{ HsyYc.outputs.CurrentGenerators__c }}",
+					"LeadSource":"{{ HsyYc.outputs.LeadSource }}",
+					"OwnerId":"{{ HsyYc.outputs.OwnerId }}",
+					"StageName":"{{ HsyYc.outputs.StageName }}",
+					"Billing_Frequecy__c":"{{ HsyYc.outputs.Billing_Frequecy__c }}",
+					"Description":"AI suggestions: \n1. {{ ef6TE.outputs.result.suggestedProduct }}\n2. {{ ef6TE.outputs.result.suggestion }}",
+					"AccountId":"{{ HsyYc.outputs.AccountId }}"
+				},
+				"object":"Opportunity"
+			},
+			"skip":false,
+			"subTitle":"Salesforce",
+			"title":"Update record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":1120,
+				"connectionId":"669f67e272db3f6a0129ae77",
+				"resourceName":"slack_post_message_in_channel",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4fp9K@DdX05-1@y",
+			"id":"vKRE4",
+			"index":0,
+			"inputs":{
+				"link_names":true,
+				"messageType":"blocks",
+				"Attach":{
+					"ua:type":"mappedArray",
+					"items":{
+						"attachmentsType":"attachmentBlock",
+						"attachmentsBlock":{
+							"color":"#36a64f",
+							"text":"*Opportunity Name: * {{ HsyYc.outputs.Name }}\n*Product* :{{ LvJw6.outputs.productNames }}\n*Current Price Quotation : * ${{ LvJw6.outputs.price }}\n*AI suggestion: * \n 1.{{ ef6TE.outputs.result.suggestedProduct }}\n2.{{ ef6TE.outputs.result.suggestion }}",
+							"pretext":"*Opportunity Price Quotation *"
+						}
+					}
+				},
+				"channel":"C06R3Q36AJU",
+				"mrkdwn":true
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"Post message",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":602,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":12
+}
