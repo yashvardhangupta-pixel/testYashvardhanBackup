@@ -1,0 +1,421 @@
+{
+	"appsUsed":[
+		"bitbucket"
+	],
+	"createdTime":1717953138084,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"GKfT0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0IKxB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"0IKxB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"oowBP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"oowBP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"VP9Wz",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"VP9Wz",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"ONknE",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"ONknE",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"k9hRH",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"ONknE",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"PeV5M",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"k9hRH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"pPr67",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"PeV5M",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"pPr67",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A",
+					"EXPORT_AS_TEMPLATE",
+					"C",
+					"D",
+					"E",
+					"VIEW_RUNS",
+					"TEST",
+					"V",
+					"DEP"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6665e272ae5bdb2109eddae4",
+	"lastModifiedBy":174,
+	"lcName":"bitbucket_update_issue (do not change) (copy) (copy)",
+	"modifiedTime":1717953184353,
+	"name":"Bitbucket_Update_Issue (Do not change) (Copy) (Copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":34,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GKfT0-1",
+			"id":"GKfT0",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"result":{
+							"type":"boolean",
+							"title":"Result"
+						}
+					},
+					"required":[]
+				},
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"",
+							"filter":{
+								"operator":"EQUAL",
+								"value":""
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"workspaceId":{
+							"type":"string",
+							"title":"Workspace ID"
+						},
+						"repoId":{
+							"type":"string",
+							"title":"Repo ID"
+						},
+						"title":{
+							"type":"string",
+							"title":"Title"
+						},
+						"kind":{
+							"type":"string",
+							"title":"Kind"
+						},
+						"assigneeUsername":{
+							"type":"string",
+							"title":"Assignee username"
+						},
+						"priority":{
+							"type":"string",
+							"title":"Priority"
+						},
+						"content":{
+							"type":"string",
+							"title":"Content"
+						}
+					},
+					"required":[
+						"workspaceId",
+						"title",
+						"kind",
+						"priority"
+					]
+				}
+			},
+			"skip":false,
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"bitbucket",
+				"resourceVersion":19,
+				"connectionId":"663fd9c9274c9545719c4f83",
+				"resourceName":"bitbucket_create_issue",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GKfT0-1",
+			"id":"0IKxB",
+			"index":0,
+			"inputs":{
+				"repoId":"{{ GKfT0.outputs.repoId }}",
+				"assigneeUsername":"{{ GKfT0.outputs.assigneeUsername }}",
+				"kind":"{{ GKfT0.outputs.kind }}",
+				"priority":"{{ GKfT0.outputs.priority }}",
+				"title":"{{ GKfT0.outputs.title }}",
+				"content":"{{ GKfT0.outputs.content }}",
+				"workspaceId":"{{ GKfT0.outputs.workspaceId }}"
+			},
+			"options":{
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"useInMemoryCache":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"STOP"
+			},
+			"skip":false,
+			"subTitle":"Bitbucket",
+			"title":"Create issue",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"bitbucket",
+				"resourceVersion":17,
+				"connectionId":"663fd9c9274c9545719c4f83",
+				"resourceName":"bitbucket_update_issue",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GKfT0-1",
+			"id":"oowBP",
+			"index":0,
+			"inputs":{
+				"repoId":"{{ 0IKxB.outputs.repository.uuid }}",
+				"issueId":"{{ 0IKxB.outputs.id }}",
+				"assigneeUsername":"{{ GKfT0.outputs.assigneeUsername }}",
+				"kind":"{{ 0IKxB.outputs.kind }}",
+				"priority":"{{ 0IKxB.outputs.priority }}",
+				"title":"{{ 0IKxB.outputs.title }}",
+				"content":"{{ 0IKxB.outputs.content.raw }}",
+				"workspaceId":"{{ GKfT0.outputs.workspaceId }}"
+			},
+			"skip":false,
+			"subTitle":"Bitbucket",
+			"title":"Update issue",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"bitbucket",
+				"resourceVersion":23,
+				"connectionId":"663fd9c9274c9545719c4f83",
+				"resourceName":"bitbucket_get_issue",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GKfT0-1",
+			"id":"VP9Wz",
+			"index":0,
+			"inputs":{
+				"repoId":"{{ oowBP.outputs.repository.uuid }}",
+				"issueId":"{{ oowBP.outputs.id }}",
+				"workspaceId":"{{ GKfT0.outputs.workspaceId }}"
+			},
+			"skip":false,
+			"subTitle":"Bitbucket",
+			"title":"Get issue",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":32,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GKfT0-1",
+			"id":"ONknE",
+			"index":0,
+			"inputs":{
+				"filters":[
+					{
+						"filters":[
+							{
+								"property":"{{ GKfT0.outputs.repoId }}",
+								"filter":{
+									"operator":"EQUAL",
+									"value":"{{ oowBP.outputs.repository.uuid }}"
+								}
+							},
+							{
+								"property":"{{ GKfT0.outputs.repoId }}",
+								"filter":{
+									"operator":"EQUAL",
+									"value":"{{ VP9Wz.outputs.repository.uuid }}"
+								}
+							}
+						],
+						"operator":"OR"
+					},
+					{
+						"property":"{{ GKfT0.outputs.title }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"{{ VP9Wz.outputs.title }}"
+						}
+					},
+					{
+						"property":"{{ GKfT0.outputs.content }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"{{ VP9Wz.outputs.content.raw }}"
+						}
+					},
+					{
+						"property":"{{ GKfT0.outputs.priority }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"{{ VP9Wz.outputs.priority }}"
+						}
+					},
+					{
+						"property":"{{ GKfT0.outputs.kind }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"{{ VP9Wz.outputs.kind }}"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":30,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ONknE@GKfT0-1@y",
+			"id":"k9hRH",
+			"index":0,
+			"inputs":{
+				"result":{
+					"jhvgyuj":true,
+					"result":true
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":30,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ONknE@GKfT0-1@n",
+			"id":"PeV5M",
+			"index":0,
+			"inputs":{
+				"result":{
+					"result":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"GKfT0-1",
+			"id":"pPr67",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
