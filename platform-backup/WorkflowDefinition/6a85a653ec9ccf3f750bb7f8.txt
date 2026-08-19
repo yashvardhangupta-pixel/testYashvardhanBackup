@@ -1,53 +1,113 @@
 {
 	"appsUsed":[
-		
+		"google_workspace"
 	],
 	"createdTime":1787143763146,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_sacjn",
+			"fromNodeId":"n_dyIs3",
+			"id":"next@n_dyIs3@n_qtXMB",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_h3OPy",
+			"toNodeId":"n_qtXMB",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_qtXMB",
+			"id":"next@n_qtXMB@n_uNVZk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_uNVZk",
 			"type":"next"
 		}
 	],
 	"id":"6a85a653ec9ccf3f750bb7f8",
 	"lastModifiedBy":2721,
 	"lastPlatformUpdateBy":2721,
-	"lastPlatformUpdateOn":1787143763146,
+	"lastPlatformUpdateOn":1787143832347,
 	"lcName":"webhook_on-newuser",
-	"modifiedTime":1787143763146,
+	"modifiedTime":1787143832347,
 	"name":"Webhook_on-newuser",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":953,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_sacjn-1",
-			"id":"_sacjn",
-			"index":0,
+			"id":"n_dyIs3",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"userid":{
+								"type":"string",
+								"title":"Userid"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					}
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"google_workspace",
+				"resourceVersion":13884,
+				"connectionId":"6a8578d9b1715b19c1f29ee8",
+				"resourceName":"google_workspace_get_user",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_sacjn-1",
-			"id":"_h3OPy",
-			"index":0,
+			"id":"n_qtXMB",
+			"index":2,
+			"inputs":{
+				"userKey":"{{ n_dyIs3.outputs.body.userid }}"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Workspace",
+			"title":"Get user",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_sacjn-1",
+			"id":"n_uNVZk",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -58,5 +118,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
