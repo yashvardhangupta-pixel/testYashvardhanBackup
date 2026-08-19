@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"whatsapp"
+	],
+	"createdTime":1721130668525,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"66965eac06268e7f2b7a0077",
+	"lastModifiedBy":1866,
+	"lcName":"untitled",
+	"modifiedTime":1721130686523,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"whatsapp"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WJTWJ-1",
+			"id":"WJTWJ",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":1866,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
