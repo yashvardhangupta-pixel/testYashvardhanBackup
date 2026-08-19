@@ -1,0 +1,54 @@
+{
+	"createdTime":1776499526668,
+	"deleted":true,
+	"description":"cool",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A",
+					"C",
+					"S",
+					"D",
+					"E",
+					"V"
+				],
+				"principalIds":[
+					"198040"
+				],
+				"principalType":"USER"
+			}
+		]
+	},
+	"id":"69e33b46b155987cbcecfbec",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":175325,
+	"lcName":"rbacqaselect all automationinterfaceysrixlzylq",
+	"modifiedTime":1776499787774,
+	"name":"rbacQAselect all AutomationInterfaceYsrIXLZylQ",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":175325,
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
