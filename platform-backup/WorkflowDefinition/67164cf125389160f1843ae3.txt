@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		"monday"
+	],
+	"createdTime":1729514737466,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1729514772409,
+		"deployedBy":12,
+		"deployedDefinitionId":"67164d1425389160f1843b1b",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"67164cf125389160f1843ae3",
+	"lastModifiedBy":12,
+	"lcName":"qwert",
+	"modifiedTime":1732879940191,
+	"name":"qwert",
+	"nodes":[
+		{
+			"context":{
+				"appName":"monday",
+				"resourceVersion":20,
+				"connectionId":"66fb877e06736259bdd94799",
+				"resourceName":"monday_on_new_item_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_MByqB-1",
+			"id":"_qHIPg",
+			"index":0,
+			"inputs":{
+				"intervalType":"minutes",
+				"boardId":"1442961041",
+				"interval":5,
+				"from":"1727959500000"
+			},
+			"skip":false,
+			"subTitle":"Monday",
+			"title":"New item",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":12,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
