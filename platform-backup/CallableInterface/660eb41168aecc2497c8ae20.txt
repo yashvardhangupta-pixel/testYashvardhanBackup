@@ -1,0 +1,33 @@
+{
+	"createdTime":1712239633879,
+	"deleted":true,
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"660eb41168aecc2497c8ae20",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"$schema":"http://json-schema.org/draft-07/schema#"
+		}
+	},
+	"modifiedTime":1712239650119,
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"$schema":"http://json-schema.org/draft-07/schema#"
+		}
+	},
+	"ownerUserId":188,
+	"standard":false,
+	"version":1
+}
