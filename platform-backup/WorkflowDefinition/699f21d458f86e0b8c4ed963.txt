@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1772036564391,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_Ps23W",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_beRlh",
+			"type":"next"
+		}
+	],
+	"id":"699f21d458f86e0b8c4ed963",
+	"lastModifiedBy":175510,
+	"lcName":"test22",
+	"modifiedTime":1772036610231,
+	"name":"test22",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ps23W-1",
+			"id":"_Ps23W",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Ps23W-1",
+			"id":"_beRlh",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
