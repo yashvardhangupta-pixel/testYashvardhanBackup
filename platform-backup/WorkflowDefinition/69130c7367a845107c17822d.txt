@@ -1,0 +1,199 @@
+{
+	"appsUsed":[
+		"sap_successfactors"
+	],
+	"createdTime":1767695237924,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1767695238038,
+		"deployedBy":191574,
+		"deployedDefinitionId":"695ce3854f6c6d7f36b566e0",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":6
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_DAOZB",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_18Sl6",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_18Sl6",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_GGuTl",
+			"type":"next"
+		}
+	],
+	"id":"69130c7367a845107c17822d",
+	"lastModifiedBy":191574,
+	"lcName":"yoda| book leaves via sap successfactors 2/2",
+	"modifiedTime":1770715593549,
+	"name":"YODA| Book leaves via SAP SuccessFactors 2/2",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":223,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Rg6nB-1",
+			"id":"n_DAOZB",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"leaves":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"userId":{
+										"type":"string",
+										"title":"User Id"
+									},
+									"LeaveType":{
+										"type":"string",
+										"title":"Leave Type"
+									},
+									"startDate":{
+										"type":"string",
+										"format":"date",
+										"title":"Start Date",
+										"disablePast":false
+									},
+									"endDate":{
+										"type":"string",
+										"title":"End Date"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Leaves"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"LeaveType":{
+							"type":"string",
+							"title":"Leave Type"
+						},
+						"startDate":{
+							"type":"string",
+							"format":"date",
+							"title":"Start Date",
+							"disablePast":false
+						},
+						"endDate":{
+							"type":"string",
+							"format":"date",
+							"title":"End Date",
+							"disablePast":false
+						},
+						"employeeId":{
+							"type":"string",
+							"title":"Employee Id"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"sap_successfactors",
+				"resourceVersion":1802,
+				"connectionId":"68720c4098bb3e73b81e9738",
+				"resourceName":"sap_successfactors_book_leaves",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Rg6nB-1",
+			"id":"n_18Sl6",
+			"index":2,
+			"inputs":{
+				"endDate":"{{ n_DAOZB.outputs.endDate }}",
+				"timeType":"{{ n_DAOZB.outputs.LeaveType }}",
+				"userId":"{{ n_DAOZB.outputs.employeeId }}",
+				"startDate":"{{ n_DAOZB.outputs.startDate }}"
+			},
+			"skip":false,
+			"subTitle":"SAP SuccessFactors",
+			"title":"Book leaves",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":224,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Rg6nB-1",
+			"id":"n_GGuTl",
+			"index":3,
+			"inputs":{
+				"result":{
+					"leaves":{
+						"items":{
+							"userId":"{{ n_18Sl6.outputs.d.userId }}",
+							"LeaveType":"{{ n_18Sl6.outputs.d.__metadata.type }}",
+							"startDate":"{{ n_18Sl6.outputs.d.startDate }}",
+							"endDate":"{{ n_18Sl6.outputs.d.endDate }}"
+						},
+						"ua:type":"mappedArray",
+						"source":"{{ n_18Sl6.outputs.d }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":191574,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":7
+}
