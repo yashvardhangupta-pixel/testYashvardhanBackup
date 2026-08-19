@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"schedule"
+	],
+	"createdTime":1721800139404,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"66a095cb0d68db0b4c80c2f6",
+	"lastModifiedBy":295,
+	"lcName":"untitled",
+	"modifiedTime":1721800201249,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"IW2N7-1",
+			"id":"IW2N7",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":295,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
