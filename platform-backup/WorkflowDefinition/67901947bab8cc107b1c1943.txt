@@ -1,0 +1,134 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1737496903215,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"PinPJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"TkYUc",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"TkYUc",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"BkDgN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"BkDgN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"4rpUY",
+			"type":"next"
+		}
+	],
+	"id":"67901947bab8cc107b1c1943",
+	"lastModifiedBy":557,
+	"lcName":"test (copy)",
+	"modifiedTime":1738667364189,
+	"name":"test (copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":175,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vXlau-1",
+			"id":"PinPJ",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"files_by_unifyapps",
+				"resourceVersion":144,
+				"resourceName":"files_by_unifyapps_upload_file",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vXlau-1",
+			"id":"TkYUc",
+			"index":0,
+			"inputs":{
+				"fileName":"test.xlsb",
+				"url":"https://s3.ap-south-1.amazonaws.com/qa.unifyapps.com.cloudstorage.1/user-uploads/1/_m67n48nf-Ageing_%285%29.xlsb?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ASIAX6VW4ASVY57VOC7C%2F20250122%2Fap-south-1%2Fs3%2Faws4_request&X-Amz-Date=20250122T082637Z&X-Amz-Expires=3600&X-Amz-Security-Token=IQoJb3JpZ2luX2VjENj%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCmFwLXNvdXRoLTEiRzBFAiAMlIxyGUfAU0dAjXgq8VPbnOSGrxHWhXbMxjX2uYBb%2BwIhAJAXdQJB2OoT8C0VDd74LqiU8LA59CX4ZZUB7KnQEdA1KscFCNH%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEQABoMNTQ2OTE4MTA2MjgzIgxWQO6Zw2wiCV1uBUEqmwV%2B2kIhJjnQKXdeVIbyCA0eSEYW65O5%2B09OL3KZZdYw9s1lGbewd7WXKRjr6kpa%2F8RPa8cNxTdzA0M3nKPeKWrPOlLm0dn3NaH3PwjbgMNyd7FQNOdYlKiuCZRor%2FSWkiUqVCx8BYoenFswZln4sgqdDpzNPiRxhwXCXuPC8hPGYnHLo6nryZIJLCWmMGC6weTSm4XuxSfx4kSYo03X5CjDreRnV%2BjwR6A8cqR7T3Zem00cYgJua553VB76c%2FUwaRsf%2Fa1ItArq1YO%2B6fudlAvrA1XOoauKTIBYtDMAG%2FxeW7m1oJF0%2BUOQFm8ZJDr6vC78YoKJDP9XQdXOzfKpAVNjNkB8ufwDJoE3ee2uA4gOB4bobjuz3T0v2JzKbBz0RQS6mnUttBFlmSjBkJWaSrTJ6bkStlMWEBFTZ7S7QES7QStnOVCJ7aFYSjILAmY8UetdLJPGbsHVmrv84H5pRlmDDwQIvpT5R6QtOQ8%2B5LtXFsHdIJpubUrIz3yB461Uqbv%2BG2zA4bvH988%2ByfgC8jLg0LX1reEtVUicGX%2BQjLw%2FN8P208OEBulY0yadCLaAJOS7e2thoBhzVaL%2FwsUSsQuMN4rZJ316abbhN12Y4gGZoDw3pA7H4DaHbC5lMJ0yQEvH8TL1eKWzCh0ObClMEWlNLgI0ctxlfIyOWEKX%2FNbrf89Ge%2F1XsYQ7m%2BEB1Tv8wWp6%2BC6ESZO4GZmEG53obLaCiGOmQqUnzuLDIdWGPNwTdlWebRNeZcJA96eVy0dDxI9k1KecO0PMcTgkE1hkHcCqs095knyYb9Bb6Vb0hOyZiRg%2F8mW2F%2BUmQUIGdnqQ1iQYPcxKvky8CR%2BV0X%2BgJCOy6eot3KYSIqvNOkrmTQc6WDx%2FMkXNQavFLqeJMN%2FFwrwGOrEBUWf7R13M4TBP36n%2BmD4Q1gdztIqDfUjgzW3UOSqtVtibs8N9kh%2BDwW5yXPognaXhMVKPPEikUBhz9b%2FJWe%2FbAHw4vAlAK2Z%2ByD84ubyKE%2Bp%2BP6snwj3sNiyPkexMpwpKdlLrkJzdAMVVxow%2BAx3%2BWUbEkYUlf9WP5yq80d%2Be5nhfWjXJzBHmURRiDqOcAlSJNwHXqg4TC44OWo82Oc5o%2FkxBRS7mMpEkvklasDKEoMFz&X-Amz-Signature=acec3bb490e87f11ba5eef4a1ac37668263028068f1e3bc193d354c8ee44ccc2&X-Amz-SignedHeaders=host&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+				"option":"url"
+			},
+			"skip":false,
+			"subTitle":"Files by UnifyApps",
+			"title":"Upload file",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"excel_by_unifyapps",
+				"resourceVersion":37,
+				"resourceName":"excel_by_unifyapps_excel_file_converter",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vXlau-1",
+			"id":"BkDgN",
+			"index":0,
+			"inputs":{
+				"sourceFileType":"xlsb",
+				"file":"{{ TkYUc.outputs.fileDetails }}",
+				"targetFileType":"xlsx"
+			},
+			"skip":false,
+			"subTitle":"Excel by UnifyApps",
+			"title":"Convert excel file to specified excel format",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vXlau-1",
+			"id":"4rpUY",
+			"index":0,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":557,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":15
+}
