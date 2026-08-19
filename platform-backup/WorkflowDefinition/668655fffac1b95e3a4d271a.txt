@@ -1,0 +1,76 @@
+{
+	"appsUsed":[
+		"box"
+	],
+	"createdTime":1720079871288,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"y94VX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"MEUS0",
+			"type":"next"
+		}
+	],
+	"id":"668655fffac1b95e3a4d271a",
+	"lastModifiedBy":303,
+	"lcName":"box all actions",
+	"modifiedTime":1720080637744,
+	"name":"Box all actions",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":44,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"y94VX-1",
+			"id":"y94VX",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"title":"Http Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"box",
+				"resourceVersion":133,
+				"connectionId":"662652f34c8dd65ff76994b9",
+				"resourceName":"box_list_sign_requests_in_batch",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"y94VX-1",
+			"id":"MEUS0",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Box",
+			"title":"List sign requests",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":303,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":5
+}
