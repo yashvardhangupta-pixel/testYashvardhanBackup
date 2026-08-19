@@ -1,0 +1,432 @@
+{
+	"appsUsed":[
+		"microsoft_calendar"
+	],
+	"createdTime":1767695235027,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1767695235324,
+		"deployedBy":191574,
+		"deployedDefinitionId":"695ce3834f6c6d7f36b566c5",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":5
+	},
+	"description":"Lists events for specific calendar in Microsoft Calendar",
+	"edges":[
+		{
+			"fromNodeId":"n_Ecx2G",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_DmdSj",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DmdSj",
+			"name":"error",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_nnhMn",
+			"type":"error"
+		},
+		{
+			"fromNodeId":"n_nnhMn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_jCkXe",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_jCkXe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_zRtdQ",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_DmdSj",
+			"name":"success",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dY9QV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_zRtdQ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_dY9QV",
+			"type":"next"
+		}
+	],
+	"id":"6936c1e1fa1a9b10b88a18c0",
+	"lastModifiedBy":191574,
+	"lcName":"yoda| list events via microsoft calendar 2/2",
+	"modifiedTime":1770715694243,
+	"name":"YODA| List events via Microsoft Calendar 2/2",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":130,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0Zaf8-1",
+			"id":"n_Ecx2G",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"eventList":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"eventId":{
+										"type":"string",
+										"title":"Event Id"
+									},
+									"location":{
+										"type":"string",
+										"title":"Location"
+									},
+									"isMeetingOnline":{
+										"type":"string",
+										"title":"Is Meeting Online"
+									},
+									"startTimeZone":{
+										"type":"string",
+										"title":"Start Time Zone"
+									},
+									"endTimeZone":{
+										"type":"string",
+										"title":"End Time Zone"
+									},
+									"startDateTime":{
+										"type":"string",
+										"format":"date",
+										"title":"Start Date Time",
+										"disablePast":false
+									},
+									"endDateTime":{
+										"type":"string",
+										"format":"date",
+										"title":"End Date Time",
+										"disablePast":false
+									},
+									"onlineMeetingUrl":{
+										"type":"string",
+										"title":"Online Meeting Url"
+									},
+									"attendees":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{},
+											"additionalProperties":false
+										},
+										"title":"Attendees"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Event List"
+						},
+						"connectionId":{
+							"type":"string",
+							"title":"Connection Id"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"calendarId":{
+							"type":"string",
+							"title":"Calendar Id"
+						},
+						"startDate":{
+							"type":"string",
+							"format":"date",
+							"title":"Start Date",
+							"disablePast":false
+						},
+						"endDate":{
+							"type":"string",
+							"format":"date",
+							"title":"End Date",
+							"disablePast":false
+						},
+						"timeZone":{
+							"type":"string",
+							"title":"Time Zone"
+						},
+						"connectionId":{
+							"type":"string",
+							"title":"Connection Id"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"microsoft_calendar",
+				"resourceVersion":1031,
+				"connectionId":"689c3914e436001bc18e4066",
+				"resourceName":"microsoft_calendar_list_events",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"MANUAL",
+			"groupId":"_0Zaf8-1",
+			"id":"n_DmdSj",
+			"index":2,
+			"inputs":{
+				"calendarId":"{{ n_Ecx2G.outputs.calendarId }}"
+			},
+			"options":{
+				"bulkheadConfig":{
+					"enabled":false,
+					"maxLeaseTimeUnit":"SECONDS",
+					"maxWaitDurationUnit":"SECONDS"
+				},
+				"businessHoursConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"cacheConfig":{
+					"enabled":false,
+					"usagePolicy":"ALWAYS",
+					"useInMemoryCache":false
+				},
+				"circuitBreakerConfig":{
+					"enabled":false
+				},
+				"disableLogging":false,
+				"enabledForReExecution":false,
+				"hookConfig":{
+					"enabled":false,
+					"postHooks":[
+						
+					],
+					"preHooks":[
+						
+					]
+				},
+				"logConfig":{
+					"enabled":false,
+					"logPolicies":[
+						
+					]
+				},
+				"rateLimitConfig":{
+					"enabled":false,
+					"waitForNextWindow":false
+				},
+				"retryConfig":{
+					"backOffFactor":null,
+					"captureRetries":false,
+					"enabled":false
+				},
+				"stepError":"MANUAL",
+				"telemetryConfig":{
+					"enableTelemetry":false,
+					"metricConfigs":[
+						
+					]
+				},
+				"timeoutConfig":{
+					"enabled":false
+				}
+			},
+			"skip":false,
+			"subTitle":"Microsoft Calendar",
+			"title":"List events",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":404,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_DmdSj@_0Zaf8-1@error",
+			"id":"n_nnhMn",
+			"index":3,
+			"inputs":{
+				"automationId":"6936b1db0f9c7935ea115ddf",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"connectionId":"{{ n_Ecx2G.outputs.connectionId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":404,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_DmdSj@_0Zaf8-1@error",
+			"id":"n_jCkXe",
+			"index":4,
+			"inputs":{
+				"automationId":"68f07c70acdb9a0aa1e004b3",
+				"runtimeConnections":{
+					"microsoft_calendar":"{{ n_nnhMn.outputs.connectionId }}"
+				},
+				"synchronous":true,
+				"version":"-1",
+				"parameters":{
+					"calendarId":"{{ n_Ecx2G.outputs.calendarId }}",
+					"startDate":"{{ n_Ecx2G.outputs.startDate }}",
+					"endDate":"{{ n_Ecx2G.outputs.endDate }}",
+					"timeZone":"{{ n_Ecx2G.outputs.timeZone }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":405,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"n_DmdSj@_0Zaf8-1@error",
+			"id":"n_zRtdQ",
+			"index":5,
+			"inputs":{
+				"result":{
+					"eventList":{
+						"source":"{{ n_jCkXe.outputs.eventList }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"eventId":"{{ n_jCkXe.outputs.eventList[0].eventId }}",
+							"location":"{{ n_jCkXe.outputs.eventList[0].location }}",
+							"isMeetingOnline":"{{ n_jCkXe.outputs.eventList[0].isMeetingOnline }}",
+							"startTimeZone":"{{ n_jCkXe.outputs.eventList[0].startTimeZone }}",
+							"endTimeZone":"{{ n_jCkXe.outputs.eventList[0].endTimeZone }}",
+							"startDateTime":"{{ n_jCkXe.outputs.eventList[0].startDateTime }}",
+							"endDateTime":"{{ n_jCkXe.outputs.eventList[0].endDateTime }}",
+							"onlineMeetingUrl":"{{ n_jCkXe.outputs.eventList[0].onlineMeetingUrl }}",
+							"attendees":{
+								"source":"{{ n_jCkXe.outputs.eventList[0].attendees }}",
+								"ua:type":"mappedArray",
+								"items":"{{ n_jCkXe.outputs.eventList[0].attendees[0] }}"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":131,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0Zaf8-1",
+			"id":"n_dY9QV",
+			"index":6,
+			"inputs":{
+				"result":{
+					"eventList":{
+						"source":"{{ n_DmdSj.outputs.value }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"startDateTime":"{{ n_DmdSj.outputs.value[0].start.dateTime }}",
+							"endDateTime":"{{ n_DmdSj.outputs.value[0].end.dateTime }}",
+							"eventId":"{{ n_DmdSj.outputs.value[0].id }}",
+							"location":"{{ n_DmdSj.outputs.value[0].locations[0].displayName }}",
+							"isMeetingOnline":"{{ n_DmdSj.outputs.value[0].isOnlineMeeting }}",
+							"startTimeZone":"{{ n_DmdSj.outputs.value[0].start.timeZone }}",
+							"endTimeZone":"{{ n_DmdSj.outputs.value[0].end.timeZone }}",
+							"onlineMeetingUrl":"{{ n_DmdSj.outputs.value[0].onlineMeetingUrl }}",
+							"attendees":{
+								"source":"{{ n_DmdSj.outputs.value[0].attendees }}",
+								"ua:type":"mappedArray",
+								"items":"{{ n_DmdSj.outputs.value[0].attendees[0] }}"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":191574,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"YODA"
+	],
+	"version":6
+}
