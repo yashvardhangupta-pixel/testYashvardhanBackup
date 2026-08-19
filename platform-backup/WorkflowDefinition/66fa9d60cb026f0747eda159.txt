@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1727700320626,
+	"deleted":true,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"hDlwf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Pei4T",
+			"type":"next"
+		}
+	],
+	"id":"66fa9d60cb026f0747eda159",
+	"lastModifiedBy":520,
+	"lcName":"cutandpasteloopnode_117277002746910",
+	"modifiedTime":1727700327949,
+	"name":"cutAndPasteLoopNode_117277002746910",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"hDlwf-1",
+			"id":"hDlwf",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"hDlwf-1",
+			"id":"Pei4T",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
