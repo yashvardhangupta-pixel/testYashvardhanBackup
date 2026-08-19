@@ -1,0 +1,43 @@
+{
+	"createdTime":1718455099134,
+	"deleted":false,
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"666d8b3bf38de224c9913b6f",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"type":"object",
+			"properties":{
+				"responseHandler":{
+					"type":"string",
+					"title":"responseHandler"
+				},
+				"caseId":{
+					"type":"string",
+					"title":"caseId"
+				},
+				"params":{
+					"type":"object",
+					"title":"params"
+				}
+			}
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"test lovekesh interface",
+	"modifiedTime":1721681271173,
+	"name":"Test Lovekesh Interface",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":311,
+	"standard":false,
+	"version":2
+}
