@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721327539381,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"66995fb3fc006024b22bf888",
+	"lastModifiedBy":533,
+	"lcName":"untitled",
+	"modifiedTime":1721327556700,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"streams_by_unifyapps"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FgLlS-1",
+			"id":"FgLlS",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":533,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
