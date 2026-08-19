@@ -1,0 +1,53 @@
+{
+	"appsUsed":[
+		"quaderno"
+	],
+	"createdTime":1740121404444,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"67b8253cd1df4128e9a699b7",
+	"lastModifiedBy":45775,
+	"lcName":"afsg",
+	"modifiedTime":1740122079034,
+	"name":"afsg",
+	"nodes":[
+		{
+			"context":{
+				"appName":"quaderno",
+				"resourceVersion":36,
+				"connectionId":"67a99a7658770b7ae79bca3b",
+				"resourceName":"quaderno_on_new_contact"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"g1tAP-1",
+			"id":"CROSl",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Quaderno",
+			"title":"New contact",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":45775,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
