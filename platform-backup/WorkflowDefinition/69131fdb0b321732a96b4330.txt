@@ -1,0 +1,213 @@
+{
+	"appsUsed":[
+		"sap_successfactors"
+	],
+	"createdTime":1767695227747,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1767695227922,
+		"deployedBy":191574,
+		"deployedDefinitionId":"695ce37b4f6c6d7f36b5664e",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":4
+	},
+	"edges":[
+		{
+			"fromNodeId":"n_eQs3s",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_a2DpS",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_a2DpS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sKBuf",
+			"type":"next"
+		}
+	],
+	"id":"69131fdb0b321732a96b4330",
+	"lastModifiedBy":191574,
+	"lcName":"yoda| query leaves via sap successfactors",
+	"modifiedTime":1770716328536,
+	"name":"YODA| Query leaves via SAP SuccessFactors",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":227,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fqVLF-1",
+			"id":"n_eQs3s",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"leaves":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"userId":{
+										"type":"string",
+										"title":"User Id"
+									},
+									"timeType":{
+										"type":"string",
+										"title":"Time Type"
+									},
+									"startDate":{
+										"type":"string",
+										"format":"date",
+										"title":"Start Date",
+										"disablePast":false
+									},
+									"endDate":{
+										"type":"string",
+										"format":"date",
+										"title":"End Date",
+										"disablePast":false
+									},
+									"approvalStatus":{
+										"type":"string",
+										"title":"Approval Status"
+									},
+									"quantityInDays":{
+										"type":"string",
+										"title":"Quantity In Days"
+									},
+									"createdDateTime":{
+										"type":"string",
+										"title":"Created Date Time"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Leaves"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"employeeId":{
+							"type":"string",
+							"title":"Employee Id"
+						},
+						"startDate":{
+							"type":"string",
+							"format":"date",
+							"title":"Start Date",
+							"disablePast":false
+						},
+						"endDate":{
+							"type":"string",
+							"format":"date",
+							"title":"End Date",
+							"disablePast":false
+						},
+						"LeaveType":{
+							"type":"string",
+							"title":"Leave Type"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"sap_successfactors",
+				"resourceVersion":1808,
+				"connectionId":"68720c4098bb3e73b81e9738",
+				"resourceName":"sap_successfactors_query_leaves",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fqVLF-1",
+			"id":"n_a2DpS",
+			"index":2,
+			"inputs":{
+				"select":"externalCode,userId,timeType,startDate,endDate,approvalStatus,quantityInDays,quantityInHours,comment,workflowRequestId,createdBy,createdDateTime,lastModifiedBy,lastModifiedDateTime,absenceDurationCategory,displayQuantity,deductionQuantity,editable"
+			},
+			"skip":false,
+			"subTitle":"SAP SuccessFactors",
+			"title":"Query leaves",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":228,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_fqVLF-1",
+			"id":"n_sKBuf",
+			"index":3,
+			"inputs":{
+				"result":{
+					"leaves":{
+						"items":{
+							"userId":"{{ n_a2DpS.outputs.d.results[0].userId }}",
+							"timeType":"{{ n_a2DpS.outputs.d.results[0].timeType }}",
+							"startDate":"{{ n_a2DpS.outputs.d.results[0].startDate }}",
+							"endDate":"{{ n_a2DpS.outputs.d.results[0].endDate }}",
+							"approvalStatus":"{{ n_a2DpS.outputs.d.results[0].approvalStatus }}",
+							"quantityInDays":"{{ n_a2DpS.outputs.d.results[0].quantityInDays }}",
+							"createdDateTime":"{{ n_a2DpS.outputs.d.results[0].createdDateTime }}"
+						},
+						"ua:type":"mappedArray",
+						"source":"{{ n_a2DpS.outputs.d.results }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":191574,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
