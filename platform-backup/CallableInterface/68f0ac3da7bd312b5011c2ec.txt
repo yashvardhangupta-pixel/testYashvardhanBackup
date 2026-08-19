@@ -1,0 +1,33 @@
+{
+	"createdTime":1760603197824,
+	"deleted":false,
+	"description":"as",
+	"id":"68f0ac3da7bd312b5011c2ec",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":643,
+	"lcName":"sasrrsastt",
+	"modifiedTime":1760603365591,
+	"name":"sasrrsastt",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":643,
+	"standard":false,
+	"version":3
+}
