@@ -1,0 +1,49 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1740992604238,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"67c5705c0fe4f5007b3e0de9",
+	"lastModifiedBy":30410,
+	"lcName":"test",
+	"modifiedTime":1740992938124,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4q2WL-1",
+			"id":"KemON",
+			"index":0,
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":30410,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
