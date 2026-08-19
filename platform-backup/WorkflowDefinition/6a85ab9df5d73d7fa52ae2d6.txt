@@ -4,6 +4,15 @@
 	],
 	"createdTime":1787145117653,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1787145200193,
+		"deployedBy":557,
+		"deployedDefinitionId":"6a85abf032827a0a2e039938",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_vabaN",
@@ -17,9 +26,9 @@
 	"id":"6a85ab9df5d73d7fa52ae2d6",
 	"lastModifiedBy":557,
 	"lastPlatformUpdateBy":557,
-	"lastPlatformUpdateOn":1787145196921,
+	"lastPlatformUpdateOn":1787145231681,
 	"lcName":"tets",
-	"modifiedTime":1787145196921,
+	"modifiedTime":1787145231681,
 	"name":"tets",
 	"nodes":[
 		{
@@ -36,7 +45,18 @@
 			"index":1,
 			"inputs":{
 				"request":{
-					"contentType":"application/json"
+					"contentType":"application/json",
+					"queryParams":{
+						"type":"object",
+						"additionalProperties":false,
+						"required":[],
+						"properties":{
+							"test":{
+								"type":"string",
+								"title":"Test"
+							}
+						}
+					}
 				}
 			},
 			"skip":false,
@@ -117,5 +137,5 @@
 		}
 	},
 	"standard":false,
-	"version":2
+	"version":3
 }
