@@ -1,0 +1,308 @@
+{
+	"appsUsed":[
+		"slack"
+	],
+	"createdTime":1770186590651,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1770186590858,
+		"deployedBy":195389,
+		"deployedDefinitionId":"6982e75e67310b201e7b9faf",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"h77A8",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"E3AuG",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"E3AuG",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"OA6Rx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"OA6Rx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_BQoJf",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"_BQoJf",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"0vkKV",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"0vkKV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"J8f9q",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"J8f9q",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"2e5Ob",
+			"type":"next"
+		}
+	],
+	"id":"6982e75e67310b201e7b9fae",
+	"lastModifiedBy":195389,
+	"lcName":"ai agent(slack deployment)",
+	"modifiedTime":1770186863393,
+	"name":"AI Agent(Slack Deployment)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":1166,
+				"connectionId":"6982e5e22bf1f854c09528de",
+				"resourceName":"slack_on_new_message"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WXTwJ-1",
+			"id":"h77A8",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"{{ h77A8.outputs.authorizations[0].is_bot }}",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"true"
+							}
+						},
+						{
+							"property":"{{ h77A8.outputs.event.bot_id }}",
+							"filter":{
+								"operator":"MISSING"
+							}
+						},
+						{
+							"property":"{{ h77A8.outputs.event.bot_profile.id }}",
+							"filter":{
+								"operator":"MISSING"
+							}
+						},
+						{
+							"property":"{{ h77A8.outputs.event.subtype }}",
+							"filter":{
+								"operator":"NOT_EQUAL",
+								"value":"message_deleted"
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"subTitle":"Slack",
+			"title":"On new message",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":15,
+				"resourceName":"standard_entities_get_connection_details",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WXTwJ-1",
+			"id":"E3AuG",
+			"index":0,
+			"inputs":{
+				"connectionIds":"6982e5e22bf1f854c09528de"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Get connection details",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":54,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WXTwJ-1",
+			"id":"OA6Rx",
+			"index":0,
+			"inputs":{
+				"automationId":"66eb1eb00218a31ea6a5e00c",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"parameters":{
+					"eventId":"{{ h77A8.outputs.event_id }}",
+					"channel":"{{ h77A8.outputs.event.channel }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":89,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WXTwJ-1",
+			"id":"_BQoJf",
+			"index":0,
+			"inputs":{
+				"automationId":"674afe5adefb851816d61959",
+				"runtimeConnections":{},
+				"synchronous":true,
+				"parameters":{
+					"caseAssociationType":"PREVIOUS_FAN_MESSAGE_IN_ONE_DAY",
+					"triggeredFromAutomationId":"{{ __RUN__.outputs.workflowId }}",
+					"messageType":"FAN",
+					"fromCustomerUserId":"{{ h77A8.outputs.event.user }}",
+					"toCustomerUserId":"e_6982e5d4fa444269480767cc",
+					"channelSpecificUserId":"{{ h77A8.outputs.event.user }}",
+					"channelName":"slack",
+					"text":"{{ h77A8.outputs.event.text }}",
+					"triggerInput":"{{ h77A8.outputs }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Case management",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WXTwJ-1",
+			"id":"0vkKV",
+			"index":0,
+			"inputs":{
+				"automationId":"66acfe1b663a6211bbc40233",
+				"runtimeConnections":{
+					"slack":"6982e5e22bf1f854c09528de"
+				},
+				"synchronous":true,
+				"parameters":{
+					"userId":"{{ h77A8.outputs.event.user }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":1012,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WXTwJ-1",
+			"id":"J8f9q",
+			"index":0,
+			"inputs":{
+				"object_type":"slack_agent_message",
+				"record":{
+					"isBot":false,
+					"message":"{{ h77A8.outputs.event.text }}",
+					"userId":"{{ h77A8.outputs.event.user }}",
+					"channelId":"{{ h77A8.outputs.event.channel }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create record",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_call_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"WXTwJ-1",
+			"id":"2e5Ob",
+			"index":0,
+			"inputs":{
+				"automationId":"6732f70850384a29acf312fd",
+				"runtimeConnections":{},
+				"synchronous":false,
+				"triggerWorkflowWithRuntimeType":"IN_MEMORY",
+				"parameters":{
+					"userQuery":"{{ h77A8.outputs.event.text }}",
+					"promptResolvableVariables":"{}",
+					"aiAgentId":"e_6982e5d4fa444269480767cc",
+					"userEmailAddress":"{{ 0vkKV.outputs.emailAddress }}",
+					"messageId":"{{ _BQoJf.outputs.messageId }}",
+					"caseId":"{{ _BQoJf.outputs.caseId }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Trigger AI Agent",
+			"title":"Call automation",
+			"type":"CALL_WORKFLOW"
+		}
+	],
+	"ownerUserId":195389,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"AI Agent Deployment"
+	],
+	"version":2
+}
