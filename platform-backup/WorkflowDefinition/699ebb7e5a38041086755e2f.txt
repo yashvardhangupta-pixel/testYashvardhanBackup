@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1772010366897,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_CgoEk",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_QJCbB",
+			"type":"next"
+		}
+	],
+	"id":"699ebb7e5a38041086755e2f",
+	"lastModifiedBy":175510,
+	"lcName":"gs11",
+	"modifiedTime":1772010405058,
+	"name":"gs11",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_CgoEk-1",
+			"id":"_CgoEk",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_CgoEk-1",
+			"id":"_QJCbB",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175510,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
