@@ -1,0 +1,71 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1716293584121,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"664c8fd009738174bc426e53",
+	"lastModifiedBy":35,
+	"lcName":"callable test audit",
+	"modifiedTime":1716293873564,
+	"name":"Callable Test Audit",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":59,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"kxDru-1",
+			"id":"kxDru",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				},
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"",
+							"filter":{
+								"operator":"EQUAL",
+								"value":""
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":35,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
