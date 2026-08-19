@@ -4,14 +4,14 @@
 	],
 	"createdTime":1745314198953,
 	"deleted":false,
-	"deployedVersion":162,
+	"deployedVersion":163,
 	"deploymentState":{
-		"deployedAt":1787128626873,
+		"deployedAt":1787129550929,
 		"deployedBy":196361,
-		"deployedDefinitionId":"6a856b32e8e5d4338fc06cbf",
+		"deployedDefinitionId":"6a856ecee8e5d4338fc07828",
 		"status":"DEPLOYED",
-		"version":162,
-		"workflowVersion":295
+		"version":163,
+		"workflowVersion":296
 	},
 	"edges":[
 		{
@@ -245,9 +245,9 @@
 	"id":"68036c6fecbd4a4d19aa7fc2",
 	"lastModifiedBy":196361,
 	"lastPlatformUpdateBy":196361,
-	"lastPlatformUpdateOn":1787129548992,
+	"lastPlatformUpdateOn":1787129874829,
 	"lcName":"stop response generation",
-	"modifiedTime":1787129548992,
+	"modifiedTime":1787129874829,
 	"name":"Stop Response Generation",
 	"nodes":[
 		{
@@ -1087,5 +1087,5 @@
 	"tags":[
 		
 	],
-	"version":296
+	"version":297
 }
