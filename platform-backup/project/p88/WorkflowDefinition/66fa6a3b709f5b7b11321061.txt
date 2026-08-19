@@ -1,0 +1,61 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1727687227357,
+	"deleted":true,
+	"description":"TESTING",
+	"edges":[
+		{
+			"fromNodeId":"Ut3ab",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"VasvV",
+			"type":"next"
+		}
+	],
+	"id":"66fa6a3b709f5b7b11321061",
+	"lastModifiedBy":21055,
+	"lcName":"test ab",
+	"modifiedTime":1728383092486,
+	"name":"test AB",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ut3ab-1",
+			"id":"Ut3ab",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Ut3ab-1",
+			"id":"VasvV",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":21055,
+	"projectId":88,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
