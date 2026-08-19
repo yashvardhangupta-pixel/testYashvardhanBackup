@@ -1,0 +1,80 @@
+{
+	"appsUsed":[
+		"gmeet"
+	],
+	"createdTime":1720075884821,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"FRqHJ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"6YE2z",
+			"type":"next"
+		}
+	],
+	"id":"6686466c1967c35fbd264db9",
+	"lastModifiedBy":305,
+	"lcName":"gmeet combined",
+	"modifiedTime":1720076040968,
+	"name":"gmeet combined",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":44,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FRqHJ-1",
+			"id":"FRqHJ",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"title":"Http Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"gmeet",
+				"resourceVersion":140,
+				"connectionId":"661122cca26def19651f40b3",
+				"resourceName":"gmeet_create_instant_meeting",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FRqHJ-1",
+			"id":"6YE2z",
+			"index":0,
+			"inputs":{
+				"config":{
+					"accessType":"OPEN"
+				}
+			},
+			"skip":false,
+			"subTitle":"Google Meet",
+			"title":"Create instant meeting",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":305,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":3
+}
