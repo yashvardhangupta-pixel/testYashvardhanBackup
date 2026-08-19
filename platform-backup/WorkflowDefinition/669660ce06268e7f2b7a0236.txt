@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"github"
+	],
+	"createdTime":1721131214721,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"669660ce06268e7f2b7a0236",
+	"lastModifiedBy":1866,
+	"lcName":"untitled",
+	"modifiedTime":1721131246017,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"github"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"6xPIh-1",
+			"id":"6xPIh",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":1866,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
