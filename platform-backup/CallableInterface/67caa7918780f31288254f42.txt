@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334417348,
+	"deleted":true,
+	"description":"SZHLUr",
+	"id":"67caa7918780f31288254f42",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspoj6qitrq40tájzl7j46l15",
+	"modifiedTime":1741358660312,
+	"name":"QvfSPOj6qitrq40tÁjzl7j46l15",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
