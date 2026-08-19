@@ -1,0 +1,50 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721715811604,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		
+	],
+	"id":"669f4c639383b64e1830712e",
+	"lastModifiedBy":308,
+	"lcName":"temp",
+	"modifiedTime":1721751490253,
+	"name":"temp",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":53,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DygGR-1",
+			"id":"DygGR",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"title":"Http Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":308,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":4
+}
