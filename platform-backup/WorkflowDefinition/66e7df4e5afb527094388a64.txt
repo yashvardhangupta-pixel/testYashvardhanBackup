@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726472014181,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"YzRPF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"bjoYw",
+			"type":"next"
+		}
+	],
+	"id":"66e7df4e5afb527094388a64",
+	"lastModifiedBy":12251,
+	"lcName":"record validations",
+	"modifiedTime":1726473116904,
+	"name":"Record Validations",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":52,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4nnFj-1",
+			"id":"YzRPF",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4nnFj-1",
+			"id":"bjoYw",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":12251,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
