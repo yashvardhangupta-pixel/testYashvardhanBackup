@@ -1,0 +1,263 @@
+{
+	"createdTime":1710151294276,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"pcwV9",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"Xunkx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"Xunkx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"BEi4a",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65eed67ebf1f7c1b94a558c0",
+	"lastModifiedBy":3,
+	"lcName":"testing schema generator",
+	"modifiedTime":1710393364643,
+	"name":"testing schema generator",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":15,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"pcwV9-1",
+			"id":"pcwV9",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{
+							"p_1":{
+								"type":"object",
+								"properties":{
+									"c_1":{
+										"type":"object",
+										"properties":{
+											"c_2":{
+												"type":"string",
+												"title":"C 2"
+											}
+										},
+										"title":"C 1"
+									},
+									"c_3":{
+										"type":"string",
+										"title":"C 3"
+									}
+								},
+								"title":"P 1"
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"asana",
+				"resourceVersion":3,
+				"connectionId":"65e304d0897977123be56fc7",
+				"resourceName":"asana_create_tag",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"pcwV9-1",
+			"id":"Xunkx",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Asana",
+			"title":"Create Tag",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":2,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"pcwV9-1",
+			"id":"BEi4a",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"source":{
+							"ui:title":"List Item Source",
+							"ui:help":"Input a list item datapill"
+						},
+						"items":{
+							"ui:title":"List Items",
+							"ui:description":"Set the initial values in the list, defaults to empty"
+						}
+					},
+					"ui:submitButtonOptions":{
+						"norender":true
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:data_path":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source"
+								},
+								"items":{
+									"type":"object",
+									"properties":{
+										"p_1":{
+											"type":"object",
+											"properties":{
+												"c_1":{
+													"type":"array",
+													"items":{
+														"type":"object",
+														"properties":{
+															"c_2":{
+																"type":"string",
+																"title":"C 2"
+															}
+														}
+													},
+													"title":"C 1"
+												}
+											},
+											"title":"P 1"
+										},
+										"c_3":{
+											"type":"string",
+											"title":"C 3"
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray",
+					"items":{
+						"p_1":{
+							"c_1":[]
+						}
+					},
+					"source":"some text tex text text text text {{ Xunkx.outputs.data.gid }}text text text text text text text text text text {{ Xunkx.outputs.data.resource_type }}"
+				}
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"List",
+							"items":{
+								"type":"object",
+								"properties":{
+									"p_1":{
+										"type":"object",
+										"properties":{
+											"c_1":{
+												"type":"array",
+												"items":{
+													"type":"object",
+													"properties":{
+														"c_2":{
+															"type":"string",
+															"title":"C 2"
+														}
+													}
+												},
+												"title":"C 1"
+											}
+										},
+										"title":"P 1"
+									},
+									"c_3":{
+										"type":"string",
+										"title":"C 3"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":13
+}
