@@ -1,0 +1,102 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1770165898321,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1770165899954,
+		"deployedBy":175325,
+		"deployedDefinitionId":"6982968a63f6240cf8c9b7be",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		{
+			"fromNodeId":"dxBaL",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"wyhGO",
+			"type":"next"
+		}
+	],
+	"id":"6982968a63f6240cf8c9b7bd",
+	"lastModifiedBy":175325,
+	"lcName":"changesetqa27431363286",
+	"modifiedTime":1770587697869,
+	"name":"changeSetQA27431363286",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":530,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ITCN5-1",
+			"id":"dxBaL",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"custom_http_endpoint",
+				"resourceVersion":626,
+				"resourceName":"custom_http_endpoint_execute",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ITCN5-1",
+			"id":"wyhGO",
+			"index":0,
+			"inputs":{
+				"path":"/api-endpoint/trigger-workflow/6982968863f6240cf8c9b7b7",
+				"baseUrl":"{{ __ENV__.outputs.changeSetQA28581132028 }}",
+				"responseContentType":"application/json",
+				"isAsync":false,
+				"enableProxy":false,
+				"requestTimeoutInSecs":-1,
+				"authType":"CUSTOM",
+				"httpMethod":"POST",
+				"requestContentType":"application/json",
+				"ignoreTrailingSlashes":false,
+				"sslVerify":false
+			},
+			"skip":false,
+			"subTitle":"Custom HTTP Endpoint",
+			"title":"Execute REST request",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":175325,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
