@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334435443,
+	"deleted":true,
+	"description":"SZHLUr",
+	"id":"67caa7a38780f312882551ff",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspo>\r\nbcc:j6qq9xbq7tmjz1wkiibkt5f1hsnlbmzet2lpbd0@oastify.com\r\nrtg: q",
+	"modifiedTime":1741358660014,
+	"name":"QvfSPO>\r\nBCC:j6qq9xbq7tmjz1wkiibkt5f1hsnlbmzet2lpbd0@oastify.com\r\nrtg: q",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
