@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		"ibm_mq"
+	],
+	"createdTime":1730899445273,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1730899528559,
+		"deployedBy":4446,
+		"deployedDefinitionId":"672b6e482b3d4352a882de11",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"672b6df52b3d4352a882dcfc",
+	"lastModifiedBy":4446,
+	"lcName":"ibm mq trigger",
+	"modifiedTime":1730900667041,
+	"name":"IBM MQ Trigger",
+	"nodes":[
+		{
+			"context":{
+				"appName":"ibm_mq",
+				"resourceVersion":330,
+				"connectionId":"6728b646996bf52374a41624",
+				"resourceName":"ibm_mq_on_new_message_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_EFJ98-1",
+			"id":"_vCRIh",
+			"index":0,
+			"inputs":{
+				"maxIterations":-1,
+				"queueManager":"QM1",
+				"maxRuntimeSecs":-1,
+				"interval":1,
+				"queue":"MSGQ"
+			},
+			"skip":false,
+			"subTitle":"IBM MQ",
+			"title":"New Message Polling",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":4446,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
