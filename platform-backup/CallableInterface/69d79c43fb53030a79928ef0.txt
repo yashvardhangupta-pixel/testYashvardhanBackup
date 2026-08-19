@@ -1,0 +1,58 @@
+{
+	"createdTime":1775737923773,
+	"deleted":false,
+	"description":"Post Login Callable Interface",
+	"id":"69d79c43fb53030a79928ef0",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"post login callable interface",
+	"modifiedTime":1775737924072,
+	"name":"Post Login Callable Interface",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"statusCode":{
+					"type":"integer",
+					"title":"Status"
+				},
+				"payload":{
+					"type":"object",
+					"title":"Payload"
+				},
+				"headers":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Headers"
+				},
+				"location":{
+					"type":"string",
+					"title":"Location"
+				}
+			},
+			"required":[
+				"statusCode"
+			]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":false,
+	"version":0
+}
