@@ -1,0 +1,80 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1729356684783,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_d29WZ",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_eKmbA",
+			"type":"next"
+		}
+	],
+	"id":"6713e38cc341bc4658cf6768",
+	"lastModifiedBy":520,
+	"lcName":"test",
+	"modifiedTime":1729368161586,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":80,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Jqz1U-1",
+			"id":"_d29WZ",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":24,
+				"resourceName":"analytics_by_unifyapps_execute_query",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Jqz1U-1",
+			"id":"_eKmbA",
+			"index":0,
+			"inputs":{
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Execute Analytics SQL Query",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
