@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		"gmail"
+	],
+	"createdTime":1718916572753,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1718916599257,
+		"deployedBy":287,
+		"deployedDefinitionId":"667495f75592f6089fdd1447",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"description":"",
+	"edges":[
+		
+	],
+	"id":"667495dc5592f6089fdd1444",
+	"lastModifiedBy":287,
+	"lcName":"test replica",
+	"modifiedTime":1718917302115,
+	"name":"test replica",
+	"nodes":[
+		{
+			"context":{
+				"appName":"gmail",
+				"resourceVersion":3,
+				"connectionId":"667419802bc4da481adb5f63",
+				"resourceName":"gmail_on_new_email_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oQgwF-1",
+			"id":"oQgwF",
+			"index":0,
+			"inputs":{
+				"labelIds":"INBOX",
+				"interval":1,
+				"from":"2024-06-20",
+				"includeSpamTrash":false,
+				"batchSize":100
+			},
+			"skip":false,
+			"title":"New email",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":287,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
