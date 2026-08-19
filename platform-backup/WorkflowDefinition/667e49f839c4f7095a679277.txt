@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"calendly"
+	],
+	"createdTime":1719552504641,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"667e49f839c4f7095a679277",
+	"lastModifiedBy":309,
+	"lcName":"untitled",
+	"modifiedTime":1719552587472,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"calendly"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"7Umof-1",
+			"id":"7Umof",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":309,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
