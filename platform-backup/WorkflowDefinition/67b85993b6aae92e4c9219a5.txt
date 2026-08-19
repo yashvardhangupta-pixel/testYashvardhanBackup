@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1740134803812,
+	"deleted":true,
+	"deployedVersion":4,
+	"deploymentState":{
+		"deployedAt":1740137896573,
+		"deployedBy":46209,
+		"deployedDefinitionId":"67b865a814bf7f1ad0191f13",
+		"status":"DEPLOYED",
+		"version":4,
+		"workflowVersion":4
+	},
+	"edges":[
+		
+	],
+	"id":"67b85993b6aae92e4c9219a5",
+	"lastModifiedBy":46209,
+	"lcName":"test",
+	"modifiedTime":1740137908283,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":303,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"swJlL-1",
+			"id":"i4Yf1",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":46209,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
