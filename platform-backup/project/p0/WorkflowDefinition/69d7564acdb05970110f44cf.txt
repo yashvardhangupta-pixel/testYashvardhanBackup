@@ -4,14 +4,14 @@
 	],
 	"createdTime":1775720010683,
 	"deleted":false,
-	"deployedVersion":14,
+	"deployedVersion":15,
 	"deploymentState":{
-		"deployedAt":1787067779242,
+		"deployedAt":1787139996129,
 		"deployedBy":195833,
-		"deployedDefinitionId":"6a847d831b770777e31aca17",
+		"deployedDefinitionId":"6a85979cc5ee671661c0fa49",
 		"status":"DEPLOYED",
-		"version":14,
-		"workflowVersion":17
+		"version":15,
+		"workflowVersion":19
 	},
 	"edges":[
 		{
@@ -188,7 +188,15 @@
 		},
 		{
 			"fromNodeId":"n_F3TwN",
-			"id":"next@n_F3TwN@n_JZqQH",
+			"id":"next@n_F3TwN@n_iG6GP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_iG6GP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_iG6GP",
+			"id":"next@n_iG6GP@n_JZqQH",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_JZqQH",
@@ -198,9 +206,9 @@
 	"id":"69d7564acdb05970110f44cf",
 	"lastModifiedBy":195833,
 	"lastPlatformUpdateBy":195833,
-	"lastPlatformUpdateOn":1787139993998,
+	"lastPlatformUpdateOn":1787143952220,
 	"lcName":"token usage | using e_traces",
-	"modifiedTime":1787139993998,
+	"modifiedTime":1787143952220,
 	"name":"Token Usage | Using e_traces",
 	"nodes":[
 		{
@@ -2035,6 +2043,64 @@
 			"type":"ACTION"
 		},
 		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.records.items.result.items.customerId",
+					"root.records.items.result.items.customerName",
+					"root.records.items.result.items.modelName",
+					"root.records.items.result.items.modelId",
+					"root.records.items.result.items.executionCount",
+					"root.records.items.result.items.totalInputTokens",
+					"root.records.items.result.items.totalOutputTokens",
+					"root.records.items.result.items.totalCost",
+					"root.records.items.result.items.env"
+				]
+			},
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":9974,
+				"resourceName":"storage_by_unifyapps_bulk_create_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_68fvK-1",
+			"id":"n_iG6GP",
+			"index":16,
+			"inputs":{
+				"useRawPayload":false,
+				"object_type":"token_usage",
+				"skipIfBlank":false,
+				"records":{
+					"source":"{{ n_YiPJJ.outputs.items }}",
+					"ua:type":"mappedArray",
+					"items":{
+						"result":{
+							"source":"{{ n_YiPJJ.outputs.items[0] }}",
+							"ua:type":"mappedArray",
+							"items":{
+								"customerId":"{{ n_YiPJJ.outputs.items[0].customerId }}",
+								"customerName":"{{ n_YiPJJ.outputs.items[0].customerName }}",
+								"modelName":"{{ n_YiPJJ.outputs.items[0].modelName }}",
+								"modelId":"{{ n_YiPJJ.outputs.items[0].modelId }}",
+								"executionCount":"{{ n_YiPJJ.outputs.items[0].executionCount }}",
+								"totalInputTokens":"{{ n_YiPJJ.outputs.items[0].totalInputTokens }}",
+								"totalOutputTokens":"{{ n_YiPJJ.outputs.items[0].totalOutputTokens }}",
+								"totalCost":"{{ n_YiPJJ.outputs.items[0].totalCost }}",
+								"env":"{{ n_YiPJJ.outputs.items[0].env }}"
+							}
+						}
+					}
+				},
+				"skipUpdate":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create or update records in bulk",
+			"type":"ACTION"
+		},
+		{
 			"context":{
 				"appName":"callables",
 				"resourceVersion":640,
@@ -2046,7 +2112,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_JZqQH",
-			"index":16,
+			"index":17,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_undefined",
@@ -2080,5 +2146,5 @@
 		}
 	},
 	"standard":false,
-	"version":19
+	"version":20
 }
