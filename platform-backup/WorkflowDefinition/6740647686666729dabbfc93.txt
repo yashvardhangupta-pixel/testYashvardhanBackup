@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		"monday"
+	],
+	"createdTime":1732273270223,
+	"deleted":true,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1732273361989,
+		"deployedBy":12,
+		"deployedDefinitionId":"674064d186666729dabbfcc3",
+		"status":"PAUSED",
+		"version":2,
+		"workflowVersion":4
+	},
+	"edges":[
+		
+	],
+	"id":"6740647686666729dabbfc93",
+	"lastModifiedBy":12,
+	"lcName":"wertyu",
+	"modifiedTime":1732294194515,
+	"name":"wertyu",
+	"nodes":[
+		{
+			"context":{
+				"appName":"monday",
+				"resourceVersion":218,
+				"connectionId":"66fb877e06736259bdd94799",
+				"resourceName":"monday_on_new_item_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_9cHdW-1",
+			"id":"_aiGVH",
+			"index":0,
+			"inputs":{
+				"intervalType":"minutes",
+				"boardId":"1442961041",
+				"interval":1,
+				"from":"1728558060000"
+			},
+			"skip":false,
+			"subTitle":"Monday",
+			"title":"New item",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":12,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":5
+}
