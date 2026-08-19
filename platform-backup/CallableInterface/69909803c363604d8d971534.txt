@@ -1,0 +1,78 @@
+{
+	"createdTime":1771083779948,
+	"deleted":false,
+	"description":"This will be used to solve OR problem",
+	"id":"69909803c363604d8d971534",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"solverId":{
+					"type":"string",
+					"title":"Solver Id"
+				},
+				"additional":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Additional"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":43498,
+	"lcName":"or solver | solve",
+	"modifiedTime":1771083892732,
+	"name":"OR solver | solve",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"success":{
+					"type":"boolean",
+					"title":"Success"
+				},
+				"solution":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Solution"
+				},
+				"totalVar":{
+					"type":"integer",
+					"title":"Total Var"
+				},
+				"nonZeroVar":{
+					"type":"integer",
+					"title":"Non Zero Var"
+				},
+				"status":{
+					"type":"string",
+					"title":"Status"
+				},
+				"objectiveValue":{
+					"type":"string",
+					"title":"Objective Value"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":43498,
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
