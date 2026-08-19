@@ -1,0 +1,56 @@
+{
+	"createdTime":1771077078854,
+	"deleted":false,
+	"description":"Create contraint through automation for OR solver",
+	"id":"69907dd60cf1890ac7c73adc",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"solverId":{
+					"type":"string",
+					"title":"Solver Id"
+				},
+				"additional":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Additional"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":49915,
+	"lcName":"or solver | constraint",
+	"modifiedTime":1771083017065,
+	"name":"OR Solver | Constraint",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"success":{
+					"type":"boolean",
+					"title":"Success"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":43498,
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
