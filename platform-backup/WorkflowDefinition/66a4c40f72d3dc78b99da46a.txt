@@ -1,0 +1,308 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1722074127017,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"ak8vS",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"eNO3D",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"eNO3D",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"XwewO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"XwewO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"R3WkX",
+			"type":"next"
+		}
+	],
+	"id":"66a4c40f72d3dc78b99da46a",
+	"lastModifiedBy":520,
+	"lcName":"fetch looks product list ",
+	"modifiedTime":1722074266998,
+	"name":"Fetch Looks Product List ",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":46,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ak8vS-1",
+			"id":"ak8vS",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"list":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"object":{
+										"type":"object",
+										"properties":{
+											"product_id":{
+												"type":"string",
+												"title":"Product ID"
+											},
+											"url":{
+												"type":"string",
+												"title":"Url"
+											},
+											"product_name":{
+												"type":"string",
+												"title":"Product Name"
+											},
+											"inventory_id":{
+												"type":"string",
+												"title":"Inventory ID"
+											},
+											"product_base_price":{
+												"type":"integer",
+												"title":"Product Base Price"
+											}
+										},
+										"additionalProperties":false,
+										"title":"Object",
+										"required":[]
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"List",
+							"required":[]
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"category_id":{
+							"type":"string",
+							"title":"Category ID"
+						},
+						"existing_productID":{
+							"type":"string",
+							"title":"Existing Product ID"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":52,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ak8vS-1",
+			"id":"eNO3D",
+			"index":0,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"properties":{
+						"op":{
+							"type":"string",
+							"title":"op"
+						},
+						"field":{
+							"type":"string",
+							"title":"field"
+						},
+						"values":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"values"
+						}
+					},
+					"additionalProperties":false
+				},
+				"input":{
+					"type":"object",
+					"properties":{
+						"categoryID":{
+							"type":"string",
+							"title":"Category ID"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"code":"return [ \"op\" : \"IN\",\"field\" : \"ENTITY_aloyoga_product=::=productCategories\", \"values\" : [categoryID] ];",
+				"parameters":{
+					"categoryID":"{{ ak8vS.outputs.category_id }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Code By UnifyApps",
+			"title":"Execute groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"analytics_by_unifyapps",
+				"resourceVersion":64,
+				"resourceName":"analytics_by_unifyapps_query_reports",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ak8vS-1",
+			"id":"XwewO",
+			"index":0,
+			"inputs":{
+				"projections":[
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_aloyoga_inventory=::=ProductID",
+						"alias":"productID"
+					},
+					{
+						"aggregationFunction":"COUNT",
+						"includePercentageChange":false,
+						"name":"ENTITY_aloyoga_inventory=::=inventoryId",
+						"alias":"count"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_aloyoga_product=::=productName",
+						"alias":"name"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_aloyoga_inventory=::=productBasePrice",
+						"alias":"price"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_aloyoga_product=::=productImages__images__url",
+						"alias":"url"
+					},
+					{
+						"aggregationFunction":"GROUP",
+						"includePercentageChange":false,
+						"name":"ENTITY_aloyoga_product=::=productCategories",
+						"alias":"cat"
+					}
+				],
+				"filter":{
+					"filters":[
+						{
+							"resolvedFilter":{
+								"filter":"{{ eNO3D.outputs.result }}"
+							}
+						},
+						{
+							"property":"ENTITY_aloyoga_product=::=productId",
+							"filter":{
+								"operator":"NOT_EQUAL",
+								"value":"{{ ak8vS.outputs.existing_productID }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"entityType":"ENTITY_aloyoga_product",
+				"includeTotalHits":true,
+				"sorts":[
+					{
+						"field":"name",
+						"order":"ASC"
+					}
+				],
+				"group":"ENTITY_REPORTING"
+			},
+			"skip":false,
+			"subTitle":"Analytics by UnifyApps",
+			"title":"Analytics Query",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":42,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ak8vS-1",
+			"id":"R3WkX",
+			"index":0,
+			"inputs":{
+				"result":{
+					"list":{
+						"items":{
+							"product_id":"{{ XwewO.outputs.objects[0].columns.productID }}",
+							"product_base_price":"{{ XwewO.outputs.objects[0].columns.price }}",
+							"inventory_id":"{{ XwewO.outputs.objects[0].columns.count }}",
+							"product_name":"{{ XwewO.outputs.objects[0].columns.name }}",
+							"url":"{{ XwewO.outputs.objects[0].columns.url }}",
+							"object":{
+								"product_id":"{{ XwewO.outputs.objects[0].columns.productID }}",
+								"product_name":"{{ XwewO.outputs.objects[0].columns.name }}",
+								"inventory_id":"{{ XwewO.outputs.objects[0].columns.count }}",
+								"product_base_price":"{{ XwewO.outputs.objects[0].columns.price }}",
+								"url":"{{ XwewO.outputs.objects[0].columns.url }}"
+							}
+						},
+						"ua:type":"mappedArray",
+						"source":"{{ XwewO.outputs.objects }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
