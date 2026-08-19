@@ -33,9 +33,9 @@
 	"id":"6a8484bc518cda5a5ed10669",
 	"lastModifiedBy":687,
 	"lastPlatformUpdateBy":687,
-	"lastPlatformUpdateOn":1787127091926,
+	"lastPlatformUpdateOn":1787128097275,
 	"lcName":"new migrate uj",
-	"modifiedTime":1787127091926,
+	"modifiedTime":1787128097275,
 	"name":"new migrate UJ",
 	"nodes":[
 		{
@@ -94,7 +94,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_OfsVR-1",
 			"id":"n_GOIbs",
@@ -117,7 +117,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_OfsVR-1",
 			"id":"n_MR1bb",
@@ -147,5 +147,5 @@
 		}
 	},
 	"standard":false,
-	"version":7
+	"version":8
 }
