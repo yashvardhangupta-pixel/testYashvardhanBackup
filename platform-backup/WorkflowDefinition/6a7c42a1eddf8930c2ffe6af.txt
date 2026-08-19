@@ -119,9 +119,9 @@
 	"id":"6a7c42a1eddf8930c2ffe6af",
 	"lastModifiedBy":196039,
 	"lastPlatformUpdateBy":196039,
-	"lastPlatformUpdateOn":1787140954112,
+	"lastPlatformUpdateOn":1787140980675,
 	"lcName":"get sessions data | code builder",
-	"modifiedTime":1787140954112,
+	"modifiedTime":1787140980675,
 	"name":"Get Sessions Data | Code Builder",
 	"nodes":[
 		{
@@ -706,5 +706,5 @@
 		}
 	},
 	"standard":false,
-	"version":37
+	"version":38
 }
