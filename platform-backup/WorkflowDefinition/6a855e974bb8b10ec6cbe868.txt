@@ -4,14 +4,14 @@
 	],
 	"createdTime":1787125399683,
 	"deleted":false,
-	"deployedVersion":2,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1787125838604,
+		"deployedAt":1787127073644,
 		"deployedBy":195520,
-		"deployedDefinitionId":"6a85604c4bb8b10ec6cbf330",
+		"deployedDefinitionId":"6a8565214bb8b10ec6cc005e",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":3
 	},
 	"edges":[
 		{
@@ -26,9 +26,9 @@
 	"id":"6a855e974bb8b10ec6cbe868",
 	"lastModifiedBy":195520,
 	"lastPlatformUpdateBy":195520,
-	"lastPlatformUpdateOn":1787127071643,
+	"lastPlatformUpdateOn":1787127074995,
 	"lcName":"yashvardhan test 3",
-	"modifiedTime":1787127071643,
+	"modifiedTime":1787127074995,
 	"name":"Yashvardhan Test 3",
 	"nodes":[
 		{
@@ -131,5 +131,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":4
 }
