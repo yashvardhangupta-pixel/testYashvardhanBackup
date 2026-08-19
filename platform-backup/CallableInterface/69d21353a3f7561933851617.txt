@@ -1,0 +1,49 @@
+{
+	"createdTime":1775375187054,
+	"deleted":false,
+	"description":"Crawls the given website url and returns html content as text",
+	"id":"69d21353a3f7561933851617",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"websiteUrl":{
+					"type":"string",
+					"title":"Website Url"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"crawl website",
+	"modifiedTime":1775375189539,
+	"name":"Crawl Website",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"websiteContent":{
+					"type":"string",
+					"title":"Website Content"
+				}
+			},
+			"required":[
+				"websiteContent"
+			]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":false,
+	"version":0
+}
