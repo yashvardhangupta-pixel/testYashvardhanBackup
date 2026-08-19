@@ -1,0 +1,64 @@
+{
+	"appsUsed":[
+		"monday"
+	],
+	"createdTime":1729575965299,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1729576013857,
+		"deployedBy":12,
+		"deployedDefinitionId":"67173c4dfb98fe2e21eabbe1",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"67173c1dfb98fe2e21eabbd7",
+	"lastModifiedBy":12,
+	"lcName":"mtesdt",
+	"modifiedTime":1732880050494,
+	"name":"mtesdt",
+	"nodes":[
+		{
+			"context":{
+				"appName":"monday",
+				"resourceVersion":22,
+				"connectionId":"66fb877e06736259bdd94799",
+				"resourceName":"monday_on_new_item_polling"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_jgAGP-1",
+			"id":"_FvIIH",
+			"index":0,
+			"inputs":{
+				"intervalType":"minutes",
+				"boardId":"1442961041",
+				"interval":5,
+				"from":"1727934360000"
+			},
+			"skip":false,
+			"subTitle":"Monday",
+			"title":"New item",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":12,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
