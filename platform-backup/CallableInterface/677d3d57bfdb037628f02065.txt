@@ -1,0 +1,33 @@
+{
+	"createdTime":1736260951044,
+	"deleted":false,
+	"description":"asdf",
+	"id":"677d3d57bfdb037628f02065",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":520,
+	"lcName":"asdf",
+	"modifiedTime":1736260967714,
+	"name":"asdf",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":1
+}
