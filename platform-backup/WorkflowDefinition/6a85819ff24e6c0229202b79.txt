@@ -7,7 +7,15 @@
 	"edges":[
 		{
 			"fromNodeId":"n_eLDwF",
-			"id":"next@n_eLDwF@n_VkuRh",
+			"id":"next@n_eLDwF@n_sUukC",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_sUukC",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_sUukC",
+			"id":"next@n_sUukC@n_VkuRh",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_VkuRh",
@@ -25,9 +33,9 @@
 	"id":"6a85819ff24e6c0229202b79",
 	"lastModifiedBy":175510,
 	"lastPlatformUpdateBy":175510,
-	"lastPlatformUpdateOn":1787137954954,
+	"lastPlatformUpdateOn":1787138137456,
 	"lcName":"test",
-	"modifiedTime":1787137954954,
+	"modifiedTime":1787138137456,
 	"name":"test",
 	"nodes":[
 		{
@@ -92,6 +100,30 @@
 		},
 		{
 			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":19017,
+				"resourceName":"standard_entities_save_and_authorize_connection",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_hgwNV-1",
+			"id":"n_sUukC",
+			"index":2,
+			"inputs":{
+				"appName":"adafruit",
+				"saveInputs":false,
+				"getQueryParamsInReturnToUrl":true,
+				"customRedirectionAllowed":false
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Save & Authorize Connection",
+			"type":"ACTION"
+		},
+		{
+			"context":{
 				"appName":"callables",
 				"resourceVersion":6509,
 				"resourceName":"callables_return_to_automation",
@@ -102,7 +134,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_hgwNV-1",
 			"id":"n_VkuRh",
-			"index":2,
+			"index":3,
 			"inputs":{},
 			"skip":false,
 			"subTitle":"Callable",
@@ -118,7 +150,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_hgwNV-1",
 			"id":"n_ci27K",
-			"index":3,
+			"index":4,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -139,5 +171,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":5
 }
