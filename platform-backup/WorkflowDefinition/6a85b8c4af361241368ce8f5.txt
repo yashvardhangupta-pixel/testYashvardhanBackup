@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1787148484357,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_jFSEx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_IKnHP",
+			"type":"next"
+		}
+	],
+	"id":"6a85b8c4af361241368ce8f5",
+	"lastModifiedBy":49915,
+	"lastPlatformUpdateBy":49915,
+	"lastPlatformUpdateOn":1787148484357,
+	"lcName":"webhook ",
+	"modifiedTime":1787148484357,
+	"name":"webhook ",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_jFSEx-1",
+			"id":"_jFSEx",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_jFSEx-1",
+			"id":"_IKnHP",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":49915,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
