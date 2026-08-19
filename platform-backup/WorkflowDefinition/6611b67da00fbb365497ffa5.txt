@@ -1,0 +1,543 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1712436861108,
+	"deleted":true,
+	"deployedVersion":0,
+	"deploymentState":{
+		"deployedAt":1712462806752,
+		"deployedDefinitionId":"66121bd696cc7f268150c978",
+		"status":"DEPLOYED",
+		"version":0,
+		"workflowVersion":5
+	},
+	"edges":[
+		{
+			"fromNodeId":"zeZb3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"nwbcx",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"nwbcx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"bshjp",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"bshjp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"K9QCq",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6611b67da00fbb365497ffa5",
+	"lastModifiedBy":174,
+	"lcName":"api customer details(page 15)",
+	"modifiedTime":1712466316828,
+	"name":"API customer details(Page 15)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":35,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"zeZb3-1",
+			"id":"zeZb3",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json",
+					"body":{
+						"type":"object",
+						"properties":{}
+					}
+				},
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"",
+							"filter":{
+								"operator":"EQUAL",
+								"value":""
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"response":[
+					{
+						"status":"200",
+						"contentType":"application/json",
+						"name":"Sucess",
+						"body":{
+							"type":"object",
+							"properties":{
+								"Contract":{
+									"type":"object",
+									"properties":{
+										"StartofContact":{
+											"type":"string",
+											"title":"Start of Contract"
+										},
+										"ContractDuration":{
+											"type":"string",
+											"title":"Contract Duration"
+										},
+										"BillingPeriod":{
+											"type":"string",
+											"title":"Billing Period"
+										},
+										"EndofBillingPeriod":{
+											"type":"string",
+											"title":"End of Billing Period"
+										},
+										"Nextpossiblecontractprologation":{
+											"type":"string",
+											"title":"Next possible contract prologation"
+										},
+										"Monthlytarrifcost":{
+											"type":"string",
+											"title":"Monthly Tarriff Cost"
+										},
+										"CustomerPassword":{
+											"type":"string",
+											"title":"Customer Password"
+										},
+										"Lastexecutedcontractprolongation":{
+											"type":"string",
+											"title":"Last executed contract prologation"
+										},
+										"terminationdate":{
+											"type":"string",
+											"title":"TermInation Date"
+										},
+										"terminationnolongerthan":{
+											"type":"string",
+											"title":"termination no longer than"
+										},
+										"ContractNumber":{
+											"type":"number",
+											"title":"Contract Number"
+										},
+										"CallNumber":{
+											"type":"string",
+											"title":"Call Number"
+										}
+									},
+									"title":"Contract",
+									"required":[]
+								},
+								"Customer":{
+									"type":"object",
+									"properties":{
+										"CustomerNumber":{
+											"type":"number",
+											"title":"Customer Number"
+										},
+										"ContactPersonfortheContract":{
+											"type":"string",
+											"title":"Contact Person for the Contract"
+										},
+										"Location":{
+											"type":"string",
+											"title":"Location"
+										},
+										"AuthorisedSupervisor":{
+											"type":"string",
+											"title":"Authorised Supervisor"
+										}
+									},
+									"title":"Customer",
+									"required":[]
+								}
+							},
+							"required":[]
+						}
+					}
+				]
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":57,
+				"resourceName":"variable_by_unifyapps_create_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"zeZb3-1",
+			"id":"nwbcx",
+			"index":0,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{
+					"createList":{
+						"ui:title":"",
+						"ua:type":{
+							"ui:widget":"hidden"
+						},
+						"source":{
+							"ui:title":"List Item Source",
+							"ui:help":"Input a list item datapill"
+						},
+						"items":{
+							"ui:title":"List Items",
+							"ui:description":"Set the initial values in the list, defaults to empty"
+						}
+					},
+					"ui:submitButtonOptions":{
+						"norender":true
+					},
+					"ua:title":{
+						"ui:widget":"hidden"
+					},
+					"ua:data_path":{
+						"ui:widget":"hidden"
+					}
+				},
+				"schema":{
+					"format":"ua:list",
+					"type":"object",
+					"properties":{
+						"ua:title":{
+							"type":"string"
+						},
+						"createList":{
+							"type":"object",
+							"properties":{
+								"ua:type":{
+									"type":"string",
+									"default":"mappedArray"
+								},
+								"source":{
+									"type":"string",
+									"format":"ua:source"
+								},
+								"items":{
+									"type":"object",
+									"properties":{
+										"Customer":{
+											"type":"object",
+											"properties":{
+												"CustomerNumber":{
+													"type":"number",
+													"title":"Customer Number"
+												},
+												"ContactPersonfortheContract":{
+													"type":"string",
+													"title":"Contact Person for the Contract"
+												},
+												"Location":{
+													"type":"string",
+													"title":"Location"
+												},
+												"AuthorisedSupervisor":{
+													"type":"string",
+													"title":"Authorised Supervisor"
+												}
+											},
+											"title":"Customer",
+											"required":[]
+										},
+										"Contract":{
+											"type":"object",
+											"properties":{
+												"StartofContact":{
+													"type":"string",
+													"title":"Start of Contract"
+												},
+												"ContractDuration":{
+													"type":"string",
+													"title":"Contract Duration"
+												},
+												"Bindingperiod":{
+													"type":"string",
+													"title":"Binding Period"
+												},
+												"EndofBindingPeriod":{
+													"type":"string",
+													"title":"End of Binding Period"
+												},
+												"Nextpossiblecontractprologation":{
+													"type":"string",
+													"title":"Next possible contract prologation"
+												},
+												"Monthlytarrifcost":{
+													"type":"string",
+													"title":"Monthly Tarriff Cost"
+												},
+												"CustomerPassword":{
+													"type":"string",
+													"title":"Customer Password"
+												},
+												"Lastexecutedcontractprolongation":{
+													"type":"string",
+													"title":"Last executed contract prologation"
+												},
+												"terminationdate":{
+													"type":"string",
+													"title":"TermInation Date"
+												},
+												"terminationnolongerthan":{
+													"type":"string",
+													"title":"termination no longer than"
+												},
+												"ContractNumber":{
+													"type":"number",
+													"title":"Contract Number"
+												},
+												"CallNumber":{
+													"type":"string",
+													"title":"Call Number"
+												}
+											},
+											"title":"Contract",
+											"required":[]
+										}
+									},
+									"required":[]
+								}
+							}
+						}
+					}
+				}
+			},
+			"inputs":{
+				"createList":{
+					"ua:type":"mappedArray",
+					"items":{
+						"Contract":{
+							"CallNumber":[]
+						}
+					}
+				}
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"type":"object",
+					"properties":{
+						"items":{
+							"type":"array",
+							"title":"List",
+							"items":{
+								"type":"object",
+								"properties":{
+									"Customer":{
+										"type":"object",
+										"properties":{
+											"CustomerNumber":{
+												"type":"number",
+												"title":"Customer Number"
+											},
+											"ContactPersonfortheContract":{
+												"type":"string",
+												"title":"Contact Person for the Contract"
+											},
+											"Location":{
+												"type":"string",
+												"title":"Location"
+											},
+											"AuthorisedSupervisor":{
+												"type":"string",
+												"title":"Authorised Supervisor"
+											}
+										},
+										"title":"Customer",
+										"required":[]
+									},
+									"Contract":{
+										"type":"object",
+										"properties":{
+											"StartofContact":{
+												"type":"string",
+												"title":"Start of Contract"
+											},
+											"ContractDuration":{
+												"type":"string",
+												"title":"Contract Duration"
+											},
+											"Bindingperiod":{
+												"type":"string",
+												"title":"Binding Period"
+											},
+											"EndofBindingPeriod":{
+												"type":"string",
+												"title":"End of Binding Period"
+											},
+											"Nextpossiblecontractprologation":{
+												"type":"string",
+												"title":"Next possible contract prologation"
+											},
+											"Monthlytarrifcost":{
+												"type":"string",
+												"title":"Monthly Tarriff Cost"
+											},
+											"CustomerPassword":{
+												"type":"string",
+												"title":"Customer Password"
+											},
+											"Lastexecutedcontractprolongation":{
+												"type":"string",
+												"title":"Last executed contract prologation"
+											},
+											"terminationdate":{
+												"type":"string",
+												"title":"TermInation Date"
+											},
+											"terminationnolongerthan":{
+												"type":"string",
+												"title":"termination no longer than"
+											},
+											"ContractNumber":{
+												"type":"number",
+												"title":"Contract Number"
+											},
+											"CallNumber":{
+												"type":"string",
+												"title":"Call Number"
+											}
+										},
+										"title":"Contract",
+										"required":[]
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Create list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"variable_by_unifyapps_add_item_to_list",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"zeZb3-1",
+			"id":"bshjp",
+			"index":0,
+			"inputs":{
+				"itemToAdd":{
+					"Customer":{
+						"CustomerNumber":34135135315,
+						"ContactPersonfortheContract":"Max MUstermann",
+						"Location":"Musterstr. 7, 12345 Musterstadt",
+						"AuthorisedSupervisor":"Dr.Herr Hans Artz"
+					},
+					"Contract":{
+						"StartofContact":"13.04.2019",
+						"ContractDuration":"4 year 6 months",
+						"Bindingperiod":"24 Months",
+						"EndofBindingPeriod":"12.04.2025",
+						"Nextpossiblecontractprologation":"13.01.2025",
+						"Monthlytarrifcost":"19,95 €",
+						"CustomerPassword":"123Passwort456",
+						"Lastexecutedcontractprolongation":"13.04.2023",
+						"terminationdate":"05.03.2024",
+						"terminationnolongerthan":"12.03.2025",
+						"ContractNumber":12123161655,
+						"CallNumber":"0175 95956547"
+					}
+				},
+				"insertLocation":"START",
+				"listName":"{{ nwbcx.outputs.items[0] }}"
+			},
+			"skip":false,
+			"subTitle":"Variable by UnifyApps",
+			"title":"Add an item to list",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"zeZb3-1",
+			"id":"K9QCq",
+			"index":0,
+			"inputs":{
+				"headers":{},
+				"responseName":"Sucess",
+				"textBody":{},
+				"body":{
+					"Contract":{
+						"StartofContact":"{{ nwbcx.outputs.items[0].Contract.StartofContact }}",
+						"ContractDuration":"{{ nwbcx.outputs.items[0].Contract.ContractDuration }}",
+						"BillingPeriod":"{{ nwbcx.outputs.items[0].Contract.Bindingperiod }}",
+						"EndofBillingPeriod":"{{ nwbcx.outputs.items[0].Contract.EndofBindingPeriod }}",
+						"Nextpossiblecontractprologation":"{{ nwbcx.outputs.items[0].Contract.Nextpossiblecontractprologation }}",
+						"Monthlytarrifcost":"{{ nwbcx.outputs.items[0].Contract.Monthlytarrifcost }}",
+						"CustomerPassword":"{{ nwbcx.outputs.items[0].Contract.CustomerPassword }}",
+						"Lastexecutedcontractprolongation":"{{ nwbcx.outputs.items[0].Contract.Lastexecutedcontractprolongation }}",
+						"terminationdate":"{{ nwbcx.outputs.items[0].Contract.terminationdate }}",
+						"terminationnolongerthan":"{{ nwbcx.outputs.items[0].Contract.terminationnolongerthan }}",
+						"ContractNumber":"{{ nwbcx.outputs.items[0].Contract.ContractNumber }}",
+						"CallNumber":"{{ nwbcx.outputs.items[0].Contract.CallNumber[0] }}"
+					},
+					"Customer":{
+						"CustomerNumber":"{{ nwbcx.outputs.items[0].Customer.CustomerNumber }}",
+						"ContactPersonfortheContract":"{{ nwbcx.outputs.items[0].Customer.ContactPersonfortheContract }}",
+						"Location":"{{ nwbcx.outputs.items[0].Customer.Location }}",
+						"AuthorisedSupervisor":"{{ nwbcx.outputs.items[0].Customer.AuthorisedSupervisor }}"
+					}
+				},
+				"multiPartBody":{}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to API Request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":6
+}
