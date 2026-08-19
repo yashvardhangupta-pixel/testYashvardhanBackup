@@ -1,0 +1,49 @@
+{
+	"createdTime":1709723782695,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e85086774a6842026be593",
+	"lastModifiedBy":34,
+	"lcName":"untitled",
+	"modifiedTime":1709723782695,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"shopify"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"iUb2K-1",
+			"id":"iUb2K",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":34,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":0
+}
