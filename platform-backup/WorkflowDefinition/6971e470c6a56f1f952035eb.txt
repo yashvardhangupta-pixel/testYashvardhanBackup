@@ -1,0 +1,467 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1769071728329,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"n_z5N35",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_EHr2B",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_EHr2B",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_R8QgP",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_R8QgP",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_uafot",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_uafot",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_GmOjB",
+			"type":"next"
+		}
+	],
+	"id":"6971e470c6a56f1f952035eb",
+	"lastModifiedBy":195851,
+	"lcName":"best practice | automation | run group checks | streams (bhuyash)",
+	"modifiedTime":1769140868530,
+	"name":"Best Practice | Automation | Run Group Checks | Streams (bhuyash)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":84,
+				"resourceName":"callables_from_interface"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wwCYF-1",
+			"id":"n_z5N35",
+			"index":1,
+			"inputs":{
+				"result":{
+					"required":[],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"checks":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"check_id":{
+										"type":"string",
+										"title":"Check Id"
+									},
+									"status":{
+										"type":"string",
+										"title":"Status"
+									},
+									"targets":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"target_id":{
+													"type":"string",
+													"title":"Target Id"
+												},
+												"target_type":{
+													"type":"string",
+													"title":"Target Type"
+												},
+												"path":{
+													"type":"array",
+													"items":{
+														"type":"string"
+													},
+													"title":"Path"
+												}
+											},
+											"additionalProperties":false,
+											"required":[]
+										},
+										"title":"Targets"
+									}
+								},
+								"additionalProperties":false,
+								"required":[]
+							},
+							"title":"Checks"
+						}
+					}
+				},
+				"callableInterfaceId":"694d430f730d4541854abd6d",
+				"setup":{
+					"required":[],
+					"ua:modal":{
+						"field_type":"STRING",
+						"is_optional":true
+					},
+					"properties":{
+						"workflow_details":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow Details"
+						},
+						"groupChecks":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Group Checks"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger interface",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"variable_by_unifyapps",
+				"resourceVersion":26,
+				"resourceName":"variable_by_unifyapps_create_variables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wwCYF-1",
+			"id":"n_EHr2B",
+			"index":2,
+			"inputSchema":{
+				"type":"SCHEMA_AND_LAYOUT",
+				"dynamic":false,
+				"layout":{},
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"workflowDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow Details"
+						},
+						"groupChecks":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Group Checks"
+						}
+					},
+					"required":[]
+				}
+			},
+			"inputs":{
+				"workflowDetails":"{{ n_z5N35.outputs.workflow_details }}",
+				"groupChecks":{
+					"source":"{{ n_z5N35.outputs.groupChecks }}",
+					"ua:type":"mappedArray",
+					"items":"{{ n_z5N35.outputs.groupChecks[0] }}"
+				}
+			},
+			"outputSchema":{
+				"type":"SCHEMA",
+				"dynamic":false,
+				"schema":{
+					"additionalProperties":false,
+					"type":"object",
+					"properties":{
+						"workflowDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow Details"
+						},
+						"groupChecks":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Group Checks"
+						}
+					},
+					"required":[]
+				}
+			},
+			"skip":false,
+			"subTitle":"Global Variables",
+			"title":"Create variables",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":96,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wwCYF-1",
+			"id":"n_R8QgP",
+			"index":3,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"precomputedContext":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Precomputed Context"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"workflowDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow Details"
+						}
+					}
+				},
+				"code":"// ---------------- HELPERS ----------------//\n\n\n// ---------------- MAIN ----------------//\n\ndef precomputedContext = [\n]\n\nreturn [\n        precomputedContext: precomputedContext\n]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"workflowDetails":"{{ n_EHr2B.outputs.workflowDetails }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Precompute Context",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.parameters.groupChecks.items"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":92,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wwCYF-1",
+			"id":"n_uafot",
+			"index":4,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"checks":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{
+									"check_id":{
+										"type":"string",
+										"title":"check_id"
+									},
+									"status":{
+										"type":"string",
+										"title":"status"
+									},
+									"targets":{
+										"type":"array",
+										"items":{
+											"type":"object",
+											"properties":{
+												"target_id":{
+													"type":"string",
+													"title":"target_id"
+												},
+												"target_type":{
+													"type":"string",
+													"title":"target_type"
+												},
+												"path":{
+													"type":"array",
+													"items":{
+														"type":"string"
+													},
+													"title":"path"
+												}
+											},
+											"additionalProperties":false
+										},
+										"title":"targets"
+									}
+								},
+								"additionalProperties":false
+							},
+							"title":"checks"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"workflowDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Workflow Details"
+						},
+						"groupChecks":{
+							"type":"array",
+							"items":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false
+							},
+							"title":"Group Checks"
+						},
+						"precomputedContext":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"Precomputed Context"
+						}
+					}
+				},
+				"code":"//---------------- HELPER ----------------//\n\n\n//---------------- CHECKS ----------------//\n\ndef NODE_CHECKS = [:]\n\n//---------------- MAIN ----------------//\n// def workflowDetails = (Map) (binding.hasVariable(\"workflowDetails\") ? binding.getVariable(\"workflowDetails\") : null)\n// def groupChecks = (List) (binding.hasVariable(\"groupChecks\") ? binding.getVariable(\"groupChecks\") : [])\n// def precomputedContext = (Map) (binding.hasVariable(\"precomputedContext\") ? binding.getVariable(\"precomputedContext\") : [:])\n\n// def groupChecksLookup = groupChecks.collectEntries({ [(it.check_id) : it] } )\n\nreturn [\n        \"checks\": []\n]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"workflowDetails":"{{ n_EHr2B.outputs.workflowDetails }}",
+					"precomputedContext":"{{ n_R8QgP.outputs.result.precomputedContext }}",
+					"groupChecks":{
+						"source":"{{ n_EHr2B.outputs.groupChecks }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_EHr2B.outputs.groupChecks[0] }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Run Checks",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"visibleOptionalFields":[
+					"root.result.checks.source",
+					"root.result.checks.ua:type",
+					"root.result.checks.items.check_id",
+					"root.result.checks.items.status",
+					"root.result.checks.items.targets.source",
+					"root.result.checks.items.targets.ua:type",
+					"root.result.checks.items.targets.items.target_id",
+					"root.result.checks.items.targets.items.target_type",
+					"root.result.checks.items.targets.items.path.source",
+					"root.result.checks.items.targets.items.path.ua:type",
+					"root.result.checks.items.targets.items.path.items"
+				]
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":89,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_wwCYF-1",
+			"id":"n_GmOjB",
+			"index":5,
+			"inputs":{
+				"result":{
+					"checks":{
+						"source":"{{ n_uafot.outputs.result.checks }}",
+						"ua:type":"mappedArray",
+						"items":{
+							"check_id":"{{ n_uafot.outputs.result.checks[0].check_id }}",
+							"status":"{{ n_uafot.outputs.result.checks[0].status }}",
+							"targets":{
+								"source":"{{ n_uafot.outputs.result.checks[0].targets }}",
+								"ua:type":"mappedArray",
+								"items":{
+									"target_id":"{{ n_uafot.outputs.result.checks[0].targets[0].target_id }}",
+									"target_type":"{{ n_uafot.outputs.result.checks[0].targets[0].target_type }}",
+									"path":{
+										"source":"{{ n_uafot.outputs.result.checks[0].targets[0].path }}",
+										"ua:type":"mappedArray",
+										"items":"{{ n_uafot.outputs.result.checks[0].targets[0].path[0] }}"
+									}
+								}
+							}
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":195851,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"BPC",
+		"Automation"
+	],
+	"version":3
+}
