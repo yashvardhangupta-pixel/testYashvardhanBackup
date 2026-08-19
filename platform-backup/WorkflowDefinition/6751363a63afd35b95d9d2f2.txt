@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		"microsoft_calendar"
+	],
+	"createdTime":1733375546458,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1733375739919,
+		"deployedBy":520,
+		"deployedDefinitionId":"675136f863afd35b95d9d39c",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"6751363a63afd35b95d9d2f2",
+	"lastModifiedBy":520,
+	"lcName":"uyvfgcgf",
+	"modifiedTime":1733475408127,
+	"name":"uyvfgcgf",
+	"nodes":[
+		{
+			"context":{
+				"appName":"microsoft_calendar",
+				"resourceVersion":2461,
+				"connectionId":"67501d7929d98176e564af2a",
+				"resourceName":"microsoft_calendar_on_new_calendar_event"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_XHfnc-1",
+			"id":"_xE4IX",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Microsoft Calendar",
+			"title":"New calendar event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
