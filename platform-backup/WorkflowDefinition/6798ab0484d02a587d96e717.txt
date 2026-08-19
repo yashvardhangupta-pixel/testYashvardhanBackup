@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1738058500999,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"f82Sa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"hhNyk",
+			"type":"next"
+		}
+	],
+	"id":"6798ab0484d02a587d96e717",
+	"lastModifiedBy":44096,
+	"lcName":"ccal",
+	"modifiedTime":1738064186753,
+	"name":"ccal",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"f82Sa-1",
+			"id":"f82Sa",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"f82Sa-1",
+			"id":"hhNyk",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":44096,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
