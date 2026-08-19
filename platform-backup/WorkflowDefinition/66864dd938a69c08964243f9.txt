@@ -1,0 +1,43 @@
+{
+	"appsUsed":[
+		"servicenow"
+	],
+	"createdTime":1720077785579,
+	"deleted":true,
+	"description":"testing",
+	"edges":[
+		
+	],
+	"id":"66864dd938a69c08964243f9",
+	"lastModifiedBy":520,
+	"lcName":"testing",
+	"modifiedTime":1720078988245,
+	"name":"testing",
+	"nodes":[
+		{
+			"context":{
+				"appName":"servicenow"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"E1a3C-1",
+			"id":"E1a3C",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
