@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"razorpay"
+	],
+	"createdTime":1713509097975,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"662212e98285e947d2a4bc80",
+	"lastModifiedBy":7,
+	"lcName":"untitled",
+	"modifiedTime":1713509364451,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"razorpay"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"5022u-1",
+			"id":"5022u",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":7,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
