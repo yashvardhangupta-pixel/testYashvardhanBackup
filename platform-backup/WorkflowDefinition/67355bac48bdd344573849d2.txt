@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		"asana"
+	],
+	"createdTime":1731550124894,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_tPLg2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_XiJqP",
+			"type":"next"
+		}
+	],
+	"id":"67355bac48bdd344573849d2",
+	"lastModifiedBy":520,
+	"lcName":"asana trigger",
+	"modifiedTime":1731550752221,
+	"name":"asana trigger",
+	"nodes":[
+		{
+			"context":{
+				"appName":"asana",
+				"resourceVersion":610,
+				"resourceName":"asana_on_new_or_updated_task"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_h7WDD-1",
+			"id":"_tPLg2",
+			"index":0,
+			"skip":false,
+			"subTitle":"Asana",
+			"title":"New or updated tasks",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_h7WDD-1",
+			"id":"_XiJqP",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
