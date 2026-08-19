@@ -1,0 +1,47 @@
+{
+	"createdTime":1742215254757,
+	"deleted":false,
+	"description":"testingg",
+	"id":"67d818562884637fa6f97f57",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"inputNumber":{
+					"type":"string",
+					"title":"Input Number"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":76193,
+	"lcName":"testsa",
+	"modifiedTime":1742215254757,
+	"name":"testSA",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"oddOrEven":{
+					"type":"string",
+					"title":"Odd Or Even"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":76193,
+	"standard":false,
+	"version":0
+}
