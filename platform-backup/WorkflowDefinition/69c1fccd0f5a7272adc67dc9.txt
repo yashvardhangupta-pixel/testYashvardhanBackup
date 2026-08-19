@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1774320845039,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_a2pgx",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_lwRWd",
+			"type":"next"
+		}
+	],
+	"id":"69c1fccd0f5a7272adc67dc9",
+	"lastModifiedBy":195488,
+	"lcName":"automation-test-breaking",
+	"modifiedTime":1774331261936,
+	"name":"automation-test-breaking",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_a2pgx-1",
+			"id":"_a2pgx",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_a2pgx-1",
+			"id":"_lwRWd",
+			"index":2,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":195488,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":4
+}
