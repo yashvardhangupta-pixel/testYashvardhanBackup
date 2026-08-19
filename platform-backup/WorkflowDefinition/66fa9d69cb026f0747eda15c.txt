@@ -1,0 +1,69 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1727700329253,
+	"deleted":true,
+	"description":"description",
+	"edges":[
+		{
+			"fromNodeId":"3mQci",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GD8f8",
+			"type":"next"
+		}
+	],
+	"id":"66fa9d69cb026f0747eda15c",
+	"lastModifiedBy":520,
+	"lcName":"readonlyworkflow_117277002746910",
+	"modifiedTime":1727700338369,
+	"name":"readOnlyWorkflow_117277002746910",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ncXAC-1",
+			"id":"3mQci",
+			"index":0,
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ncXAC-1",
+			"id":"GD8f8",
+			"index":0,
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Select an action",
+			"type":"CALL_WORKFLOW"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
