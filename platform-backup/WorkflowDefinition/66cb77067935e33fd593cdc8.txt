@@ -1,0 +1,70 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1724610310916,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"iOjP1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GZqiC",
+			"type":"next"
+		}
+	],
+	"id":"66cb77067935e33fd593cdc8",
+	"lastModifiedBy":520,
+	"lcName":"ba ba ba bam",
+	"modifiedTime":1724611280936,
+	"name":"ba ba ba bam",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":56,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DdpMR-1",
+			"id":"iOjP1",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"HTTP Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"DdpMR-1",
+			"id":"GZqiC",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
