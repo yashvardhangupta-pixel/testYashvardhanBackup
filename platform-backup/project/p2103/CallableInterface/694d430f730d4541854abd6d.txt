@@ -1,0 +1,121 @@
+{
+	"createdTime":1767012809521,
+	"deleted":false,
+	"description":"Interace for group wise checks for Automation best practice",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"694d430f730d4541854abd6d",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"groupChecks":{
+					"items":{
+						"additionalProperties":false,
+						"properties":{},
+						"type":"object"
+					},
+					"title":"Group Checks",
+					"type":"array"
+				},
+				"maskingKeys":{
+					"items":{
+						"type":"string"
+					},
+					"title":"Masking Keys",
+					"type":"array"
+				},
+				"workflow_details":{
+					"additionalProperties":false,
+					"properties":{},
+					"title":"Workflow Details",
+					"type":"object"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"best practice | automation | run group checks interface",
+	"modifiedTime":1787051771829,
+	"name":"Best Practice | Automation | Run Group Checks Interface",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"checks":{
+					"items":{
+						"additionalProperties":false,
+						"properties":{
+							"check_id":{
+								"title":"Check Id",
+								"type":"string"
+							},
+							"status":{
+								"title":"Status",
+								"type":"string"
+							},
+							"targets":{
+								"items":{
+									"additionalProperties":false,
+									"properties":{
+										"failureMessage":{
+											"title":"Failure Message",
+											"type":"string"
+										},
+										"path":{
+											"items":{
+												"type":"string"
+											},
+											"title":"Path",
+											"type":"array"
+										},
+										"target_id":{
+											"title":"Target Id",
+											"type":"string"
+										},
+										"target_type":{
+											"title":"Target Type",
+											"type":"string"
+										}
+									},
+									"required":[],
+									"type":"object"
+								},
+								"title":"Targets",
+								"type":"array"
+							}
+						},
+						"required":[],
+						"type":"object"
+					},
+					"title":"Checks",
+					"type":"array"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":47540,
+	"projectId":2103,
+	"standard":false,
+	"version":87
+}
