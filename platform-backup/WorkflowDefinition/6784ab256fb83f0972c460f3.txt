@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1736747813112,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"Vs04z",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"bmT79",
+			"type":"next"
+		}
+	],
+	"id":"6784ab256fb83f0972c460f3",
+	"lastModifiedBy":520,
+	"lcName":"videtest",
+	"modifiedTime":1736747886764,
+	"name":"videtest",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Vs04z-1",
+			"id":"Vs04z",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Vs04z-1",
+			"id":"bmT79",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
