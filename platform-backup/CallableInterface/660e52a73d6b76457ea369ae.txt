@@ -1,0 +1,50 @@
+{
+	"createdTime":1712214695121,
+	"deleted":false,
+	"description":"Callable Interface 4Callable Interface 4",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A",
+					"C",
+					"S",
+					"D",
+					"E",
+					"V"
+				],
+				"principalIds":[
+					"66681c602261d6426d663042"
+				],
+				"principalType":"USER_GROUPS"
+			}
+		]
+	},
+	"id":"660e52a73d6b76457ea369ae",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"type":"object",
+			"properties":{
+				"new":{
+					"type":"string",
+					"title":"New"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"callable interface 4",
+	"modifiedTime":1786990340214,
+	"name":"Callable Interface 4",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":188,
+	"standard":false,
+	"version":700
+}
