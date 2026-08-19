@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1773766837407,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_vCQdV",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_pZDLa",
+			"type":"next"
+		}
+	],
+	"id":"69b988b5c9820f0e4386b7c7",
+	"lastModifiedBy":195463,
+	"lcName":"erbng ",
+	"modifiedTime":1773767120706,
+	"name":"erbng ",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vCQdV-1",
+			"id":"_vCQdV",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_vCQdV-1",
+			"id":"_pZDLa",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":195463,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":1
+}
