@@ -1,0 +1,57 @@
+{
+	"createdTime":1709553861019,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e5b8a70acb715124be8f74",
+	"lastModifiedBy":5,
+	"lcName":"workflow",
+	"modifiedTime":1709553861019,
+	"name":"Workflow",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":6,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vYQiX-1",
+			"id":"vYQiX",
+			"index":0,
+			"inputs":{
+				"response":{
+					"contentType":"application/json",
+					"responses":[]
+				}
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":5,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
