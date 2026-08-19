@@ -1,0 +1,52 @@
+{
+	"appsUsed":[
+		"linkedin"
+	],
+	"createdTime":1716446324640,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"664ee4748135c75cc68da5a9",
+	"lastModifiedBy":305,
+	"lcName":"untitled",
+	"modifiedTime":1716446356173,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"linkedin"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"vNZlS-1",
+			"id":"vNZlS",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":305,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
