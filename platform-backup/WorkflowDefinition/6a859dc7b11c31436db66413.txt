@@ -83,9 +83,9 @@
 	"id":"6a859dc7b11c31436db66413",
 	"lastModifiedBy":196039,
 	"lastPlatformUpdateBy":196039,
-	"lastPlatformUpdateOn":1787141747638,
+	"lastPlatformUpdateOn":1787141766647,
 	"lcName":"test",
-	"modifiedTime":1787141747638,
+	"modifiedTime":1787141766647,
 	"name":"test",
 	"nodes":[
 		{
@@ -95,7 +95,7 @@
 				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_1tw7X-1",
 			"id":"n_EEZYc",
@@ -330,7 +330,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_1tw7X-1",
 			"id":"n_XfNdk",
@@ -358,5 +358,5 @@
 		}
 	},
 	"standard":false,
-	"version":2
+	"version":3
 }
