@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721902416134,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"wfhOv",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"jfvBb",
+			"type":"next"
+		}
+	],
+	"id":"66a22550197d7063abf72452",
+	"lastModifiedBy":520,
+	"lcName":"email-checking-tenantmanager",
+	"modifiedTime":1721904386339,
+	"name":"Email-checking-tenantmanager",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wfhOv-1",
+			"id":"wfhOv",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"wfhOv-1",
+			"id":"jfvBb",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
