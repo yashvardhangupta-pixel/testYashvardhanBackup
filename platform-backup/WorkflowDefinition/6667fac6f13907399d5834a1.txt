@@ -1,0 +1,45 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1718090438465,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		
+	},
+	"id":"6667fac6f13907399d5834a1",
+	"lastModifiedBy":15,
+	"lcName":"untitled",
+	"modifiedTime":1718090514141,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"5MqLf-1",
+			"id":"5MqLf",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":15,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
