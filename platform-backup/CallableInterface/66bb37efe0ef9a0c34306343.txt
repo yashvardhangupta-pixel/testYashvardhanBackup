@@ -1,0 +1,23 @@
+{
+	"createdTime":1723545644665,
+	"deleted":false,
+	"description":"PepvLjDvOw",
+	"id":"66bb37efe0ef9a0c34306343",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":520,
+	"lcName":"qfmvtkdvct",
+	"modifiedTime":1723545870372,
+	"name":"qFmVtKDvCT",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":2
+}
