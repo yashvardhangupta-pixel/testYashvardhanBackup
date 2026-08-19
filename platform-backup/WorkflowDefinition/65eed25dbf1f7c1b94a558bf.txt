@@ -1,0 +1,33 @@
+{
+	"createdTime":1710150237175,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65eed25dbf1f7c1b94a558bf",
+	"lastModifiedBy":3,
+	"lcName":"automation d1.0",
+	"modifiedTime":1710393373342,
+	"name":"automation d1.0",
+	"nodes":[
+		
+	],
+	"ownerUserId":3,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":7
+}
