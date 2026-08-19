@@ -1,0 +1,71 @@
+{
+	"appsUsed":[
+		"schedule"
+	],
+	"createdTime":1722579514239,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"Rzufr",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"IqdAa",
+			"type":"next"
+		}
+	],
+	"id":"66ac7a3a2a4e87612f190b7c",
+	"lastModifiedBy":32,
+	"lcName":"test tushar 4",
+	"modifiedTime":1722579529389,
+	"name":"test tushar 4",
+	"nodes":[
+		{
+			"context":{
+				"appName":"schedule",
+				"resourceVersion":42,
+				"resourceName":"schedule_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FQ1jH-1",
+			"id":"Rzufr",
+			"index":0,
+			"inputs":{
+				"cron":"INTERVAL",
+				"interval":15,
+				"frequency":"MINUTES"
+			},
+			"skip":false,
+			"subTitle":"Schedule",
+			"title":"New recurring event",
+			"trigger":{
+				"type":"SCHEDULED"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"FQ1jH-1",
+			"id":"IqdAa",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":32,
+	"projectId":88,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		"tag1"
+	],
+	"version":2
+}
