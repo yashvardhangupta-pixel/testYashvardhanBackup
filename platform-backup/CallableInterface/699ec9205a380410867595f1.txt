@@ -1,0 +1,43 @@
+{
+	"createdTime":1772013856343,
+	"deleted":false,
+	"description":"cvds",
+	"id":"699ec9205a380410867595f1",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"cds":{
+					"type":"string",
+					"title":"Cds"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":308,
+	"lcName":"cds",
+	"modifiedTime":1772013856343,
+	"name":"cds",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":308,
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":0
+}
