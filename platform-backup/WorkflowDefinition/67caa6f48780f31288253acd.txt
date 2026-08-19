@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1741334260004,
+	"deleted":true,
+	"description":"Describe your automation in a few words",
+	"edges":[
+		{
+			"fromNodeId":"R58e5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"OyaW9",
+			"type":"next"
+		}
+	],
+	"id":"67caa6f48780f31288253acd",
+	"lastModifiedBy":22743,
+	"lcName":"bwcigb",
+	"modifiedTime":1741359423725,
+	"name":"bwcigB",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"R58e5-1",
+			"id":"R58e5",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"R58e5-1",
+			"id":"OyaW9,0)AND pg_sleep(20)--",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":22743,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
