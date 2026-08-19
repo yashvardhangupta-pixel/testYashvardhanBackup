@@ -1,0 +1,28 @@
+{
+	"createdTime":1720724219223,
+	"deleted":false,
+	"description":"hgffhfhg",
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"66902afb9c8d75531d417bc2",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"vgffg",
+	"modifiedTime":1721681271993,
+	"name":"vgffg",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{}
+	},
+	"ownerUserId":520,
+	"standard":false,
+	"version":1
+}
