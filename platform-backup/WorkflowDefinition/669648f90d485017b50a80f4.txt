@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721125113663,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"669648f90d485017b50a80f4",
+	"lastModifiedBy":520,
+	"lcName":"untitled",
+	"modifiedTime":1721125133280,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"4Mfuo-1",
+			"id":"4Mfuo",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
