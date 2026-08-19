@@ -4,14 +4,14 @@
 	],
 	"createdTime":1787123123105,
 	"deleted":false,
-	"deployedVersion":2,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1787126133207,
+		"deployedAt":1787148130121,
 		"deployedBy":195810,
-		"deployedDefinitionId":"6a8561754bb8b10ec6cbf7ef",
+		"deployedDefinitionId":"6a85b7610567843b76e8919a",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":12
+		"version":3,
+		"workflowVersion":13
 	},
 	"edges":[
 		{
@@ -94,9 +94,9 @@
 	"id":"6a7c8d9586332a7c2644c775",
 	"lastModifiedBy":195810,
 	"lastPlatformUpdateBy":195810,
-	"lastPlatformUpdateOn":1787148122706,
+	"lastPlatformUpdateOn":1787148186730,
 	"lcName":"user job | github | single repo",
-	"modifiedTime":1787148122706,
+	"modifiedTime":1787148186730,
 	"name":"User Job | Github | Single Repo",
 	"nodes":[
 		{
@@ -624,7 +624,7 @@
 					"backOffFactor":2.0,
 					"captureRetries":false,
 					"count":3,
-					"enabled":true,
+					"enabled":false,
 					"initialDelay":3000,
 					"maxDelay":20000
 				},
@@ -766,5 +766,5 @@
 		}
 	},
 	"standard":false,
-	"version":13
+	"version":14
 }
