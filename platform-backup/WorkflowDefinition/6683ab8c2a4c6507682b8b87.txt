@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		"ozonetel"
+	],
+	"createdTime":1719905164255,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"6683ab8c2a4c6507682b8b87",
+	"lastModifiedBy":520,
+	"lcName":"untitled (copy)",
+	"modifiedTime":1719905178110,
+	"name":"Untitled (copy)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"ozonetel"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"VpRxu-1",
+			"id":"VpRxu",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
