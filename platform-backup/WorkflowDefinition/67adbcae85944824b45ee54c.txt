@@ -1,0 +1,66 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1739439278913,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"OUeYo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"7SZhp",
+			"type":"next"
+		}
+	],
+	"id":"67adbcae85944824b45ee54c",
+	"lastModifiedBy":44108,
+	"lcName":"test",
+	"modifiedTime":1739439560908,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"pXO2e-1",
+			"id":"OUeYo",
+			"index":0,
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"pXO2e-1",
+			"id":"7SZhp",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":44108,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
