@@ -1,0 +1,45 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1718082259919,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		
+	},
+	"id":"6667dad3f13907399d5828c8",
+	"lastModifiedBy":520,
+	"lcName":"untitled",
+	"modifiedTime":1718082274914,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"bPJj4-1",
+			"id":"bPJj4",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
