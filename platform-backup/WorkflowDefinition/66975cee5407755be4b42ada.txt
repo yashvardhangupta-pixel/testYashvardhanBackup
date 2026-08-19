@@ -1,0 +1,111 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721195758750,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"h7lp3",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"RRt4Y",
+			"type":"next"
+		}
+	],
+	"grants":{
+		"configs":[
+			
+		]
+	},
+	"id":"66975cee5407755be4b42ada",
+	"lastModifiedBy":1866,
+	"lcName":"prompt executor (ai agent)",
+	"modifiedTime":1721888048338,
+	"name":"Prompt Executor (AI Agent)",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":46,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"h7lp3-1",
+			"id":"h7lp3",
+			"index":0,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"properties":{
+						"finalResult":{
+							"type":"string",
+							"title":"Final Result"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				},
+				"setup":{
+					"type":"object",
+					"properties":{
+						"query":{
+							"type":"string",
+							"title":"Query"
+						},
+						"aiAgentId":{
+							"type":"string",
+							"title":"Ai Agent Id"
+						},
+						"prompResponse":{
+							"type":"string",
+							"title":"Promp Response"
+						}
+					},
+					"additionalProperties":false,
+					"required":[]
+				}
+			},
+			"skip":false,
+			"title":"Trigger from automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":42,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"h7lp3-1",
+			"id":"RRt4Y",
+			"index":0,
+			"inputs":{
+				"result":{
+					"finalResult":"{{ h7lp3.outputs.query }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Return data to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":1866,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":5
+}
