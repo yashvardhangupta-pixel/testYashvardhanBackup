@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		"shopify"
+	],
+	"createdTime":1733990519653,
+	"deleted":true,
+	"deployedVersion":2,
+	"deploymentState":{
+		"deployedAt":1733990552770,
+		"deployedBy":522,
+		"deployedDefinitionId":"675a9898899ea43fad863d16",
+		"status":"DEPLOYED",
+		"version":2,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"675a9877899ea43fad863c6e",
+	"lastModifiedBy":522,
+	"lcName":"test",
+	"modifiedTime":1733990571616,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"shopify",
+				"resourceVersion":3389,
+				"connectionId":"67568df8c88af93bc104442d",
+				"resourceName":"shopify_on_customer_create"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_radXk-1",
+			"id":"_nHIAs",
+			"index":0,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Shopify",
+			"title":"Customer created (Shopify)",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":522,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
