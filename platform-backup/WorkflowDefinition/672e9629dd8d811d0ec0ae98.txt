@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		"airtable"
+	],
+	"createdTime":1731106345881,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1731106407045,
+		"deployedBy":520,
+		"deployedDefinitionId":"672e9666dd8d811d0ec0aea5",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":1
+	},
+	"edges":[
+		
+	],
+	"id":"672e9629dd8d811d0ec0ae98",
+	"lastModifiedBy":520,
+	"lcName":"airtable | new/updated record | sp",
+	"modifiedTime":1731106581222,
+	"name":"Airtable | New/Updated Record | SP",
+	"nodes":[
+		{
+			"context":{
+				"appName":"airtable",
+				"resourceVersion":96,
+				"connectionId":"672ca6657145c5678654376f",
+				"resourceName":"airtable_on_create_or_update_record"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_WBfZe-1",
+			"id":"_23vt7",
+			"index":0,
+			"inputs":{
+				"view":"viwcQhf674fkzqDxy",
+				"table":"tbl351lZ0yCa6MnvA",
+				"base":"appGtP9OYKT7UAw1M"
+			},
+			"skip":false,
+			"subTitle":"Airtable",
+			"title":"New/Updated Record",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
