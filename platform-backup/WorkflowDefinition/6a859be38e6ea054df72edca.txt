@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1787141091162,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_RrLjE",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_xQMpP",
+			"type":"next"
+		}
+	],
+	"id":"6a859be38e6ea054df72edca",
+	"lastModifiedBy":6701,
+	"lastPlatformUpdateBy":6701,
+	"lastPlatformUpdateOn":1787141091162,
+	"lcName":"tets",
+	"modifiedTime":1787141091162,
+	"name":"tets",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RrLjE-1",
+			"id":"_RrLjE",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_RrLjE-1",
+			"id":"_xQMpP",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":6701,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
