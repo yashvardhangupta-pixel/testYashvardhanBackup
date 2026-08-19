@@ -1,0 +1,62 @@
+{
+	"createdTime":1780253380609,
+	"deleted":true,
+	"description":"Webhook Raw Data Downloader | Custom Flow",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6a01c3ef212faa5430cc3f3d",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"properties":{
+					"additionalProperties":false,
+					"properties":{},
+					"required":[],
+					"title":"properties",
+					"type":"object"
+				},
+				"sanskar":{
+					"title":"Sanskar",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"webhook raw data downloader | custom flow",
+	"modifiedTime":1787051771933,
+	"name":"Webhook Raw Data Downloader | Custom Flow",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":-1,
+	"standard":true,
+	"tags":[
+		
+	],
+	"version":63
+}
