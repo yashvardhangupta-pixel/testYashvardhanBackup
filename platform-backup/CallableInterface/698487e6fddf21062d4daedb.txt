@@ -1,0 +1,36 @@
+{
+	"createdTime":1770293222682,
+	"deleted":false,
+	"description":"Searching node builder and node builder resources in opensearch",
+	"id":"698487e6fddf21062d4daedb",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":426,
+	"lcName":"testing",
+	"modifiedTime":1770293222682,
+	"name":"testing",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":426,
+	"standard":false,
+	"tags":[
+		"you"
+	],
+	"version":0
+}
