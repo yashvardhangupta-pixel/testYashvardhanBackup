@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1724134575749,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"oe4Xp",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NtRED",
+			"type":"next"
+		}
+	],
+	"id":"66c434afa07b7a4090e82bfd",
+	"lastModifiedBy":635,
+	"lcName":"sgffeghs",
+	"modifiedTime":1724134898036,
+	"name":"sgffeghs",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oe4Xp-1",
+			"id":"oe4Xp",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"oe4Xp-1",
+			"id":"NtRED",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":635,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
