@@ -4,6 +4,15 @@
 	],
 	"createdTime":1787148484357,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1787148499782,
+		"deployedBy":49915,
+		"deployedDefinitionId":"6a85b8ceaf361241368ce905",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
 			"fromNodeId":"n_lr0su",
@@ -17,9 +26,9 @@
 	"id":"6a85b8c4af361241368ce8f5",
 	"lastModifiedBy":49915,
 	"lastPlatformUpdateBy":49915,
-	"lastPlatformUpdateOn":1787148492457,
+	"lastPlatformUpdateOn":1787148537601,
 	"lcName":"webhook ",
-	"modifiedTime":1787148492457,
+	"modifiedTime":1787148537601,
 	"name":"webhook ",
 	"nodes":[
 		{
@@ -77,5 +86,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
