@@ -1,0 +1,58 @@
+{
+	"createdTime":1775646322934,
+	"deleted":false,
+	"description":"Post Logout Callable Interface",
+	"id":"69d63672a8c3c114cd2ae14b",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"post logout callable interface",
+	"modifiedTime":1775646323003,
+	"name":"Post Logout Callable Interface",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"statusCode":{
+					"type":"integer",
+					"title":"Status"
+				},
+				"payload":{
+					"type":"object",
+					"title":"Payload"
+				},
+				"headers":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Headers"
+				},
+				"location":{
+					"type":"string",
+					"title":"Location"
+				}
+			},
+			"required":[
+				"statusCode"
+			]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":false,
+	"version":0
+}
