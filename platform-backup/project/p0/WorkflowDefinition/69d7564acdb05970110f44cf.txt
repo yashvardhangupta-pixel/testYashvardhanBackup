@@ -4,14 +4,14 @@
 	],
 	"createdTime":1775720010683,
 	"deleted":false,
-	"deployedVersion":16,
+	"deployedVersion":17,
 	"deploymentState":{
-		"deployedAt":1787143954284,
+		"deployedAt":1787154559730,
 		"deployedBy":195833,
-		"deployedDefinitionId":"6a85a712f5d73d7fa522c80e",
+		"deployedDefinitionId":"6a85d07e537fe5570c75b340",
 		"status":"DEPLOYED",
-		"version":16,
-		"workflowVersion":20
+		"version":17,
+		"workflowVersion":21
 	},
 	"edges":[
 		{
@@ -24,15 +24,7 @@
 		},
 		{
 			"fromNodeId":"n_68BIW",
-			"id":"next@n_68BIW@n_EM8j3",
-			"priority":0,
-			"skip":false,
-			"toNodeId":"n_EM8j3",
-			"type":"next"
-		},
-		{
-			"fromNodeId":"n_EM8j3",
-			"id":"next@n_EM8j3@n_Pj6kD",
+			"id":"next@n_68BIW@n_Pj6kD",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Pj6kD",
@@ -180,9 +172,9 @@
 	"id":"69d7564acdb05970110f44cf",
 	"lastModifiedBy":195833,
 	"lastPlatformUpdateBy":195833,
-	"lastPlatformUpdateOn":1787154556582,
+	"lastPlatformUpdateOn":1787155798855,
 	"lcName":"token usage | using e_traces",
-	"modifiedTime":1787154556582,
+	"modifiedTime":1787155798855,
 	"name":"Token Usage | Using e_traces",
 	"nodes":[
 		{
@@ -192,7 +184,7 @@
 				"resourceName":"callables_from_api"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_Dw7D8",
@@ -271,7 +263,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_68BIW",
@@ -419,28 +411,6 @@
 			"type":"ACTION"
 		},
 		{
-			"context":{
-				"appName":"analytics_by_unifyapps",
-				"resourceVersion":855,
-				"resourceName":"analytics_by_unifyapps_execute_query",
-				"type":"APPLICATION"
-			},
-			"debug":false,
-			"dirty":true,
-			"fallbackMode":"STOP",
-			"groupId":"_68fvK-1",
-			"id":"n_EM8j3",
-			"index":3,
-			"inputs":{
-				"query":"SELECT      t._pr_aiAgentId AS agentId,     COALESCE(ag._pr_name, t._pr_aiAgentId) AS agentName,     t._pr_modelId AS modelId,     COALESCE(m._pr_name, t._pr_modelId) AS modelName,     SUM(COALESCE(CAST(t._pr_inputToken AS BIGINT), 0) + COALESCE(CAST(t._pr_cacheReadInputTokens AS BIGINT), 0)) AS totalInputTokens,     SUM(COALESCE(CAST(t._pr_outputToken AS BIGINT), 0) + COALESCE(CAST(t._pr_cacheWriteInputTokens AS BIGINT), 0)) AS totalOutputTokens,     SUM(COALESCE(t._pr_cost, 0)) AS totalCost,     COUNT(*) AS executionCount FROM ENTITY_e_traces t LEFT JOIN ENTITY_ai_agent_llm_model m ON t._pr_modelId = m.id LEFT JOIN ENTITY_ai_agent ag ON t._pr_aiAgentId = ag.id WHERE      t.timestamp BETWEEN '2026-08-19 00:00:00' AND '2026-08-19 23:59:59'     AND t._pr_inputToken > 0 GROUP BY      t._pr_aiAgentId,     COALESCE(ag._pr_name, t._pr_aiAgentId),     t._pr_modelId,     COALESCE(m._pr_name, t._pr_modelId) ORDER BY totalCost DESC;",
-				"group":"ENTITY_REPORTING"
-			},
-			"skip":false,
-			"subTitle":"Analytics by UnifyApps",
-			"title":"Execute Analytics SQL Query",
-			"type":"ACTION"
-		},
-		{
 			"additional":{
 				"visibleOptionalFields":[
 					"root.parameters.input1.items"
@@ -453,11 +423,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_Pj6kD",
-			"index":4,
+			"index":3,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -538,11 +508,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_Uep7l",
-			"index":5,
+			"index":4,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -598,11 +568,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_YiPJJ",
-			"index":6,
+			"index":5,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -979,11 +949,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_F3TwN",
-			"index":7,
+			"index":6,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_Pj6kD.outputs.result.result }}",
@@ -1007,11 +977,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_F3TwN@_68fvK-1@l",
 			"id":"n_P78LP",
-			"index":8,
+			"index":7,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -1370,11 +1340,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_P78LP@n_F3TwN@_68fvK-1@l@success",
 			"id":"n_VMmQP",
-			"index":9,
+			"index":8,
 			"inputs":{
 				"output":{
 					"type":"object",
@@ -1443,11 +1413,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_P78LP@n_F3TwN@_68fvK-1@l@success",
 			"id":"n_zLz6v",
-			"index":10,
+			"index":9,
 			"inputs":{
 				"filters":[
 					{
@@ -1485,11 +1455,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_zLz6v@n_P78LP@n_F3TwN@_68fvK-1@l@success@y",
 			"id":"n_ghkb6",
-			"index":11,
+			"index":10,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -1740,11 +1710,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_ghkb6@n_zLz6v@n_P78LP@n_F3TwN@_68fvK-1@l@success@y@success",
 			"id":"n_OEUKt",
-			"index":12,
+			"index":11,
 			"inputs":{
 				"captureAddedItems":false,
 				"insertLocation":"END",
@@ -1790,11 +1760,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_zLz6v@n_P78LP@n_F3TwN@_68fvK-1@l@success@n",
 			"id":"n_maVGs",
-			"index":13,
+			"index":12,
 			"inputs":{
 				"isAsync":false,
 				"enableProxy":false,
@@ -2051,11 +2021,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_maVGs@n_zLz6v@n_P78LP@n_F3TwN@_68fvK-1@l@success@n@success",
 			"id":"n_4btYZ",
-			"index":14,
+			"index":13,
 			"inputs":{
 				"captureAddedItems":false,
 				"insertLocation":"END",
@@ -2096,11 +2066,11 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_68fvK-1",
 			"id":"n_JZqQH",
-			"index":15,
+			"index":14,
 			"inputs":{
 				"streamingCompleted":true,
 				"responseName":"200_undefined",
@@ -2134,5 +2104,5 @@
 		}
 	},
 	"standard":false,
-	"version":21
+	"version":22
 }
