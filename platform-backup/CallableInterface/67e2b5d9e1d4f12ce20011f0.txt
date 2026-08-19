@@ -1,0 +1,115 @@
+{
+	"createdTime":1744352491287,
+	"deleted":false,
+	"description":"AI As Judge Evaluator Metrics",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"67e2b5d9e1d4f12ce20011f0",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"criteria":{
+					"title":"Evaluation Criteria",
+					"type":"string"
+				},
+				"evaluationParameters":{
+					"items":{
+						"type":"string"
+					},
+					"title":"Evaluation Parameters",
+					"type":"array"
+				},
+				"evaluationSteps":{
+					"items":{
+						"type":"string"
+					},
+					"title":"Evaluation Steps",
+					"type":"array"
+				},
+				"experimentId":{
+					"title":"Experiment Id",
+					"type":"string"
+				},
+				"metricId":{
+					"title":"Metric Id",
+					"type":"string"
+				},
+				"model":{
+					"title":"Model",
+					"type":"string"
+				},
+				"runId":{
+					"title":"Run Id",
+					"type":"string"
+				},
+				"scoreRange":{
+					"title":"Scoring Range",
+					"type":"string"
+				},
+				"testCase":{
+					"additionalProperties":false,
+					"properties":{},
+					"title":"Test Case",
+					"type":"object"
+				},
+				"testCaseId":{
+					"title":"Test Case Id",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lastPlatformUpdateBy":195823,
+	"lastPlatformUpdateOn":1785176847926,
+	"lcName":"ai as judge evaluator metrics",
+	"modifiedTime":1787051771765,
+	"name":"AI As Judge Evaluator Metrics",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"cost":{
+					"title":"Cost",
+					"type":"number"
+				},
+				"reason":{
+					"title":"Reason",
+					"type":"string"
+				},
+				"score":{
+					"title":"Score",
+					"type":"number"
+				},
+				"tokensUsed":{
+					"title":"Tokens Used",
+					"type":"number"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":49915,
+	"standard":false,
+	"version":309
+}
