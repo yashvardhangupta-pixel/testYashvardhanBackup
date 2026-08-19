@@ -1,0 +1,67 @@
+{
+	"createdTime":1783344486876,
+	"deleted":false,
+	"description":"To call custom automation for rbac for text2sql",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"6a47d2d1f6d6c77b01f81a82",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"additionalWorkspaceDataset":{
+					"additionalProperties":false,
+					"properties":{},
+					"title":"Additional Workspace Dataset",
+					"type":"object"
+				},
+				"platformName":{
+					"title":"Platform Name",
+					"type":"string"
+				},
+				"sql":{
+					"title":"Sql",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"text to sql custom rbac automation",
+	"modifiedTime":1787051771930,
+	"name":"Text to Sql custom rbac automation",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"properties":{
+				"result":{
+					"title":"Result",
+					"type":"string"
+				},
+				"sql":{
+					"title":"Sql",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":true,
+	"version":88
+}
