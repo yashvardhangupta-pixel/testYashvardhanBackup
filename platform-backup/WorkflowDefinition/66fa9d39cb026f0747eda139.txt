@@ -1,0 +1,47 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1727700281017,
+	"deleted":true,
+	"description":"description",
+	"edges":[
+		
+	],
+	"id":"66fa9d39cb026f0747eda139",
+	"lastModifiedBy":520,
+	"lcName":"replace_trigger_117277002746910",
+	"modifiedTime":1727700286890,
+	"name":"Replace_Trigger_117277002746910",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"hulNu-1",
+			"id":"X55AD",
+			"index":0,
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
