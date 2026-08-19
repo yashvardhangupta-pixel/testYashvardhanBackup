@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1726126800359,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"Dm6UX",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"8B0Xq",
+			"type":"next"
+		}
+	],
+	"id":"66e29ad003a9a06cf6eba1fc",
+	"lastModifiedBy":520,
+	"lcName":"6sense",
+	"modifiedTime":1726144535840,
+	"name":"6sense",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Dm6UX-1",
+			"id":"Dm6UX",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Dm6UX-1",
+			"id":"8B0Xq",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
