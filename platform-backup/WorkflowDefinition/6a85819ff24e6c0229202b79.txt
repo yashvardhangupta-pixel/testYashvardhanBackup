@@ -93,9 +93,9 @@
 	"id":"6a85819ff24e6c0229202b79",
 	"lastModifiedBy":175510,
 	"lastPlatformUpdateBy":175510,
-	"lastPlatformUpdateOn":1787139266040,
+	"lastPlatformUpdateOn":1787139354506,
 	"lcName":"test",
-	"modifiedTime":1787139266040,
+	"modifiedTime":1787139354506,
 	"name":"test",
 	"nodes":[
 		{
@@ -239,6 +239,7 @@
 				"writeThroughSessionVariables":false,
 				"object_type":"db_team_members",
 				"skipIfBlank":false,
+				"inlineRefresh":false,
 				"record":{
 					"name":"{{ __USER__.outputs.name }}",
 					"email":"{{ __USER__.outputs.contactDetails.email }}"
@@ -409,5 +410,5 @@
 		}
 	},
 	"standard":false,
-	"version":7
+	"version":8
 }
