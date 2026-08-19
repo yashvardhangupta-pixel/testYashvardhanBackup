@@ -1,0 +1,80 @@
+{
+	"createdTime":1768515824645,
+	"deleted":false,
+	"description":"Generates knowledge resource data parameters from Enterprise Search knowledge input",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"696968f0dc07ce384d915d4e",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"inputs":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Inputs"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":0,
+	"lcName":"expand knowledge inputs",
+	"modifiedTime":1786718038516,
+	"name":"Expand Knowledge Inputs",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"resourceInputs":{
+					"type":"array",
+					"items":{
+						"type":"object",
+						"properties":{
+							"resourceName":{
+								"type":"string",
+								"title":"Resource Name"
+							},
+							"inputs":{
+								"type":"object",
+								"properties":{},
+								"additionalProperties":false,
+								"title":"Inputs"
+							},
+							"enabled":{
+								"type":"boolean",
+								"title":"Enabled"
+							}
+						},
+						"additionalProperties":false,
+						"required":[]
+					},
+					"title":"Resource Inputs"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":309,
+	"standard":false,
+	"version":22
+}
