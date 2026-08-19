@@ -119,9 +119,9 @@
 	"id":"67e390229982b026deebbee1",
 	"lastModifiedBy":195810,
 	"lastPlatformUpdateBy":195810,
-	"lastPlatformUpdateOn":1787129996684,
+	"lastPlatformUpdateOn":1787130054622,
 	"lcName":"[github] get user sharedwithids",
-	"modifiedTime":1787129996684,
+	"modifiedTime":1787130054622,
 	"name":"[Github] Get User SharedWithIds",
 	"nodes":[
 		{
@@ -694,9 +694,9 @@
 			"inputs":{
 				"result":{
 					"sharedWithIds":{
-						"items":"{{ gTidM.outputs.items[0] }}",
-						"source":"{{ gTidM.outputs.items }}",
-						"ua:type":"mappedArray"
+						"source":"{{ n_8EFN4.outputs.result.uniqueSharedWithIds }}",
+						"ua:type":"mappedArray",
+						"items":"{{ n_8EFN4.outputs.result.uniqueSharedWithIds[0] }}"
 					}
 				}
 			},
@@ -724,5 +724,5 @@
 	"tags":[
 		
 	],
-	"version":190
+	"version":191
 }
