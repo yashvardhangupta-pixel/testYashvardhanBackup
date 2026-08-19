@@ -1,0 +1,59 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1729366660625,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_Vmcxe",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_Inakd",
+			"type":"next"
+		}
+	],
+	"id":"67140a84eda57c4ed7e187a1",
+	"lastModifiedBy":520,
+	"lcName":"testingtour3",
+	"modifiedTime":1729368151321,
+	"name":"testingtour3",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Vmcxe-1",
+			"id":"_Vmcxe",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_Vmcxe-1",
+			"id":"_Inakd",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
