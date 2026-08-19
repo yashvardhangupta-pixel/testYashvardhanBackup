@@ -1,0 +1,85 @@
+{
+	"createdTime":1758530275460,
+	"deleted":false,
+	"description":"Execute SQL Query",
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"V"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"68c269941bf81b3daae97af8",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"additional":{
+					"additionalProperties":false,
+					"properties":{},
+					"title":"Additional",
+					"type":"object"
+				},
+				"platformName":{
+					"title":"Platform Name",
+					"type":"string"
+				},
+				"sqlQuery":{
+					"title":"Sql Query",
+					"type":"string"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"execute sql query",
+	"modifiedTime":1787051771793,
+	"name":"Execute SQL Query",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"additionalProperties":false,
+			"type":"object",
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"columnNames":{
+					"title":"columnNames",
+					"type":"array"
+				},
+				"err_msg":{
+					"title":"err_msg",
+					"type":"string"
+				},
+				"passMessageDirectlyToAgent":{
+					"title":"Pass Message Directly To Agent",
+					"type":"string"
+				},
+				"rows":{
+					"title":"rows",
+					"type":"array"
+				},
+				"status":{
+					"title":"status",
+					"type":"integer"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":true,
+	"version":192
+}
