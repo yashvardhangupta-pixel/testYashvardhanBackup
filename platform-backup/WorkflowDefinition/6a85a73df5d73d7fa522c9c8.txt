@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1787143997277,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_E4ZyI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_KQntj",
+			"type":"next"
+		}
+	],
+	"id":"6a85a73df5d73d7fa522c9c8",
+	"lastModifiedBy":195810,
+	"lastPlatformUpdateBy":195810,
+	"lastPlatformUpdateOn":1787143997277,
+	"lcName":"export saved csr",
+	"modifiedTime":1787143997277,
+	"name":"Export saved csr",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_E4ZyI-1",
+			"id":"_E4ZyI",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_E4ZyI-1",
+			"id":"_KQntj",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":195810,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"version":0
+}
