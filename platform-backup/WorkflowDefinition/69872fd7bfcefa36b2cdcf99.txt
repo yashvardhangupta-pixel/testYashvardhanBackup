@@ -1,0 +1,71 @@
+{
+	"appsUsed":[
+		"isa"
+	],
+	"createdTime":1770467287632,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_SsOZa",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_N16E8",
+			"type":"next"
+		}
+	],
+	"id":"69872fd7bfcefa36b2cdcf99",
+	"lastModifiedBy":2621,
+	"lcName":"test",
+	"modifiedTime":1770471044771,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SsOZa-1",
+			"id":"_SsOZa",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"isa",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_SsOZa-1",
+			"id":"n_N16E8",
+			"index":2,
+			"skip":false,
+			"subTitle":"ISA",
+			"title":"Select an action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":2621,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
