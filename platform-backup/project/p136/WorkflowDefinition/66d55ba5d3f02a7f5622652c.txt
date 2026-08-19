@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725258661012,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"himeo",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"UhwUz",
+			"type":"next"
+		}
+	],
+	"id":"66d55ba5d3f02a7f5622652c",
+	"lastModifiedBy":520,
+	"lcName":"akma2sep1",
+	"modifiedTime":1725258834501,
+	"name":"akma2sep1",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"himeo-1",
+			"id":"himeo",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"himeo-1",
+			"id":"UhwUz",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"projectId":136,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		"32kkww"
+	],
+	"version":2
+}
