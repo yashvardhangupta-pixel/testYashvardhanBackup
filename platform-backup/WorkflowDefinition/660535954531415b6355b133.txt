@@ -1,0 +1,55 @@
+{
+	"appsUsed":[
+		"kafka"
+	],
+	"createdTime":1711617429784,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"660535954531415b6355b133",
+	"lastModifiedBy":174,
+	"lcName":"untitled",
+	"modifiedTime":1711617452841,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"kafka",
+				"resourceVersion":2,
+				"resourceName":"kafka_on_record"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"rl6lj-1",
+			"id":"rl6lj",
+			"index":0,
+			"skip":false,
+			"subTitle":"Kafka",
+			"title":"Trigger from event in a topic",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":174,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
