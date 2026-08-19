@@ -25,9 +25,9 @@
 	"id":"6a85a653ec9ccf3f750bb7f8",
 	"lastModifiedBy":2721,
 	"lastPlatformUpdateBy":2721,
-	"lastPlatformUpdateOn":1787143832347,
+	"lastPlatformUpdateOn":1787143834772,
 	"lcName":"webhook_on-newuser",
-	"modifiedTime":1787143832347,
+	"modifiedTime":1787143834772,
 	"name":"Webhook_on-newuser",
 	"nodes":[
 		{
@@ -118,5 +118,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
