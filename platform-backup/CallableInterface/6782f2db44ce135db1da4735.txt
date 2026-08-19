@@ -1,0 +1,33 @@
+{
+	"createdTime":1736635099337,
+	"deleted":false,
+	"description":"otAyeP",
+	"id":"6782f2db44ce135db1da4735",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"otayepl9tttmp2si",
+	"modifiedTime":1736635099337,
+	"name":"otAyePl9tttmp2si",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":854,
+	"standard":false,
+	"version":0
+}
