@@ -1,67 +1,328 @@
 {
 	"appsUsed":[
-		"gdrive"
+		
 	],
 	"createdTime":1787141091162,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_RrLjE",
-			"id":"next@_RrLjE@n_qu9Dw",
+			"fromNodeId":"n_7Ajxz",
+			"id":"next@n_7Ajxz@n_Dh39s",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_qu9Dw",
+			"toNodeId":"n_Dh39s",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_Dh39s",
+			"id":"next@n_Dh39s@n_KWcc2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KWcc2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_KWcc2",
+			"id":"loop@n_KWcc2@n_7aBPq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_7aBPq",
+			"type":"loop"
+		},
+		{
+			"fromNodeId":"n_7aBPq",
+			"id":"next@n_7aBPq@n_oRRqF",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_oRRqF",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_oRRqF",
+			"id":"next@n_oRRqF@n_4cGHq",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_4cGHq",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_4cGHq",
+			"id":"next@n_4cGHq@n_jn4YN",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_jn4YN",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_jn4YN",
+			"id":"next@n_jn4YN@n_KWcc2",
+			"name":"loopback",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_KWcc2",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_KWcc2",
+			"id":"next@n_KWcc2@n_CwDZ0",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_CwDZ0",
 			"type":"next"
 		}
 	],
 	"id":"6a859be38e6ea054df72edca",
-	"lastModifiedBy":6701,
-	"lastPlatformUpdateBy":6701,
-	"lastPlatformUpdateOn":1787141235649,
+	"lastModifiedBy":196039,
+	"lastPlatformUpdateBy":196039,
+	"lastPlatformUpdateOn":1787141523547,
 	"lcName":"tets",
-	"modifiedTime":1787141235649,
+	"modifiedTime":1787141523547,
 	"name":"tets",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":953,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrLjE-1",
-			"id":"_RrLjE",
+			"id":"n_7Ajxz",
 			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
 			"context":{
-				"appName":"gdrive",
-				"resourceVersion":11088,
-				"connectionId":"6a859c0645a2ff6cfe955ba3",
-				"resourceName":"gdrive_upload_files",
+				"appName":"code_by_unifyapps",
+				"resourceVersion":896,
+				"resourceName":"code_by_unifyapps_groovy",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_RrLjE-1",
-			"id":"n_qu9Dw",
+			"id":"n_Dh39s",
 			"index":2,
 			"inputs":{
-				"attachment":{
-					"attachment_option":"use_file_url",
-					"url":"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
-					"file_name":"test",
-					"mimeType":"application/pdf"
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"workflowIds":{
+							"type":"array",
+							"items":{
+								"type":"string"
+							},
+							"title":"Workflow Ids"
+						}
+					}
+				},
+				"code":"return [\"workflowIds\":[\"6a7c42a1eddf8930c2ffe6af\"]]",
+				"compile_static":false,
+				"captureStdOutput":false
+			},
+			"skip":false,
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"loop",
+				"resourceVersion":41,
+				"resourceName":"loop_for_each",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_RrLjE-1",
+			"id":"n_KWcc2",
+			"index":3,
+			"inputs":{
+				"repeatMode":"SINGLE",
+				"listSource":"{{ n_Dh39s.outputs.result.workflowIds }}",
+				"captureIterations":false
+			},
+			"skip":false,
+			"subTitle":"Loop",
+			"title":"For each loop",
+			"type":"LOOP"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":3635,
+				"resourceName":"standard_entities_lookup_entities",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_KWcc2@_RrLjE-1@l",
+			"id":"n_7aBPq",
+			"index":4,
+			"inputs":{
+				"keys":[
+					"{{ n_KWcc2.outputs.item }}"
+				],
+				"lookupType":"WORKFLOW_DEFINITION",
+				"type":"ByKeys"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Lookup Request",
+			"type":"ACTION"
+		},
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				},
+				"visibleOptionalFields":[
+					"root.parameters.response.inaccessibleObjects",
+					"root.parameters.response.type",
+					"root.parameters.response.objects"
+				]
+			},
+			"context":{
+				"appName":"code_by_unifyapps",
+				"resourceVersion":0,
+				"resourceName":"code_by_unifyapps_groovy",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_KWcc2@_RrLjE-1@l",
+			"id":"n_oRRqF",
+			"index":5,
+			"inputs":{
+				"output":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"w":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"W"
+						}
+					}
+				},
+				"input":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"workflowId"
+					],
+					"properties":{
+						"response":{
+							"type":"object",
+							"properties":{},
+							"title":"response",
+							"additionalProperties":false,
+							"required":[]
+						},
+						"workflowId":{
+							"type":"string",
+							"title":"Workflow Id"
+						}
+					}
+				},
+				"code":"response.objects.each { id, obj ->\n    obj.standard = true\n}\n\nreturn [\"w\":response.objects[workflowId]]",
+				"compile_static":false,
+				"captureStdOutput":false,
+				"parameters":{
+					"response":"{{ n_7aBPq.outputs.response }}",
+					"workflowId":"{{ n_KWcc2.outputs.item }}"
 				}
 			},
 			"skip":false,
-			"subTitle":"Google Drive",
-			"title":"Upload a file",
+			"subTitle":"Code by UnifyApps",
+			"title":"Execute Groovy code",
 			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":3635,
+				"resourceName":"standard_entities_update_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_KWcc2@_RrLjE-1@l",
+			"id":"n_4cGHq",
+			"index":6,
+			"inputs":{
+				"workflowObject":"{{ n_oRRqF.outputs.result.w }}",
+				"violationCheck":false,
+				"workflowId":"{{ n_KWcc2.outputs.item }}"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Save automation",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":3635,
+				"resourceName":"standard_entities_deploy_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_KWcc2@_RrLjE-1@l",
+			"id":"n_jn4YN",
+			"index":7,
+			"inputs":{
+				"workflowId":"{{ n_KWcc2.outputs.item }}"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Deploy automation",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":0,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_RrLjE-1",
+			"id":"n_CwDZ0",
+			"index":8,
+			"inputs":{
+				"result":"{{ n_oRRqF.outputs.result }}"
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
 		}
 	],
 	"ownerUserId":6701,
@@ -78,5 +339,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
