@@ -1,0 +1,63 @@
+{
+	"appsUsed":[
+		"ibm_mq"
+	],
+	"createdTime":1731144570600,
+	"deleted":true,
+	"deployedVersion":4,
+	"deploymentState":{
+		"deployedAt":1731151769959,
+		"deployedBy":287,
+		"deployedDefinitionId":"672f4799b883100b8fa6fe86",
+		"status":"DEPLOYED",
+		"version":4,
+		"workflowVersion":7
+	},
+	"edges":[
+		
+	],
+	"id":"672f2b7add73513eac8c5677",
+	"lastModifiedBy":287,
+	"lcName":"ibm mq stream",
+	"modifiedTime":1731151792999,
+	"name":"ibm mq stream",
+	"nodes":[
+		{
+			"context":{
+				"appName":"ibm_mq",
+				"resourceVersion":23,
+				"connectionId":"672f2b156bbd9f085c79ab04",
+				"resourceName":"ibm_mq_on_new_message"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_tAa4S-1",
+			"id":"_A7QGJ",
+			"index":0,
+			"inputs":{
+				"queueManager":"QM1",
+				"isDelete":false,
+				"queue":"MSGQ"
+			},
+			"skip":false,
+			"subTitle":"IBM MQ",
+			"title":"New Message Stream",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":287,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":8
+}
