@@ -1,0 +1,43 @@
+{
+	"appsUsed":[
+		"freshservice"
+	],
+	"createdTime":1720325313390,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		
+	],
+	"id":"668a14c1b6a4ae5b120598e6",
+	"lastModifiedBy":520,
+	"lcName":"hnnjj",
+	"modifiedTime":1720325847727,
+	"name":"hnnjj",
+	"nodes":[
+		{
+			"context":{
+				"appName":"freshservice"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"CSjM6-1",
+			"id":"CSjM6",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
