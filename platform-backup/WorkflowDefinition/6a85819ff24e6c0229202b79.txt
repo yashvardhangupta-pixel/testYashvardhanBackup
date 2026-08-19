@@ -7,35 +7,95 @@
 	"edges":[
 		{
 			"fromNodeId":"n_eLDwF",
-			"id":"next@n_eLDwF@n_sUukC",
+			"id":"next@n_eLDwF@n_count",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_sUukC",
+			"toNodeId":"n_count",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_sUukC",
-			"id":"next@n_sUukC@n_VkuRh",
+			"fromNodeId":"n_count",
+			"id":"next@n_count@n_ifNew",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_VkuRh",
+			"toNodeId":"n_ifNew",
 			"type":"next"
 		},
 		{
-			"fromNodeId":"n_VkuRh",
-			"id":"next@n_VkuRh@n_ci27K",
+			"fromNodeId":"n_ifNew",
+			"id":"if@n_ifNew@n_newUser",
+			"name":"yes",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_ci27K",
+			"toNodeId":"n_newUser",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_newUser",
+			"id":"next@n_newUser@n_getConn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_getConn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ifNew",
+			"id":"next@n_ifNew@n_getConn",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_getConn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_getConn",
+			"id":"next@n_getConn@n_ifNoConn",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_ifNoConn",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ifNoConn",
+			"id":"if@n_ifNoConn@n_auth",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_auth",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_auth",
+			"id":"next@n_auth@n_redirect",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_redirect",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_redirect",
+			"id":"next@n_redirect@n_done",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_done",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_ifNoConn",
+			"id":"next@n_ifNoConn@n_done",
+			"name":"no",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_done",
 			"type":"next"
 		}
 	],
 	"id":"6a85819ff24e6c0229202b79",
 	"lastModifiedBy":175510,
 	"lastPlatformUpdateBy":175510,
-	"lastPlatformUpdateOn":1787138137456,
+	"lastPlatformUpdateOn":1787139264187,
 	"lcName":"test",
-	"modifiedTime":1787138137456,
+	"modifiedTime":1787139264187,
 	"name":"test",
 	"nodes":[
 		{
@@ -100,19 +160,182 @@
 		},
 		{
 			"context":{
-				"appName":"standard_entities",
-				"resourceVersion":19017,
-				"resourceName":"standard_entities_save_and_authorize_connection",
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2609,
+				"resourceName":"storage_by_unifyapps_count_records",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hgwNV-1",
-			"id":"n_sUukC",
+			"id":"n_count",
 			"index":2,
 			"inputs":{
-				"appName":"adafruit",
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"properties_email",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ __USER__.outputs.contactDetails.email }}"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"object_type":"db_team_members"
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Count records",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":91,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_hgwNV-1",
+			"id":"n_ifNew",
+			"index":3,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_count.outputs.count }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"0"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"New user?",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":2609,
+				"resourceName":"storage_by_unifyapps_create_record",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_ifNew@_hgwNV-1@y",
+			"id":"n_newUser",
+			"index":4,
+			"inputs":{
+				"useRawPayload":false,
+				"writeThroughSessionVariables":false,
+				"object_type":"db_team_members",
+				"skipIfBlank":false,
+				"record":{
+					"name":"{{ __USER__.outputs.name }}",
+					"email":"{{ __USER__.outputs.contactDetails.email }}"
+				},
+				"useUuid":false,
+				"batching":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Create team member",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":34,
+				"resourceName":"standard_entities_get_connections",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_hgwNV-1",
+			"id":"n_getConn",
+			"index":5,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"oUId",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"{{ __RUN__.outputs.userId }}"
+							}
+						},
+						{
+							"property":"appName",
+							"filter":{
+								"operator":"EQUAL",
+								"value":"google_workspace"
+							}
+						}
+					],
+					"operator":"AND"
+				},
+				"offset":0,
+				"size":1
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Get connections",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"if_else",
+				"resourceVersion":91,
+				"resourceName":"if_else_condition",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"_hgwNV-1",
+			"id":"n_ifNoConn",
+			"index":6,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ n_getConn.outputs.connections[0].id }}",
+						"filter":{
+							"operator":"MISSING"
+						}
+					}
+				],
+				"operator":"OR"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"No Google connection?",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":7467,
+				"resourceName":"standard_entities_save_and_authorize_connection",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_ifNoConn@_hgwNV-1@y",
+			"id":"n_auth",
+			"index":7,
+			"inputs":{
+				"appName":"google_workspace",
 				"saveInputs":false,
 				"getQueryParamsInReturnToUrl":true,
 				"customRedirectionAllowed":false
@@ -125,7 +348,33 @@
 		{
 			"context":{
 				"appName":"callables",
-				"resourceVersion":6509,
+				"resourceVersion":1102,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_ifNoConn@_hgwNV-1@y",
+			"id":"n_redirect",
+			"index":8,
+			"inputs":{
+				"result":{
+					"statusCode":302,
+					"headers":{
+						"Location":"{{ n_auth.outputs.redirectUrl }}"
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Redirect to Google consent",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":1102,
 				"resourceName":"callables_return_to_automation",
 				"type":"APPLICATION"
 			},
@@ -133,27 +382,16 @@
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_hgwNV-1",
-			"id":"n_VkuRh",
-			"index":3,
-			"inputs":{},
+			"id":"n_done",
+			"index":9,
+			"inputs":{
+				"result":{
+					"statusCode":200
+				}
+			},
 			"skip":false,
 			"subTitle":"Callable",
-			"title":"Respond to automation",
-			"type":"STOP"
-		},
-		{
-			"context":{
-				"appName":"stop"
-			},
-			"debug":false,
-			"dirty":false,
-			"fallbackMode":"STOP",
-			"groupId":"_hgwNV-1",
-			"id":"n_ci27K",
-			"index":4,
-			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
+			"title":"Continue normal login",
 			"type":"STOP"
 		}
 	],
@@ -171,5 +409,5 @@
 		}
 	},
 	"standard":false,
-	"version":5
+	"version":6
 }
