@@ -1,53 +1,83 @@
 {
 	"appsUsed":[
-		
+		"google_workspace"
 	],
 	"createdTime":1787143594406,
 	"deleted":false,
 	"edges":[
 		{
-			"fromNodeId":"_MyMIY",
+			"fromNodeId":"n_353nj",
+			"id":"next@n_353nj@n_6lgpb",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"_DGKh5",
+			"toNodeId":"n_6lgpb",
 			"type":"next"
 		}
 	],
 	"id":"6a85a5aaec9ccf3f750bb4da",
 	"lastModifiedBy":2721,
 	"lastPlatformUpdateBy":2721,
-	"lastPlatformUpdateOn":1787143594406,
+	"lastPlatformUpdateOn":1787143727957,
 	"lcName":"test",
-	"modifiedTime":1787143594406,
+	"modifiedTime":1787143727957,
 	"name":"test",
 	"nodes":[
 		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":953,
+				"resourceName":"webhooks_default"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MyMIY-1",
-			"id":"_MyMIY",
-			"index":0,
+			"id":"n_353nj",
+			"index":1,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
 			"skip":false,
-			"title":"Select a trigger event",
+			"subTitle":"Webhook",
+			"title":"New event",
 			"trigger":{
-				"type":"EVENT"
+				"type":"WEBHOOK"
 			},
 			"type":"START"
 		},
 		{
+			"context":{
+				"appName":"google_workspace",
+				"resourceVersion":2,
+				"connectionId":"6a8578d9b1715b19c1f29ee8",
+				"resourceName":"google_workspace_watch_users",
+				"type":"APPLICATION"
+			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_MyMIY-1",
-			"id":"_DGKh5",
-			"index":0,
+			"id":"n_6lgpb",
+			"index":2,
+			"inputs":{
+				"domain":"unifyapps.com",
+				"id":"newUserChannel",
+				"type":"web_hook",
+				"event":"ADD",
+				"customer":"my_customer"
+			},
 			"skip":false,
-			"title":"Select an app and action",
+			"subTitle":"Google Workspace",
+			"title":"Watch users",
 			"type":"ACTION"
 		}
 	],
 	"ownerUserId":2721,
+	"schemaReferences":[
+		
+	],
 	"settings":{
 		"enableNodeLevelLogging":true,
 		"enableRunLogging":true,
@@ -58,5 +88,5 @@
 		}
 	},
 	"standard":false,
-	"version":0
+	"version":1
 }
