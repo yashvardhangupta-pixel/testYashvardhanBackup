@@ -1,0 +1,62 @@
+{
+	"appsUsed":[
+		"stripe"
+	],
+	"createdTime":1729662000575,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1729662083895,
+		"deployedBy":520,
+		"deployedDefinitionId":"67188c8384770a1b262ef9b5",
+		"status":"PAUSED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"edges":[
+		
+	],
+	"id":"67188c3084770a1b262ef99a",
+	"lastModifiedBy":520,
+	"lcName":"in",
+	"modifiedTime":1729681462858,
+	"name":"in",
+	"nodes":[
+		{
+			"context":{
+				"appName":"stripe",
+				"resourceVersion":17,
+				"connectionId":"670e549cf9485267caff8f36",
+				"resourceName":"stripe_on_new_invoice_polling_batch"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_cfBqh-1",
+			"id":"_LvDeV",
+			"index":0,
+			"inputs":{
+				"interval":5,
+				"batchSize":10
+			},
+			"skip":false,
+			"subTitle":"Stripe",
+			"title":"New invoice (Batch)",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":3
+}
