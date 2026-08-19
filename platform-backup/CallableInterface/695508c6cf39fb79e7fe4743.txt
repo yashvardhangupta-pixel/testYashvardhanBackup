@@ -1,0 +1,79 @@
+{
+	"createdTime":1767180485935,
+	"deleted":false,
+	"description":"Custom Workflow Authentication",
+	"id":"695508c6cf39fb79e7fe4743",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"body":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Body"
+				},
+				"queryParams":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Query Params"
+				},
+				"headers":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Headers"
+				}
+			},
+			"required":[]
+		}
+	},
+	"lastModifiedBy":-1,
+	"lcName":"custom workflow authentication",
+	"modifiedTime":1767180486034,
+	"name":"Custom Workflow Authentication",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"body":{
+					"type":"object",
+					"properties":{
+						"authenticated":{
+							"type":"boolean",
+							"title":"Authenticated"
+						},
+						"userDetails":{
+							"type":"object",
+							"properties":{},
+							"additionalProperties":false,
+							"title":"User Details"
+						},
+						"returnTo":{
+							"type":"string",
+							"title":"Return To"
+						}
+					},
+					"additionalProperties":false,
+					"title":"Body",
+					"required":[]
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":-1,
+	"standard":false,
+	"version":0
+}
