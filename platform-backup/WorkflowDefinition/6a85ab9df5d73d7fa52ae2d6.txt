@@ -4,19 +4,19 @@
 	],
 	"createdTime":1787145117653,
 	"deleted":false,
-	"deployedVersion":1,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1787145200193,
+		"deployedAt":1787147664714,
 		"deployedBy":557,
-		"deployedDefinitionId":"6a85abf032827a0a2e039938",
+		"deployedDefinitionId":"6a85b590514cf006f6e90ca1",
 		"status":"DEPLOYED",
-		"version":1,
-		"workflowVersion":2
+		"version":3,
+		"workflowVersion":4
 	},
 	"edges":[
 		{
-			"fromNodeId":"n_vabaN",
-			"id":"next@n_vabaN@n_ZEc0n",
+			"fromNodeId":"n_W9IiK",
+			"id":"next@n_W9IiK@n_ZEc0n",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_ZEc0n",
@@ -26,44 +26,34 @@
 	"id":"6a85ab9df5d73d7fa52ae2d6",
 	"lastModifiedBy":557,
 	"lastPlatformUpdateBy":557,
-	"lastPlatformUpdateOn":1787145231681,
+	"lastPlatformUpdateOn":1787147707989,
 	"lcName":"tets",
-	"modifiedTime":1787145231681,
+	"modifiedTime":1787147707989,
 	"name":"tets",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":953,
-				"resourceName":"webhooks_default"
+				"appName":"schedule",
+				"resourceVersion":967,
+				"resourceName":"schedule_default"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_gcwY6-1",
-			"id":"n_vabaN",
+			"id":"n_W9IiK",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json",
-					"queryParams":{
-						"type":"object",
-						"additionalProperties":false,
-						"required":[],
-						"properties":{
-							"test":{
-								"type":"string",
-								"title":"Test"
-							}
-						}
-					}
-				}
+				"cron":"INTERVAL",
+				"sequential":false,
+				"interval":1,
+				"frequency":"MINUTES"
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Schedule",
+			"title":"New recurring event",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"SCHEDULED"
 			},
 			"type":"START"
 		},
@@ -75,7 +65,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_gcwY6-1",
 			"id":"n_ZEc0n",
@@ -137,5 +127,5 @@
 		}
 	},
 	"standard":false,
-	"version":3
+	"version":5
 }
