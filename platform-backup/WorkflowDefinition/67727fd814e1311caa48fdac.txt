@@ -1,0 +1,73 @@
+{
+	"appsUsed":[
+		"facebook_ads"
+	],
+	"createdTime":1735557080297,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"MkNYg",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"GFLZa",
+			"type":"next"
+		}
+	],
+	"id":"67727fd814e1311caa48fdac",
+	"lastModifiedBy":520,
+	"lcName":"test",
+	"modifiedTime":1735557126779,
+	"name":"test",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"qCyaW-1",
+			"id":"MkNYg",
+			"index":0,
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"facebook_ads",
+				"resourceVersion":18,
+				"resourceName":"facebook_ads_create_ad_adsets",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"qCyaW-1",
+			"id":"GFLZa",
+			"index":0,
+			"skip":false,
+			"subTitle":"Facebook Ads",
+			"title":"Create an ad adset",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
