@@ -1,0 +1,60 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1724608168396,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"nriz5",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"yrBCp",
+			"type":"next"
+		}
+	],
+	"id":"66cb6ea87935e33fd593ccb0",
+	"lastModifiedBy":520,
+	"lcName":"afssadadada",
+	"modifiedTime":1724608178134,
+	"name":"afssadadada",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"nriz5-1",
+			"id":"nriz5",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"nriz5-1",
+			"id":"yrBCp",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"projectId":115,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":1
+}
