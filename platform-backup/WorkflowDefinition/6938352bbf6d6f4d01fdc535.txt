@@ -1,0 +1,180 @@
+{
+	"appsUsed":[
+		"microsoft_calendar"
+	],
+	"createdTime":1767695227519,
+	"deleted":true,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1767695227724,
+		"deployedBy":191574,
+		"deployedDefinitionId":"695ce37b4f6c6d7f36b5664d",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":2
+	},
+	"description":"Adds an attachment to an existing event in Microsoft Calendar",
+	"edges":[
+		{
+			"fromNodeId":"n_Kbby2",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_aPonH",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_aPonH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_lzWs8",
+			"type":"next"
+		}
+	],
+	"id":"6938352bbf6d6f4d01fdc535",
+	"lastModifiedBy":191574,
+	"lcName":"yoda| add attachment to event via microsoft calendar 2/2 -v2",
+	"modifiedTime":1770716335766,
+	"name":"YODA| Add attachment to event via Microsoft Calendar 2/2 -v2",
+	"nodes":[
+		{
+			"additional":{
+				"xsdSchemaConfig":{
+					"root":{}
+				}
+			},
+			"context":{
+				"appName":"callables",
+				"resourceVersion":130,
+				"resourceName":"callables_from_automation"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0JZdc-1",
+			"id":"n_Kbby2",
+			"index":1,
+			"inputs":{
+				"result":{
+					"type":"object",
+					"additionalProperties":false,
+					"properties":{
+						"id":{
+							"type":"string",
+							"title":"id"
+						},
+						"name":{
+							"type":"string",
+							"title":"name"
+						},
+						"contentType":{
+							"type":"string",
+							"title":"contentType"
+						}
+					}
+				},
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[],
+					"properties":{
+						"eventId":{
+							"type":"string",
+							"title":"Event Id"
+						},
+						"calendarId":{
+							"type":"string",
+							"title":"Calendar Id"
+						},
+						"fileName":{
+							"type":"string",
+							"title":"File Name"
+						},
+						"fileContent":{
+							"type":"string",
+							"title":"File Content"
+						}
+					}
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"microsoft_calendar",
+				"resourceVersion":929,
+				"connectionId":"689c3914e436001bc18e4066",
+				"resourceName":"microsoft_calendar_add_attachment_to_event",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0JZdc-1",
+			"id":"n_aPonH",
+			"index":2,
+			"inputs":{
+				"file_content":"{{ n_Kbby2.outputs.fileContent }}",
+				"event_id":"{{ n_Kbby2.outputs.eventId }}",
+				"calendar_id":"{{ n_Kbby2.outputs.calendarId }}",
+				"file_name":"{{ n_Kbby2.outputs.fileName }}"
+			},
+			"skip":false,
+			"subTitle":"Microsoft Calendar",
+			"title":"Add attachment to event",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":131,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_0JZdc-1",
+			"id":"n_lzWs8",
+			"index":3,
+			"inputs":{
+				"result":{
+					"id":"{{ n_aPonH.outputs.id }}",
+					"name":"{{ n_aPonH.outputs.name }}",
+					"contentType":"{{ n_aPonH.outputs.contentType }}"
+				}
+			},
+			"skip":false,
+			"subTitle":"Callable",
+			"title":"Respond to automation",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":191574,
+	"runtimeConnectionAppNames":[
+		"microsoft_calendar"
+	],
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"headerValueTierMap":{},
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"YODA"
+	],
+	"version":3
+}
