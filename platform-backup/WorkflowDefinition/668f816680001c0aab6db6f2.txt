@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1720680806796,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"668f816680001c0aab6db6f2",
+	"lastModifiedBy":308,
+	"lcName":"untitled",
+	"modifiedTime":1720682287549,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"PRp3U-1",
+			"id":"PRp3U",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":308,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
