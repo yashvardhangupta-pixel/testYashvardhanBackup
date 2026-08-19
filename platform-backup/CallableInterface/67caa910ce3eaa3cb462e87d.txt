@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334800865,
+	"deleted":true,
+	"description":"SZHLUr",
+	"id":"67caa910ce3eaa3cb462e87d",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspo",
+	"modifiedTime":1741358596630,
+	"name":"QvfSPO",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRINA0KQkNDOmV5Z2wxczNsem9lZXJ3b2ZhZDNmbDA3dzluZmczaHI5a3hpcDVsc2JnMEBvYXN0aWZ5LmNvbQ0KaXpjOiBy",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
