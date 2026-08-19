@@ -4,10 +4,19 @@
 	],
 	"createdTime":1787141575329,
 	"deleted":false,
+	"deployedVersion":1,
+	"deploymentState":{
+		"deployedAt":1787141607943,
+		"deployedBy":196039,
+		"deployedDefinitionId":"6a859de7b11c31436db665b4",
+		"status":"DEPLOYED",
+		"version":1,
+		"workflowVersion":1
+	},
 	"edges":[
 		{
-			"fromNodeId":"n_GU115",
-			"id":"next@n_GU115@n_Dh39s",
+			"fromNodeId":"n_EEZYc",
+			"id":"next@n_EEZYc@n_Dh39s",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_Dh39s",
@@ -64,43 +73,53 @@
 		},
 		{
 			"fromNodeId":"n_KWcc2",
-			"id":"next@n_KWcc2@n_chxfx",
+			"id":"next@n_KWcc2@n_XfNdk",
 			"priority":0,
 			"skip":false,
-			"toNodeId":"n_chxfx",
+			"toNodeId":"n_XfNdk",
 			"type":"next"
 		}
 	],
 	"id":"6a859dc7b11c31436db66413",
 	"lastModifiedBy":196039,
 	"lastPlatformUpdateBy":196039,
-	"lastPlatformUpdateOn":1787141606265,
+	"lastPlatformUpdateOn":1787141747638,
 	"lcName":"test",
-	"modifiedTime":1787141606265,
+	"modifiedTime":1787141747638,
 	"name":"test",
 	"nodes":[
 		{
 			"context":{
-				"appName":"webhooks",
-				"resourceVersion":953,
-				"resourceName":"webhooks_default"
+				"appName":"callables",
+				"resourceVersion":6475,
+				"resourceName":"callables_from_automation"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_1tw7X-1",
-			"id":"n_GU115",
+			"id":"n_EEZYc",
 			"index":1,
 			"inputs":{
-				"request":{
-					"contentType":"application/json"
+				"setup":{
+					"type":"object",
+					"additionalProperties":false,
+					"required":[
+						"count"
+					],
+					"properties":{
+						"count":{
+							"type":"string",
+							"title":"Count"
+						}
+					}
 				}
 			},
 			"skip":false,
-			"subTitle":"Webhook",
-			"title":"New event",
+			"subTitle":"Callable",
+			"title":"Trigger via automation",
 			"trigger":{
-				"type":"WEBHOOK"
+				"type":"CALLABLE"
 			},
 			"type":"START"
 		},
@@ -112,7 +131,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_1tw7X-1",
 			"id":"n_Dh39s",
@@ -149,7 +168,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"_1tw7X-1",
 			"id":"n_KWcc2",
@@ -172,7 +191,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_KWcc2@_1tw7X-1@l",
 			"id":"n_7aBPq",
@@ -207,7 +226,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_KWcc2@_1tw7X-1@l",
 			"id":"n_oRRqF",
@@ -267,7 +286,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_KWcc2@_1tw7X-1@l",
 			"id":"n_4cGHq",
@@ -290,7 +309,7 @@
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":true,
+			"dirty":false,
 			"fallbackMode":"STOP",
 			"groupId":"n_KWcc2@_1tw7X-1@l",
 			"id":"n_jn4YN",
@@ -305,17 +324,23 @@
 		},
 		{
 			"context":{
-				"appName":"stop"
+				"appName":"callables",
+				"resourceVersion":6511,
+				"resourceName":"callables_return_to_automation",
+				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_1tw7X-1",
-			"id":"n_chxfx",
+			"id":"n_XfNdk",
 			"index":8,
+			"inputs":{
+				"result":"hii"
+			},
 			"skip":false,
-			"subTitle":"Stop",
-			"title":"Stop",
+			"subTitle":"Callable",
+			"title":"Respond to automation",
 			"type":"STOP"
 		}
 	],
@@ -333,5 +358,5 @@
 		}
 	},
 	"standard":false,
-	"version":1
+	"version":2
 }
