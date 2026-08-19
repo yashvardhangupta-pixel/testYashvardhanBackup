@@ -4,19 +4,45 @@
 	],
 	"createdTime":1787123123186,
 	"deleted":false,
-	"deployedVersion":2,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1787123344262,
+		"deployedAt":1787129575481,
 		"deployedBy":195810,
-		"deployedDefinitionId":"6a8556904bb8b10ec6cb443b",
+		"deployedDefinitionId":"6a856ee7e8e5d4338fc0786c",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":9
+		"version":3,
+		"workflowVersion":10
 	},
 	"edges":[
 		{
 			"fromNodeId":"n_5b8dx",
-			"id":"next@n_5b8dx@n_hywUO",
+			"id":"next@n_5b8dx@n_rWaGj",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_rWaGj",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_rWaGj",
+			"id":"if@n_rWaGj@n_kZJ3W",
+			"name":"yes",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_kZJ3W",
+			"type":"if"
+		},
+		{
+			"fromNodeId":"n_kZJ3W",
+			"id":"next@n_kZJ3W@n_hywUO",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_hywUO",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"n_rWaGj",
+			"id":"next@n_rWaGj@n_hywUO",
+			"name":"no",
 			"priority":0,
 			"skip":false,
 			"toNodeId":"n_hywUO",
@@ -121,9 +147,9 @@
 	"id":"6a7c7ff886332a7c263c8345",
 	"lastModifiedBy":195810,
 	"lastPlatformUpdateBy":195810,
-	"lastPlatformUpdateOn":1787129572170,
+	"lastPlatformUpdateOn":1787140465573,
 	"lcName":"user job | github | all connections",
-	"modifiedTime":1787129572170,
+	"modifiedTime":1787140465573,
 	"name":"User Job | Github | All Connections",
 	"nodes":[
 		{
@@ -153,17 +179,62 @@
 		},
 		{
 			"context":{
-				"appName":"storage_by_unifyapps",
-				"resourceVersion":50236,
-				"resourceName":"storage_by_unifyapps_fetch_records",
+				"appName":"if_else",
+				"resourceVersion":914,
+				"resourceName":"if_else_condition",
 				"type":"APPLICATION"
 			},
 			"debug":false,
 			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"_7762G-1",
-			"id":"n_hywUO",
+			"id":"n_rWaGj",
 			"index":2,
+			"inputs":{
+				"filters":[
+					{
+						"property":"{{ __ENV__.outputs.run_user_job_github }}",
+						"filter":{
+							"operator":"EQUAL",
+							"value":"false"
+						}
+					}
+				],
+				"operator":"AND"
+			},
+			"skip":false,
+			"subTitle":"Condition",
+			"title":"Condition",
+			"type":"IF_ELSE"
+		},
+		{
+			"context":{
+				"appName":"stop"
+			},
+			"debug":false,
+			"dirty":true,
+			"fallbackMode":"STOP",
+			"groupId":"n_rWaGj@_7762G-1@y",
+			"id":"n_kZJ3W",
+			"index":3,
+			"skip":false,
+			"subTitle":"Stop",
+			"title":"Stop",
+			"type":"STOP"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":50236,
+				"resourceName":"storage_by_unifyapps_fetch_records",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_7762G-1",
+			"id":"n_hywUO",
+			"index":4,
 			"inputs":{
 				"triggerInputCondition":{
 					"filters":[
@@ -210,7 +281,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_7762G-1",
 			"id":"n_QK2VX",
-			"index":3,
+			"index":5,
 			"inputSchema":{
 				"type":"SCHEMA_AND_LAYOUT",
 				"dynamic":false,
@@ -466,7 +537,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_7762G-1",
 			"id":"n_WYdRc",
-			"index":4,
+			"index":6,
 			"inputs":{
 				"repeatMode":"SINGLE",
 				"listSource":"{{ n_hywUO.outputs.objects }}",
@@ -489,7 +560,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_WYdRc@_7762G-1@l",
 			"id":"n_lERu3",
-			"index":5,
+			"index":7,
 			"inputs":{
 				"loop":"n_WYdRc",
 				"conditions":{
@@ -522,7 +593,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_WYdRc@_7762G-1@l",
 			"id":"n_CIxxL",
-			"index":6,
+			"index":8,
 			"inputs":{
 				"itemToAdd":"{{ n_WYdRc.outputs.item.properties.applicationInfo.context.connectionId }}",
 				"insertLocation":"END",
@@ -546,7 +617,7 @@
 			"fallbackMode":"MANUAL",
 			"groupId":"n_WYdRc@_7762G-1@l",
 			"id":"n_J7tYq",
-			"index":7,
+			"index":9,
 			"inputs":{
 				"automationId":"6a7c810586332a7c263d30df",
 				"runtimeConnections":{
@@ -631,7 +702,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_J7tYq@n_WYdRc@_7762G-1@l@success",
 			"id":"n_e8GEH",
-			"index":8,
+			"index":10,
 			"inputs":{
 				"numberOfRecordsToUpdate":"SINGLE",
 				"triggerInputCondition":{
@@ -679,7 +750,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"n_J7tYq@n_WYdRc@_7762G-1@l@error",
 			"id":"n_u4j7n",
-			"index":9,
+			"index":11,
 			"inputs":{
 				"numberOfRecordsToUpdate":"SINGLE",
 				"triggerInputCondition":{
@@ -724,7 +795,7 @@
 			"fallbackMode":"STOP",
 			"groupId":"_7762G-1",
 			"id":"n_Kz8SD",
-			"index":10,
+			"index":12,
 			"skip":false,
 			"subTitle":"Stop",
 			"title":"Stop",
@@ -745,5 +816,5 @@
 		}
 	},
 	"standard":false,
-	"version":10
+	"version":11
 }
