@@ -1,0 +1,266 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1721904857043,
+	"deleted":true,
+	"description":"",
+	"edges":[
+		{
+			"fromNodeId":"sQyRI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"wgzl4",
+			"type":"next"
+		},
+		{
+			"fromNodeId":"wgzl4",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"NIGHW",
+			"type":"next"
+		}
+	],
+	"id":"66a22e7a197d7063abf72b49",
+	"lastModifiedBy":32,
+	"lcName":"backend automation ipaaslebcupivty",
+	"modifiedTime":1721904857043,
+	"name":"Backend Automation IPAASlEBCUPIvtY",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":48,
+				"resourceName":"callables_from_api"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"sQyRI-1",
+			"id":"sQyRI",
+			"index":0,
+			"inputs":{
+				"request":{
+					"pathParams":{
+						"type":"object",
+						"properties":{
+							"id":{
+								"type":"string",
+								"title":"Id"
+							}
+						},
+						"required":[]
+					},
+					"body":{
+						"type":"object",
+						"properties":{
+							"name":{
+								"type":"string",
+								"title":"Name"
+							},
+							"location":{
+								"type":"string",
+								"title":"Location"
+							},
+							"jobDetails":{
+								"type":"object",
+								"title":"Job Details",
+								"properties":{
+									"companyDetails":{
+										"type":"object",
+										"title":"Company Details",
+										"properties":{
+											"companyOwner":{
+												"type":"string",
+												"title":"Company Owner"
+											},
+											"companyEmployees":{
+												"type":"array",
+												"title":"Company Employees",
+												"items":{
+													"type":"object",
+													"properties":{
+														"employeeName":{
+															"type":"string",
+															"title":"Employee Name"
+														},
+														"employeeAge":{
+															"type":"integer",
+															"title":"Employee Age"
+														},
+														"employeeHeight":{
+															"type":"number",
+															"title":"Employee Height"
+														}
+													}
+												}
+											}
+										},
+										"required":[
+											"companyOwner",
+											"companyEmployees"
+										]
+									},
+									"companyName":{
+										"type":"string",
+										"title":"Company Name"
+									},
+									"isPublic":{
+										"type":"boolean",
+										"title":"Is Public"
+									}
+								},
+								"required":[
+									"companyName",
+									"isPublic",
+									"companyDetails"
+								]
+							},
+							"married":{
+								"type":"boolean",
+								"title":"Married"
+							},
+							"age":{
+								"type":"integer",
+								"title":"Age"
+							},
+							"height":{
+								"type":"number",
+								"title":"Height"
+							},
+							"multiSelect":{
+								"type":"array",
+								"title":"multiSelect",
+								"items":{
+									"type":"string"
+								}
+							}
+						},
+						"required":[]
+					},
+					"contentType":"application/json"
+				},
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"filter":{
+								"value":"",
+								"operator":"EQUAL"
+							},
+							"property":""
+						}
+					],
+					"operator":"AND"
+				},
+				"response":[
+					{
+						"name":"200",
+						"body":{
+							"type":"object",
+							"properties":{
+								"data":{
+									"type":"object",
+									"title":"data",
+									"properties":{}
+								}
+							},
+							"required":[]
+						},
+						"contentType":"application/json",
+						"status":200
+					}
+				]
+			},
+			"skip":false,
+			"title":"Call Automation via API",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"storage_by_unifyapps",
+				"resourceVersion":3600,
+				"resourceName":"storage_by_unifyapps_update_record_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"sQyRI-1",
+			"id":"wgzl4",
+			"index":0,
+			"inputs":{
+				"recordId":"{{ sQyRI.outputs.pathParams.id }}",
+				"object_type":"wbHweWXzaWWGqpuCzaQT",
+				"record":{
+					"name":"{{ sQyRI.outputs.body.name }}",
+					"location":"{{ sQyRI.outputs.body.location }}",
+					"jobDetails":{
+						"companyDetails":{
+							"companyOwner":"{{ sQyRI.outputs.body.jobDetails.companyDetails.companyOwner }}",
+							"companyEmployees":{
+								"source":"{{ sQyRI.outputs.body.jobDetails.companyDetails.companyEmployees }}",
+								"items":{
+									"employeeName":"{{ sQyRI.outputs.body.jobDetails.companyDetails.companyEmployees[0].employeeName }}",
+									"employeeAge":"{{ sQyRI.outputs.body.jobDetails.companyDetails.companyEmployees[0].employeeAge }}",
+									"employeeHeight":"{{ sQyRI.outputs.body.jobDetails.companyDetails.companyEmployees[0].employeeHeight }}"
+								},
+								"ua:type":"mappedArray"
+							}
+						},
+						"companyName":"{{ sQyRI.outputs.body.jobDetails.companyName }}",
+						"isPublic":"{{ sQyRI.outputs.body.jobDetails.isPublic }}"
+					},
+					"married":"{{ sQyRI.outputs.body.married }}",
+					"age":"{{ sQyRI.outputs.body.age }}",
+					"height":"{{ sQyRI.outputs.body.height }}",
+					"multiSelect":{
+						"source":"{{ sQyRI.outputs.body.multiSelect }}",
+						"items":"{{ sQyRI.outputs.body.multiSelect }}",
+						"ua:type":"mappedArray"
+					}
+				},
+				"upsert":false
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Update record by id",
+			"type":"ACTION"
+		},
+		{
+			"context":{
+				"appName":"callables",
+				"resourceVersion":26,
+				"resourceName":"callables_return_response_to_api",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"sQyRI-1",
+			"id":"NIGHW",
+			"index":0,
+			"inputs":{
+				"responseName":"200",
+				"body":{
+					"data":"{{ wgzl4.outputs.properties }}"
+				},
+				"status":200
+			},
+			"skip":false,
+			"subTitle":"Storage by UnifyApps",
+			"title":"Respond to API request",
+			"type":"STOP"
+		}
+	],
+	"ownerUserId":32,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
