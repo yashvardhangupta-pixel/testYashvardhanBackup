@@ -1,0 +1,76 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1720873605119,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"HL7Gw",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"QXG3B",
+			"type":"next"
+		}
+	],
+	"id":"66927285bb360116f311deb5",
+	"lastModifiedBy":520,
+	"lcName":"untitled",
+	"modifiedTime":1720873683581,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":44,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HL7Gw-1",
+			"id":"HL7Gw",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"title":"Http Webhook",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"standard_entities",
+				"resourceVersion":0,
+				"resourceName":"standard_entities_create_user",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"HL7Gw-1",
+			"id":"QXG3B",
+			"index":0,
+			"inputs":{
+				"user":"name\n\n"
+			},
+			"skip":false,
+			"subTitle":"Standard entities by UnifyApps",
+			"title":"Create User",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":2
+}
