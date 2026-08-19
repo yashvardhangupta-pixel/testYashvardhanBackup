@@ -1,0 +1,58 @@
+{
+	"createdTime":1771076910186,
+	"deleted":false,
+	"description":"Create variable through automation for OR solver",
+	"id":"69907d2e0cf1890ac7c7283b",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"solverId":{
+					"type":"string",
+					"title":"Solver Id"
+				},
+				"additional":{
+					"type":"object",
+					"properties":{},
+					"additionalProperties":false,
+					"title":"Additional"
+				}
+			},
+			"required":[
+				"solverId"
+			]
+		}
+	},
+	"lastModifiedBy":49915,
+	"lcName":"or solver | variable",
+	"modifiedTime":1771083006678,
+	"name":"OR Solver | Variable",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			},
+			"properties":{
+				"success":{
+					"type":"boolean",
+					"title":"Success"
+				}
+			},
+			"required":[]
+		}
+	},
+	"ownerUserId":43498,
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
