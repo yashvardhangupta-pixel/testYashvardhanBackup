@@ -1,0 +1,56 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1725518231933,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"hspTI",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"sNRkZ",
+			"type":"next"
+		}
+	],
+	"id":"66d951977426026ab9d154a9",
+	"lastModifiedBy":520,
+	"lcName":"checks (copy)",
+	"modifiedTime":1725518254340,
+	"name":"checks (copy)",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"hspTI-1",
+			"id":"hspTI",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"hspTI-1",
+			"id":"sNRkZ",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":520,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
