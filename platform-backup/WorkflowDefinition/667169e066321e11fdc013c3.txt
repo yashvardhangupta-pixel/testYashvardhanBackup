@@ -1,0 +1,42 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1718708704776,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"667169e066321e11fdc013c3",
+	"lastModifiedBy":306,
+	"lcName":"untitled",
+	"modifiedTime":1718708736999,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"callables"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"kOSTC-1",
+			"id":"kOSTC",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"CALLABLE"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":306,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":1
+}
