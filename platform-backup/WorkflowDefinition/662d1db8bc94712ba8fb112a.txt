@@ -1,0 +1,77 @@
+{
+	"appsUsed":[
+		"slack"
+	],
+	"createdTime":1714232760865,
+	"deleted":true,
+	"deployedVersion":3,
+	"deploymentState":{
+		"deployedAt":1714298008977,
+		"deployedDefinitionId":"662e1c9845101d15f4c61b04",
+		"status":"DEPLOYED",
+		"version":3,
+		"workflowVersion":8
+	},
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"662d1db8bc94712ba8fb112a",
+	"lastModifiedBy":34,
+	"lcName":"slack tri",
+	"modifiedTime":1714325241547,
+	"name":"slack tri",
+	"nodes":[
+		{
+			"context":{
+				"appName":"slack",
+				"resourceVersion":1,
+				"connectionId":"662b73fc0e3bdf00b1771b30",
+				"resourceName":"slack_on_new_message"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"TlNPw-1",
+			"id":"TlNPw",
+			"index":0,
+			"inputs":{
+				"triggerInputCondition":{
+					"filters":[
+						{
+							"property":"",
+							"filter":{
+								"operator":"EQUAL",
+								"value":""
+							}
+						}
+					],
+					"operator":"AND"
+				}
+			},
+			"skip":false,
+			"title":"On New Message",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":33,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":9
+}
