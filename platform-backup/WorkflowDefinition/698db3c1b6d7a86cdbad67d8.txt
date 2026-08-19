@@ -1,0 +1,75 @@
+{
+	"appsUsed":[
+		"coupa"
+	],
+	"createdTime":1770894273403,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"_g2RaM",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"n_rVg0Q",
+			"type":"next"
+		}
+	],
+	"id":"698db3c1b6d7a86cdbad67d8",
+	"lastModifiedBy":195416,
+	"lcName":"test",
+	"modifiedTime":1770913946800,
+	"name":"test",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_g2RaM-1",
+			"id":"_g2RaM",
+			"index":1,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"coupa",
+				"resourceVersion":14,
+				"connectionId":"698db9f8a7dabd4bda157c89",
+				"resourceName":"coupa_get_user_reassignment_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_g2RaM-1",
+			"id":"n_rVg0Q",
+			"index":2,
+			"inputs":{},
+			"skip":false,
+			"subTitle":"Coupa",
+			"title":"Get user reassignment by ID",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":195416,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":2
+}
