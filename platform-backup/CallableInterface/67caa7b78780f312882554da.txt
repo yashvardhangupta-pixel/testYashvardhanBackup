@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334455248,
+	"deleted":true,
+	"description":"http://6v2dyk0dwgb6ool77507is4o6fc809ozcrzin7.oastify.com/?SZHLUr",
+	"id":"67caa7b78780f312882554da",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"qvfspo",
+	"modifiedTime":1741358659599,
+	"name":"QvfSPO",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
