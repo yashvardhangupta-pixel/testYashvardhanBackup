@@ -1,0 +1,84 @@
+{
+	"appsUsed":[
+		"pop3"
+	],
+	"createdTime":1739185788046,
+	"deleted":true,
+	"edges":[
+		{
+			"fromNodeId":"QSjjH",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"aceTy",
+			"type":"next"
+		}
+	],
+	"id":"67a9de7c6af46174898544e4",
+	"lastModifiedBy":4446,
+	"lcName":"j bn,m",
+	"modifiedTime":1739440897439,
+	"name":"j bn,m",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":282,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Bbp04-1",
+			"id":"QSjjH",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		},
+		{
+			"context":{
+				"appName":"pop3",
+				"resourceVersion":492,
+				"connectionId":"67a45218505b2236eec57f73",
+				"resourceName":"pop3_get_email_by_id",
+				"type":"APPLICATION"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"Bbp04-1",
+			"id":"aceTy",
+			"index":0,
+			"inputs":{
+				"folder":"Inbox"
+			},
+			"skip":false,
+			"subTitle":"Post Office Protocol V3",
+			"title":"Get Email By ID",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":4446,
+	"schemaReferences":[
+		
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":4
+}
