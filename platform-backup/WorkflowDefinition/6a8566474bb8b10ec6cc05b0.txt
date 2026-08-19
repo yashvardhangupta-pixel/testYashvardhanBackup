@@ -1,0 +1,65 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1787127367754,
+	"deleted":false,
+	"edges":[
+		{
+			"fromNodeId":"_3r9H1",
+			"priority":0,
+			"skip":false,
+			"toNodeId":"_1Elvd",
+			"type":"next"
+		}
+	],
+	"id":"6a8566474bb8b10ec6cc05b0",
+	"lastModifiedBy":201507,
+	"lastPlatformUpdateBy":201507,
+	"lastPlatformUpdateOn":1787127367754,
+	"lcName":"wd",
+	"modifiedTime":1787127367754,
+	"name":"wd",
+	"nodes":[
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3r9H1-1",
+			"id":"_3r9H1",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		},
+		{
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"_3r9H1-1",
+			"id":"_1Elvd",
+			"index":0,
+			"skip":false,
+			"title":"Select an app and action",
+			"type":"ACTION"
+		}
+	],
+	"ownerUserId":201507,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true,
+		"route":{
+			"default":false,
+			"tierName":"global"
+		}
+	},
+	"standard":false,
+	"tags":[
+		"SCREENSHOT_DND"
+	],
+	"version":0
+}
