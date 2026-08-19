@@ -1,0 +1,49 @@
+{
+	"createdTime":1709717481370,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"grants":{
+		"configs":[
+			{
+				"permissions":[
+					"A"
+				],
+				"principalType":"GLOBAL"
+			}
+		]
+	},
+	"id":"65e837e9f7982c6d97cc97b0",
+	"lastModifiedBy":17,
+	"lcName":"untitled",
+	"modifiedTime":1709717481370,
+	"name":"Untitled",
+	"nodes":[
+		{
+			"context":{
+				"appName":"amazon-sns"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"ZbNSw-1",
+			"id":"ZbNSw",
+			"index":0,
+			"skip":false,
+			"title":"Select a trigger event",
+			"trigger":{
+				"type":"EVENT"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":17,
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"version":0
+}
