@@ -1,0 +1,56 @@
+{
+	"appsUsed":[
+		
+	],
+	"createdTime":1738154201737,
+	"deleted":true,
+	"edges":[
+		
+	],
+	"id":"679a20d90162d7261f102c58",
+	"lastModifiedBy":4446,
+	"lcName":"temp",
+	"modifiedTime":1739440918158,
+	"name":"temp",
+	"nodes":[
+		{
+			"context":{
+				"appName":"webhooks",
+				"resourceVersion":226,
+				"resourceName":"webhooks_default"
+			},
+			"debug":false,
+			"dirty":false,
+			"fallbackMode":"STOP",
+			"groupId":"TfdCi-1",
+			"id":"2IMw9",
+			"index":0,
+			"inputs":{
+				"request":{
+					"contentType":"application/json"
+				}
+			},
+			"skip":false,
+			"subTitle":"Webhook",
+			"title":"New event",
+			"trigger":{
+				"type":"WEBHOOK"
+			},
+			"type":"START"
+		}
+	],
+	"ownerUserId":4446,
+	"schemaReferences":[
+		"entity|e_code_snippet|e_675ab04d4993fb5b822f33c8"
+	],
+	"settings":{
+		"enableNodeLevelLogging":true,
+		"enableRunLogging":true,
+		"enableVariableLogging":true
+	},
+	"standard":false,
+	"tags":[
+		
+	],
+	"version":9
+}
