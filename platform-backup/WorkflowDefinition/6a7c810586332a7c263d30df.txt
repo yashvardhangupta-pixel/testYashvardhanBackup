@@ -4,14 +4,14 @@
 	],
 	"createdTime":1787123122911,
 	"deleted":false,
-	"deployedVersion":2,
+	"deployedVersion":3,
 	"deploymentState":{
-		"deployedAt":1787125993884,
+		"deployedAt":1787127463984,
 		"deployedBy":195810,
-		"deployedDefinitionId":"6a8560e94bb8b10ec6cbf4fc",
+		"deployedDefinitionId":"6a8566a74bb8b10ec6cc0773",
 		"status":"DEPLOYED",
-		"version":2,
-		"workflowVersion":28
+		"version":3,
+		"workflowVersion":30
 	},
 	"edges":[
 		{
@@ -415,9 +415,9 @@
 	"id":"6a7c810586332a7c263d30df",
 	"lastModifiedBy":195810,
 	"lastPlatformUpdateBy":195810,
-	"lastPlatformUpdateOn":1787127461485,
+	"lastPlatformUpdateOn":1787127949920,
 	"lcName":"user job | github | single connection",
-	"modifiedTime":1787127461485,
+	"modifiedTime":1787127949920,
 	"name":"User Job | Github | Single Connection",
 	"nodes":[
 		{
@@ -565,12 +565,12 @@
 			"context":{
 				"appName":"github",
 				"resourceVersion":296,
-				"connectionId":"69e670dca122e6446933384f",
+				"connectionId":"6a8443c09b0eba549369ba1b",
 				"resourceName":"github_fetch_organizations",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"MANUAL",
 			"groupId":"_AJUhB-1",
 			"id":"n_wI7Rt",
@@ -1016,12 +1016,12 @@
 			"context":{
 				"appName":"github",
 				"resourceVersion":29976,
-				"connectionId":"69e670dca122e6446933384f",
+				"connectionId":"6a8443c09b0eba549369ba1b",
 				"resourceName":"github_list_repositories",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"MANUAL",
 			"groupId":"n_OQGaT@n_eUAZV@_AJUhB-1@n@l",
 			"id":"n_YfVak",
@@ -2060,12 +2060,12 @@
 			"context":{
 				"appName":"github",
 				"resourceVersion":5401,
-				"connectionId":"69e670dca122e6446933384f",
+				"connectionId":"6a8443c09b0eba549369ba1b",
 				"resourceName":"github_list_repositories",
 				"type":"APPLICATION"
 			},
 			"debug":false,
-			"dirty":false,
+			"dirty":true,
 			"fallbackMode":"STOP",
 			"groupId":"n_IN2Tu@_AJUhB-1@l",
 			"id":"n_Dw6az",
@@ -2415,5 +2415,5 @@
 		}
 	},
 	"standard":false,
-	"version":30
+	"version":31
 }
