@@ -1,0 +1,33 @@
+{
+	"createdTime":1741334427295,
+	"deleted":true,
+	"description":"SZHLUr",
+	"id":"67caa79b8780f31288255085",
+	"input":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"lastModifiedBy":22743,
+	"lcName":"/etc/passwd",
+	"modifiedTime":1741358660155,
+	"name":"/etc/passwd",
+	"output":{
+		"type":"SCHEMA",
+		"dynamic":false,
+		"schema":{
+			"ua:modal":{
+				"field_type":"STRING",
+				"is_optional":true
+			}
+		}
+	},
+	"ownerUserId":22743,
+	"standard":false,
+	"version":1
+}
